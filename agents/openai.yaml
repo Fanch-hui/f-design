@@ -1,4 +1,4 @@
 interface:
   display_name: "F-design"
   short_description: "Accountable frontend design, components, motion, and browser QA"
-  default_prompt: "Use $f-design as the complete frontend workflow: ask guided questions with a free-form choice and a separate additional-requirements prompt, keep one desktop/mobile content canon, record component and motion decisions, implement without silent phase skips, and verify the rendered result in a real browser."
+  default_prompt: "Use $f-design as the complete frontend workflow: before analysis, offer optional reference upload, website URL, current-page, no-reference, and custom paths without requiring a reference; let me choose or delegate the experience and technical architecture, ask guided questions with free-form choices and a separate additional-requirements prompt, keep one desktop/mobile content canon, record component and motion decisions, implement without silent phase skips, and verify the rendered result in a real browser."

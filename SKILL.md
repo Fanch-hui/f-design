@@ -1,6 +1,6 @@
 ---
 name: f-design
-description: End-to-end frontend product design, implementation, and existing-interface optimization workflow. Use when Codex must plan, design, redesign, prototype, implement, audit, refine, or polish a website, web app, dashboard, marketing site, hybrid product, responsive mobile experience, design system, reference-image-to-code build, color system, dark mode, interaction states, imagery, or motion. Also use when an existing interface needs better hierarchy, layout, typography, palette, feedback, card restraint, mobile composition, accessibility, media integration, image transitions, motion fidelity, performance, or standards compliance. Run guided discovery before material design analysis, synthesize a project-specific DESIGN.md, keep desktop and mobile references on one content canon, record component and motion decisions, adapt mature GitHub components to the project, implement role-based color, imagery, and motion faithfully, and verify the result in a real browser without silently skipping phases.
+description: End-to-end frontend product design, implementation, and existing-interface optimization. Use when an AI coding agent must plan, design, redesign, prototype, implement, audit, or polish websites, web apps, dashboards, marketing or responsive mobile surfaces, design systems, reference-to-code builds, color/themes, interaction states, imagery, or motion. Also use for hierarchy, layout, typography, card restraint, accessibility, media transitions, motion fidelity, performance, and standards compliance. Before material analysis, run guided discovery, optionally let the user upload or link a reference website or decline references, and present experience and technical architecture choices for selection or explicit delegation. Keep desktop/mobile on one content canon, record component and motion decisions, adapt mature open-source components to the project, implement faithfully, and verify in a real browser without silent phase skips.
 ---
 
 # F-design
@@ -12,7 +12,7 @@ Design and deliver frontend products through one self-contained process. The syn
 Apply these rules before any stylistic preference:
 
 1. **Reconcile existing project truth.** Read the nearest `AGENTS.md`, `DESIGN.md`, product requirements, design system, components, assets, routes, rendered UI, and conventions before proposing technology or visuals. Distinguish functional truth, documented intent, and accidental implementation drift instead of trusting any one source silently.
-2. **Ask before material analysis.** After a factual repository scan, ask a short guided round about unresolved product, style, palette, imagery, and motion choices. Every choice question must include a visible free-form answer path, and the round must end with a separate open-ended question for additional requirements. Do not publish a Product Brief, analyze visual directions, generate references, or code until the user answers, already supplied equivalent detail, explicitly says there are no additional requirements, or delegates the choices.
+2. **Ask before material analysis.** After a factual repository scan, ask a short guided round about unresolved product, optional reference source, experience/technical architecture, style, palette, imagery, and motion choices. The first material round must visibly let the user upload reference screenshots or recordings, provide a website URL or local page, proceed without any reference, or write a custom combination. Using a reference is entirely optional: accept `no reference` without persuasion or a follow-up demand. Present viable architecture choices with consequences and a recommendation, but let the user select, customize, or explicitly delegate the decision. Every choice question must include a visible free-form answer path, and the round must end with a separate open-ended question for additional requirements. Do not publish a Product Brief, analyze visual directions, generate references, choose a new architecture, or code until the user answers, already supplied equivalent detail, explicitly says there are no additional requirements, or delegates the choices.
 3. **User task wins over visual fashion.** Classify the product and identify the primary job before choosing a layout.
 4. **No page without purpose.** Define routes, states, first-viewport priority, and success criteria before generating references.
 5. **One content canon across viewports.** Desktop and mobile references are different compositions of the same approved copy, content IDs, asset identities, data, user state, navigation, and actions. Mobile may reorder, condense, or progressively disclose; it may not silently invent or replace the product.
@@ -58,7 +58,7 @@ Run a factual scan before asking questions:
 - Read `package.json`, lockfiles, framework config, routes, global styles, design documentation, token files, shared components, icon dependencies, assets, tests, and build scripts.
 - Identify the current framework, rendering model, styling approach, component primitives, state/data layer, test tooling, browser support, and deployment constraints.
 - Reuse an existing stack, component system, and icon family. Do not start a parallel app or add a second primitive system.
-- For a greenfield project, choose technology from product needs rather than fashion. Explain the recommendation and ask only when the choice materially affects ownership, hosting, or maintainability.
+- For a greenfield project, derive two or three viable experience and technical architecture options from product needs rather than fashion. Explain the tradeoffs, mark one recommendation, and ask the user to choose, customize, or delegate before scaffolding. For an existing project, preserve the current architecture by default but obtain explicit approval before a material migration or parallel stack.
 - Record what is known, directly evidenced, and unresolved. Do not turn the scan into a visual-direction decision before the discovery gate.
 - Classify external guidance by authority and freshness. Current standards and platform documentation outrank design-system examples, professional research, and community inspiration; none silently overrides explicit product evidence.
 
@@ -66,7 +66,7 @@ Read [discovery-and-architecture.md](references/discovery-and-architecture.md) f
 
 ## Phase 2: Discover And Classify The Product
 
-For material new work, visual redesign, or ambiguous image-led work, stop at a **Discovery Gate** after the factual scan. Ask one guided round of two or three high-leverage direction questions plus one separate open-ended additional-requirements question, then wait for the answer before analyzing directions. Every direction question must offer a `Custom / 自定义：请填写` response in addition to suggested options. Ask a second round only when the answer exposes a material branch. Skip the gate only when the prompt and repository already answer the same questions and additional requirements, the user explicitly delegates the decisions, or the task is a small repair whose direction is established.
+For material new work, visual redesign, or ambiguous image-led work, stop at a **Discovery Gate** after the factual scan. Ask one guided round of up to four high-leverage questions plus one separate open-ended additional-requirements question, then wait for the answer before analyzing directions. When unresolved, this first round must include an optional **Reference Input Choice** with a first-class `no reference` path and an **Architecture Choice**; do not bury either inside the additional-requirements prompt. Every direction question must offer a `Custom / 自定义：请填写` response in addition to suggested options. Ask a second round only when the answer exposes a material branch. Skip the gate only when the prompt and repository already answer the same questions and additional requirements, the user explicitly delegates the decisions, or the task is a small repair whose direction is established.
 
 Resolve at least:
 
@@ -75,13 +75,15 @@ Resolve at least:
 - product class and per-surface register: brand, product, or hybrid;
 - content/data shape, roles, authentication, permissions, and realistic ranges;
 - target platforms, accessibility level, localization, performance, SEO, and browser constraints;
+- reference input mode: uploaded screenshot/video, public website URL, local/current page, named inspiration, no reference, or a custom combination; plus exactly what may be imitated and what must not be copied;
+- experience architecture and, when greenfield or materially changing, technical architecture selected by the user or explicitly delegated after tradeoffs are shown;
 - fidelity, breadth, timing, references, and anti-references;
 - success measures for effectiveness, efficiency, errors/recovery, and user confidence, rather than click-through alone;
 - preferred visual lane and rejected visual lane;
 - palette strategy or hue families, light/dark preference, imagery/material treatment, and motion energy.
 - user-authored custom directions, extra functionality or content, naming/copy, must-preserve details, prohibited elements, technical constraints, and any other requirements not covered by the suggested options.
 
-Offer concrete choices grounded in the product instead of asking only "what style do you like?" Explain each option in one sentence, include a visible free-form option for each question, and allow the user to combine traits or ignore the suggestions and write their own direction. The final additional-requirements question must remain open-ended rather than another fixed choice list. Produce a compact **Product Brief only after this gate**. For a material build, present it for confirmation before visual exploration. If the user asks for autonomous execution, state the assumptions instead of blocking.
+Offer concrete choices grounded in the product instead of asking only "what style do you like?" Explain each option in one sentence, include a visible free-form option for each question, and allow the user to combine traits or ignore the suggestions and write their own direction. A reference choice must accept attachments and URLs, not only named style options. An architecture choice must distinguish experience topology from implementation stack when both are unresolved. The final additional-requirements question must remain open-ended rather than another fixed choice list. Produce a compact **Product Brief**, **Reference Intake Record**, and **Architecture Decision Record** only after this gate. For a material build, present them for confirmation before visual exploration. If the user asks for autonomous execution, state the assumptions instead of blocking.
 
 Never call something a dashboard merely because it contains data. A dashboard is justified only when monitoring, comparison, or triage across multiple signals is the primary recurring job.
 
@@ -90,7 +92,7 @@ Never call something a dashboard merely because it contains data. A dashboard is
 Turn the brief into an implementation-sized scope:
 
 1. Map the primary and secondary user flows.
-2. Separate routes from tabs, overlays, drawers, dialogs, and data states.
+2. When more than one information architecture is plausible, present the viable page/app topology choices and let the user select, customize, or delegate before locking routes. Then separate routes from tabs, overlays, drawers, dialogs, and data states.
 3. List every page with purpose, audience, entry, primary action, key content, desktop composition, mobile first-viewport priority, and completion condition.
 4. Add loading, empty, error, offline, success, disabled, permission, first-run, overflow, and long-content states where relevant.
 5. Identify shared shells and templates without erasing page-specific needs.

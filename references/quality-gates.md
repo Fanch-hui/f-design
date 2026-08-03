@@ -30,6 +30,9 @@ Treat a silently skipped component or motion phase as P1 when it materially chan
 - Every implemented route appears in the Page and State Map.
 - Every planned route either exists or is explicitly deferred.
 - Material discovery gave every suggested-choice question a visible free-form response path and separately captured additional requirements, `none`, or explicit delegation before analysis.
+- Material discovery visibly offered reference upload, website URL, current/local page, no-reference, and custom paths; the Reference Intake Record states what may be emulated, what must not be copied, and any access or asset-rights limits.
+- Greenfield or materially changed work presented viable experience and technical architecture options with consequences and a recommendation; the Architecture Decision Record contains the user's selection, custom answer, or explicit delegation before scaffolding.
+- Existing projects preserve their detected architecture unless a material migration was explicitly selected; focused repairs are not blocked by irrelevant architecture ceremony.
 - The primary job and success event are clear.
 - Material product work defines effectiveness, efficiency, errors/recovery, and user confidence measures; clicks alone are not treated as success.
 - Navigation labels and information architecture match the user's mental model.
@@ -55,6 +58,8 @@ At matching viewports, compare implementation screenshots against every approved
 Classify differences as blocking, material, or polish. Keep semantic/accessibility improvements even when a generated reference drew an impossible detail, but document the deviation.
 
 Audit every desktop/mobile pair against its Page Content Canon. Treat changed user/data state, missing required content, rewritten core copy, substituted asset subject, changed navigation meaning, or changed action outcome as P1 unless explicitly approved. Responsive reordering, disclosure, and art-directed cropping are allowed only when recorded in the canon.
+
+For a supplied reference website, verify that claimed desktop/mobile states and motion were actually inspected or clearly marked as inferred. Fail the gate if the result copies proprietary copy, trademarks, unique brand assets, source code, or unlicensed media instead of adapting approved design principles to the target product.
 
 For approved image transitions, compare State A, at least one midpoint, and State B. A final static screenshot does not prove motion fidelity.
 

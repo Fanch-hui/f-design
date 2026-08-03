@@ -24,6 +24,7 @@ Component primitives and icons:
 Data/auth/state:
 Tests and browser tooling:
 Existing visual identity:
+Existing reference inputs:
 Known constraints:
 Unknowns that change the design:
 ```
@@ -80,7 +81,7 @@ If the primary job is to complete one workflow, open that workflow. If it is to 
 
 ## Discovery Gate
 
-Run the repository-first scan, summarize only directly evidenced facts and unresolved choices, then stop. For a material new build, redesign, multi-page addition, or ambiguous image-led request, ask two or three guided direction questions plus one separate open-ended additional-requirements question and wait for the answer before producing a Product Brief, comparing visual directions, generating references, or implementing UI.
+Run the repository-first scan, summarize only directly evidenced facts and unresolved choices, then stop. For a material new build, redesign, multi-page addition, or ambiguous image-led request, ask up to four guided direction questions plus one separate open-ended additional-requirements question and wait for the answer before producing a Product Brief, comparing visual directions, generating references, choosing a new architecture, or implementing UI. The first round must include reference intake and architecture selection when either remains unresolved.
 
 The gate is already satisfied only when:
 
@@ -91,9 +92,73 @@ The gate is already satisfied only when:
 
 Do not interpret silence as approval. If the user delegates, record the selected defaults and the evidence behind them.
 
+## Optional Reference Input Choice
+
+Give the user a visible choice before visual analysis. Reference use is optional and owned by the user. Adapt the labels to the host, but preserve all paths:
+
+1. **Upload a reference:** screenshots, mockups, design files, GIFs, or screen recordings.
+2. **Provide a website URL:** one or more public pages to inspect in their current desktop and mobile states.
+3. **Use the current or local page:** the existing project, localhost URL, or supplied files become the baseline.
+4. **Named inspiration without direct imitation:** products, studios, design systems, or qualities the user wants to borrow.
+5. **No reference:** derive a direction from the product brief and project identity; accept this immediately without persuasion or requiring substitute inspiration.
+6. **Custom / 自定义:** combine sources or explain another reference workflow.
+
+The question must allow file attachment and free-form URLs. Do not frame an upload or URL as required, recommended by default, or necessary for quality. Do not force users to describe an available website from memory. If an attachment or URL is already present, acknowledge it and ask only what qualities should be matched: information architecture, layout, hierarchy, typography, palette, imagery, interaction, motion, density, or another specific trait.
+
+For a website URL:
+
+- inspect the actual page with the available browser or web tools before claiming visual facts;
+- capture or inspect representative desktop and mobile states, key routes, overlays, and motion when accessible;
+- record page URL, observation date, accessible states, viewport, relevant qualities, anti-reference details, and confidence;
+- distinguish observed behavior from inference when login, geo, paywall, robots, network, or animation timing limits access;
+- never request credentials, bypass access controls, scrape private content, or claim inspection when the page was inaccessible;
+- imitate the approved design principles and behavior, not trademarks, proprietary copy, unique brand assets, or unlicensed media;
+- do not hotlink or copy remote assets unless the user has rights and the implementation has an explicit asset plan.
+
+Create a compact **Reference Intake Record**:
+
+```text
+Reference mode and source:
+What to emulate:
+What to avoid or preserve:
+Pages/states/viewports inspected:
+Motion/media evidence:
+Asset and rights constraints:
+Access limitations and confidence:
+User selection or delegation:
+```
+
+## Architecture Choice Gate
+
+Architecture has two layers. Ask only the unresolved layer, but never collapse them silently:
+
+1. **Experience architecture:** single narrative page, multi-page content/marketing site, task-focused app shell, workspace/editor, commerce flow, or hybrid public site plus signed-in product.
+2. **Technical architecture:** existing stack, static/semantic site, client application, server-rendered/full-stack application, content-managed site, or a domain-specific canvas/3D architecture.
+
+For a greenfield build, show two or three viable options with one recommended first. Explain each option's consequences for hosting, SEO, content ownership, authentication/data, interactivity, accessibility, performance, maintenance, and future scope. Add `Custom / 自定义：请填写` and allow `你定 / decide for me` as explicit delegation. Do not scaffold until the user selects, customizes, or delegates.
+
+For an existing project, present the detected architecture and recommend preserving it. Offer an architecture question only when the requested scope creates a real choice:
+
+- keep and extend the current architecture;
+- keep the architecture but add a justified compatible capability;
+- migrate or replace it, with cost, risk, and affected scope stated;
+- custom direction or explicit delegation.
+
+Do not make a small visual repair wait for an irrelevant framework choice. Conversely, do not treat a material migration as implementation detail. Record the user's decision in an **Architecture Decision Record**:
+
+```text
+Experience architecture selected:
+Technical architecture selected:
+Options presented and recommendation:
+User selection, custom answer, or delegation:
+Why it fits the product and constraints:
+Migration/hosting/maintenance consequences:
+Rejected alternatives:
+```
+
 ## Guided Question Cadence
 
-Ask two or three direction questions and one additional-requirements question in the discovery round. Ask a second round only if the answers reveal a new material branch. Keep suggested options short, mutually distinct, and grounded in the product rather than fashion labels.
+Ask up to four direction questions and one additional-requirements question in the discovery round. Reserve visible questions for reference input and architecture whenever they are unresolved; combine already-known purpose, visual, palette, imagery, and motion details efficiently. Ask a second round only if the answers reveal a new material branch. Keep suggested options short, mutually distinct, and grounded in the product rather than fashion labels.
 
 For every direction question:
 
@@ -112,38 +177,44 @@ Additional requirements / 额外要求：
 
 Do not bury this prompt inside another question or replace it with fixed choices. If a structured-question interface limits the number of fields, reserve a field for additional requirements or ask it as a short follow-up before analysis.
 
-Prioritize questions in this order:
+Cover questions in this order, skipping only what direct evidence or an explicit user answer already resolves:
 
 1. Who uses this, in what context, and what are they trying to finish?
 2. What is the observable success event for the user and the business?
-3. What product class and scope are intended?
-4. What real content/data enters the interface, and at what minimum, typical, and maximum ranges?
-5. Which roles, permissions, authentication, payments, or high-stakes actions exist?
-6. Which platforms, browsers, languages, accessibility level, and performance constraints matter?
-7. Which named references capture the right behavior or atmosphere, and what should be rejected?
-8. Which palette strategy fits: neutral-led with one accent, brand-color field, editorial monochrome, or another named approach? Ask about light/dark preference and hue families to favor or reject when unresolved.
-9. What should imagery feel like and do: product evidence, photography, illustration, texture/material, 3D, or deliberate restraint?
-10. What motion energy is appropriate: nearly static, functional state motion, one signature sequence, or reference-faithful expressive choreography?
+3. Which reference-input path will be used, and exactly what qualities may be imitated or must be avoided?
+4. Which experience architecture and, when applicable, technical architecture does the user select after seeing viable tradeoffs?
+5. What product class and scope are intended?
+6. What real content/data enters the interface, and at what minimum, typical, and maximum ranges?
+7. Which roles, permissions, authentication, payments, or high-stakes actions exist?
+8. Which platforms, browsers, languages, accessibility level, and performance constraints matter?
+9. Which palette strategy fits: neutral-led with one accent, brand-color field, editorial monochrome, or another named approach? Ask about light/dark preference and hue families to favor or reject when unresolved.
+10. What should imagery feel like and do: product evidence, photography, illustration, texture/material, 3D, or deliberate restraint?
+11. What motion energy is appropriate: nearly static, functional state motion, one signature sequence, or reference-faithful expressive choreography?
 
 In the first round, combine one purpose question with one or two direction questions when the repository already establishes the basics. For example:
 
 ```text
-1. Product direction?
-   A. Quiet work tool — prioritizes speed and repeated tasks.
-   B. Editorial brand experience — prioritizes narrative and imagery.
-   C. Hybrid — public and signed-in surfaces use different pacing.
+1. Reference input / 参考来源？
+   A. Upload screenshots, mockups, GIFs, or recordings / 上传文件。
+   B. Provide a website URL for desktop/mobile inspection / 提供网站链接。
+   C. Use the current or local page as the baseline / 使用当前页面。
+   D. No direct reference; derive from the brief / 不使用直接参考。
+   E. Custom / 自定义：请填写或组合，并说明想模仿与不想复制的部分。
+2. Experience architecture / 产品与页面架构？
+   A. One focused narrative or conversion page — smallest scope and clearest path.
+   B. Multi-page site — separates content, search, SEO, and navigation responsibilities.
+   C. Task-focused app/workspace — prioritizes repeated actions, states, and signed-in navigation.
+   D. Hybrid — public brand pages plus a restrained signed-in product.
+   E. Custom / 自定义，或回复“你定”授权代理选择。
+3. Technical architecture / 技术架构？
+   A. Recommended option grounded in hosting, content, data, and maintenance — explain the consequence.
+   B. Second viable option — explain its distinct tradeoff.
+   C. Third option only when genuinely competitive — explain its distinct tradeoff.
+   D. Custom / 自定义，或回复“你定”授权代理选择。
+4. Visual, color, imagery, and motion direction / 视觉方向？
+   A-C. Offer product-specific, structurally distinct choices with consequences.
    D. Custom / 自定义：请填写，或组合以上方向。
-2. Color direction?
-   A. Neutral-led with one action accent.
-   B. Existing brand hue as the main anchor.
-   C. Deliberately monochrome.
-   D. Custom / 自定义：请填写偏好和应避免的色系。
-3. Motion direction?
-   A. Functional state motion only.
-   B. One image-led signature transition.
-   C. Reference-faithful expressive choreography.
-   D. Custom / 自定义：请填写，或组合以上方向。
-4. Additional requirements / 额外要求：还有哪些名称、文案、功能、内容、素材、必须保留、禁止出现或技术限制需要补充？没有可回答“无”，希望代为决定可回答“你定”。
+5. Additional requirements / 额外要求：还有哪些名称、文案、功能、内容、素材、必须保留、禁止出现或技术限制需要补充？没有可回答“无”，希望代为决定可回答“你定”。
 ```
 
 Ask about visual taste after enough purpose and content are known to make the options meaningful. Replace vague adjectives with named anchors or physical-context sentences. "Modern" is not direction; "a quiet clinical workspace used by a support lead under time pressure" is.
@@ -167,6 +238,9 @@ For material work, produce this compact brief:
 **Core content/data:**
 **Scope and fidelity:**
 **Platforms and inputs:**
+**Reference intake:** Source, inspected states, qualities to emulate, prohibitions, access/rights limits
+**Experience architecture:** Selected topology and user decision/delegation
+**Technical architecture:** Selected stack and user decision/delegation
 **Constraints:**
 **References:**
 **Anti-references:**
@@ -182,7 +256,7 @@ Create this only after the Discovery Gate. Confirm it before visual exploration 
 
 ### Existing Project
 
-Keep its framework and pipeline. Select additions by compatibility with:
+Recommend keeping its framework and pipeline. State the detected architecture and obtain user approval before a material migration. Select additions by compatibility with:
 
 - current rendering model and server/client boundaries;
 - current TypeScript and framework versions;
@@ -193,14 +267,14 @@ Keep its framework and pipeline. Select additions by compatibility with:
 
 ### Greenfield Project
 
-Choose only after the brief:
+Present viable choices after enough discovery context exists, then let the user select, customize, or explicitly delegate. Use these decision families rather than treating them as automatic answers:
 
 - **Content-led brand/docs site:** favor a server-rendered or static content framework with strong image, metadata, and content support.
 - **Interactive application:** favor an app framework that matches hosting, data loading, authentication, and team experience.
 - **One-off prototype:** use the lightest environment that still allows accurate interaction and responsive testing.
 - **Complex canvas, editor, or 3D product:** choose proven domain libraries for rendering, parsing, physics, or collaboration instead of rebuilding core engines.
 
-State why the choice fits the product. Do not introduce a framework merely to use a preferred component library.
+State why the recommended choice fits the product and how the alternatives differ. Record the user's selection or delegation before scaffolding. Do not introduce a framework merely to use a preferred component library.
 
 ## Flow Mapping
 

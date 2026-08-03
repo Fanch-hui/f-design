@@ -2,11 +2,30 @@
 
 Use this reference in Phase 4 and during visual comparison in Phases 6, 7, and 9. A reference set is a page-by-page design contract, not loose inspiration.
 
+## User-Supplied Website Or Upload
+
+Accept references through uploaded screenshots, mockups, design files, GIFs, recordings, public website URLs, localhost/current pages, or a user-authored combination. Do not reduce the choice to a fixed list of style adjectives.
+
+When the user provides a website URL, inspect the live page before visual analysis when tools and access permit. Record the URL, date, viewport, route/state, and what the user wants to emulate. Capture representative desktop and mobile states separately; inspect navigation, overlays, responsive transformations, image crops, and motion instead of relying only on the first static viewport. If access is blocked or partial, state exactly what was and was not observed and ask for screenshots or a recording rather than inventing evidence.
+
+Separate imitation targets into:
+
+- structure and information architecture;
+- hierarchy, spacing, typography, palette, and material treatment;
+- component and interaction behavior;
+- image identity, crop, layering, and transitions;
+- motion choreography and timing evidence;
+- content, brand assets, trademarks, or unique expression that must not be copied.
+
+A reference website is evidence, not a license. Recreate approved principles and behavior in the target project's identity. Do not copy proprietary text, trademarks, unique illustrations, photography, source code, or remote assets without permission. Do not hotlink assets. Preserve attribution and license requirements for any reusable public resource.
+
 ## Preconditions
 
 Before generating images, have:
 
 - a confirmed or explicitly delegated Product Brief;
+- a Reference Intake Record, including an explicit `no reference` or delegated result when applicable;
+- an Architecture Decision Record selected or delegated by the user;
 - a complete Page and State Map;
 - a confirmed project design contract;
 - a project `DESIGN.md` when this work creates or changes a multi-page visual system;

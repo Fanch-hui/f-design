@@ -40,6 +40,8 @@ Maintain this ledger for material builds, redesigns, and broad optimizations. A 
 At minimum consider:
 
 - discovery response record with free-form choices and a separate additional-requirements answer;
+- Reference Intake Record covering upload, URL, local/current page, named inspiration, no-reference, custom, or delegated input, including inspection limits and asset rights;
+- Architecture Decision Record covering experience and technical options, recommendation, consequences, and the user's selection, custom answer, or explicit delegation;
 - Product Brief, Page and State Map, and success measures;
 - project design contract, Color Role Table, Theme Matrix, and state coverage;
 - Page Content Canon and desktop/mobile parity;
@@ -108,6 +110,8 @@ Do not invent user-test results or turn a small qualitative sample into precise 
 Treat these as release failures:
 
 - a material phase is declared complete without a ledger status and evidence;
+- a material build starts visual analysis or scaffolding without a resolved reference-input path and user-selected or explicitly delegated architecture;
+- a supplied website is described as inspected without browser/web evidence, or its proprietary copy, brand assets, or unlicensed media are reproduced without permission;
 - a nontrivial primitive is absent from the Component Decision Register;
 - the final report omits component evaluation merely because no dependency was added;
 - the Motion Coverage Matrix is missing for a material build/redesign or requested motion work;
