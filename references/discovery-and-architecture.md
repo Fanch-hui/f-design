@@ -189,7 +189,7 @@ Cover questions in this order, skipping only what direct evidence or an explicit
 8. Which platforms, browsers, languages, accessibility level, and performance constraints matter?
 9. Which palette strategy fits: neutral-led with one accent, brand-color field, editorial monochrome, or another named approach? Ask about light/dark preference and hue families to favor or reject when unresolved.
 10. What should imagery feel like and do: product evidence, photography, illustration, texture/material, 3D, or deliberate restraint?
-11. What motion energy is appropriate: nearly static, functional state motion, one signature sequence, or reference-faithful expressive choreography?
+11. What calibration fits the product: low/medium/high expressive variance, focused/balanced/dense information, and nearly static/functional/signature/expressive motion? Let the user set each dial independently.
 
 In the first round, combine one purpose question with one or two direction questions when the repository already establishes the basics. For example:
 
@@ -212,7 +212,7 @@ In the first round, combine one purpose question with one or two direction quest
    C. Third option only when genuinely competitive — explain its distinct tradeoff.
    D. Custom / 自定义，或回复“你定”授权代理选择。
 4. Visual, color, imagery, and motion direction / 视觉方向？
-   A-C. Offer product-specific, structurally distinct choices with consequences.
+   A-C. Offer product-specific, structurally distinct choices with consequences and name each choice's expressive-variance, information-density, and motion-energy levels.
    D. Custom / 自定义：请填写，或组合以上方向。
 5. Additional requirements / 额外要求：还有哪些名称、文案、功能、内容、素材、必须保留、禁止出现或技术限制需要补充？没有可回答“无”，希望代为决定可回答“你定”。
 ```
@@ -245,6 +245,7 @@ For material work, produce this compact brief:
 **References:**
 **Anti-references:**
 **Custom directions and combinations:**
+**Visual calibration:** Expressive variance, information density, motion energy
 **Additional requirements:**
 **Must preserve / must avoid:**
 **Assumptions and unresolved risks:**

@@ -14,18 +14,19 @@ Apply these rules before any stylistic preference:
 1. **Reconcile existing project truth.** Read the nearest `AGENTS.md`, `DESIGN.md`, product requirements, design system, components, assets, routes, rendered UI, and conventions before proposing technology or visuals. Distinguish functional truth, documented intent, and accidental implementation drift instead of trusting any one source silently.
 2. **Ask before material analysis.** After a factual repository scan, ask a short guided round about unresolved product, optional reference source, experience/technical architecture, style, palette, imagery, and motion choices. The first material round must visibly let the user upload reference screenshots or recordings, provide a website URL or local page, proceed without any reference, or write a custom combination. Using a reference is entirely optional: accept `no reference` without persuasion or a follow-up demand. Present viable architecture choices with consequences and a recommendation, but let the user select, customize, or explicitly delegate the decision. Every choice question must include a visible free-form answer path, and the round must end with a separate open-ended question for additional requirements. Do not publish a Product Brief, analyze visual directions, generate references, choose a new architecture, or code until the user answers, already supplied equivalent detail, explicitly says there are no additional requirements, or delegates the choices.
 3. **User task wins over visual fashion.** Classify the product and identify the primary job before choosing a layout.
-4. **No page without purpose.** Define routes, states, first-viewport priority, and success criteria before generating references.
-5. **One content canon across viewports.** Desktop and mobile references are different compositions of the same approved copy, content IDs, asset identities, data, user state, navigation, and actions. Mobile may reorder, condense, or progressively disclose; it may not silently invent or replace the product.
-6. **No code before direction.** For material new builds or redesigns, confirm the Product Brief, Page and State Map, project design contract, and visual direction before implementation. If the user explicitly delegates decisions, record assumptions and proceed.
-7. **Reference images are contracts when direction changes.** For new builds and substantial redesigns, produce a named desktop and mobile reference for every planned page. For focused optimization, use the live page and before screenshots as the baseline unless a new direction is required.
-8. **Media belongs to the composition.** Preserve image identity, crop intent, focal point, layering, edge treatment, and reference transition behavior. Do not insert imagery as an unrelated rectangle after layout is finished.
-9. **Color is role-based communication.** Use semantic tokens, controlled salience, complete component states, and deliberate theme mappings. Treat `60-30-10` as a diagnostic heuristic, never a quota; never rely on hue alone for meaning; never create dark mode by inversion.
-10. **Open source is evidence-based.** Prefer mature, maintained GitHub projects, but adapt them to the current product. Never paste a library's demo styling into the project unchanged.
-11. **Cards must be earned.** Do not use dashboard-card composition as the default grammar. Never nest cards. Use spacing, dividers, lists, tables, bands, or direct layout when content does not need an independent container.
-12. **Mobile is a separate composition, not a separate product.** Re-prioritize, reorder, collapse, and reposition for phone use while preserving the content canon.
-13. **Function before motion does not mean motion is optional.** Stabilize content, states, responsiveness, accessibility, and interaction behavior first; then implement every approved or reference-derived motion cue, or document an accepted omission.
-14. **Browser evidence is required.** Builds, linters, and detectors support the review; screenshots, captured keyframes, and real interaction paths decide whether the UI is ready.
-15. **No silent phase completion.** Keep a Phase Accountability Ledger. Every applicable phase must end as `implemented`, `evaluated-local`, `not applicable`, `blocked`, or `accepted omission`, with its decision and verification evidence. A written rule is not a delivered feature until the rendered product proves it.
+4. **Distinctiveness comes from the subject.** Derive materials, imagery, language, structure, and one signature move from the product's real world. Do not manufacture identity from generic gradients, decorative effects, or fashionable component demos.
+5. **No page without purpose.** Define routes, states, first-viewport priority, and success criteria before generating references.
+6. **One content canon across viewports.** Desktop and mobile references are different compositions of the same approved copy, content IDs, asset identities, data, user state, navigation, and actions. Mobile may reorder, condense, or progressively disclose; it may not silently invent or replace the product.
+7. **No code before direction.** For material new builds or redesigns, confirm the Product Brief, Page and State Map, project design contract, and visual direction before implementation. If the user explicitly delegates decisions, record assumptions and proceed.
+8. **Reference images are contracts when direction changes.** For new builds and substantial redesigns, produce a named desktop and mobile reference for every planned page. For focused optimization, use the live page and before screenshots as the baseline unless a new direction is required.
+9. **Media belongs to the composition.** Preserve image identity, crop intent, focal point, layering, edge treatment, and reference transition behavior. Do not insert imagery as an unrelated rectangle after layout is finished.
+10. **Color is role-based communication.** Use semantic tokens, controlled salience, complete component states, and deliberate theme mappings. Treat `60-30-10` as a diagnostic heuristic, never a quota; never rely on hue alone for meaning; never create dark mode by inversion.
+11. **Open source is evidence-based.** Prefer mature, maintained GitHub projects, but adapt them to the current product. Never paste a library's demo styling into the project unchanged.
+12. **Cards must be earned.** Do not use dashboard-card composition as the default grammar. Never nest cards. Use spacing, dividers, lists, tables, bands, or direct layout when content does not need an independent container.
+13. **Mobile is a separate composition, not a separate product.** Re-prioritize, reorder, collapse, and reposition for phone use while preserving the content canon.
+14. **Function before motion does not mean motion is optional.** Stabilize content, states, responsiveness, accessibility, and interaction behavior first; then implement every approved or reference-derived motion cue, or document an accepted omission.
+15. **Browser evidence is required.** Builds, linters, and detectors support the review; screenshots, captured keyframes, and real interaction paths decide whether the UI is ready.
+16. **No silent phase completion.** Keep a Phase Accountability Ledger. Every applicable phase must end as `implemented`, `evaluated-local`, `not applicable`, `blocked`, or `accepted omission`, with its decision and verification evidence. A written rule is not a delivered feature until the rendered product proves it.
 
 ## Choose The Work Path
 
@@ -80,7 +81,7 @@ Resolve at least:
 - fidelity, breadth, timing, references, and anti-references;
 - success measures for effectiveness, efficiency, errors/recovery, and user confidence, rather than click-through alone;
 - preferred visual lane and rejected visual lane;
-- palette strategy or hue families, light/dark preference, imagery/material treatment, and motion energy.
+- palette strategy or hue families, light/dark preference, imagery/material treatment, and the three calibration dials: expressive variance, information density, and motion energy;
 - user-authored custom directions, extra functionality or content, naming/copy, must-preserve details, prohibited elements, technical constraints, and any other requirements not covered by the suggested options.
 
 Offer concrete choices grounded in the product instead of asking only "what style do you like?" Explain each option in one sentence, include a visible free-form option for each question, and allow the user to combine traits or ignore the suggestions and write their own direction. A reference choice must accept attachments and URLs, not only named style options. An architecture choice must distinguish experience topology from implementation stack when both are unresolved. The final additional-requirements question must remain open-ended rather than another fixed choice list. Produce a compact **Product Brief**, **Reference Intake Record**, and **Architecture Decision Record** only after this gate. For a material build, present them for confirmation before visual exploration. If the user asks for autonomous execution, state the assumptions instead of blocking.
@@ -105,7 +106,9 @@ The result is the **Page and State Map**. Do not generate references or code unt
 First define one visual system for the entire product:
 
 - audience and emotional register;
+- a subject-world inventory of real materials, instruments, artifacts, environments, language, and interaction metaphors that can ground the identity;
 - named references and named anti-references;
+- approved levels for expressive variance, information density, and motion energy;
 - palette roles, visual-weight budget, and contrast strategy;
 - semantic feedback roles, component state colors, light/dark mappings, and data-color policy;
 - typography roles and loading strategy;
@@ -115,6 +118,8 @@ First define one visual system for the entire product:
 
 Existing identity wins unless the user explicitly requests departure. Brand surfaces may be expressive; task-focused product surfaces should feel quiet, familiar, and efficient. Hybrid products may use both registers, but shared tokens and identity must connect them.
 
+Choose one justified signature element or sequence and make the rest of the system support it. For a material system, identify the canonical design/token source, page or surface overrides, component contracts, and compatibility policy before implementation. Do not overwrite an existing master system to rationalize one generated page. Read [design-system-governance.md](references/design-system-governance.md).
+
 Define a **Color Role Table**, **Theme Matrix**, and **Component State Matrix** before generating references. Use `60-30-10` only to diagnose visual balance; reserve salience for real hierarchy; keep brand, action, focus, and status meanings distinct. Read [color-system-and-states.md](references/color-system-and-states.md).
 
 For a material new build, redesign, or multi-page system, synthesize a project-specific `DESIGN.md` from the Product Brief, existing project identity, user-provided references, and [design-reference-synthesis.md](references/design-reference-synthesis.md). Existing project design documentation remains authoritative.
@@ -123,7 +128,7 @@ Before generating any reference, freeze a **Page Content Canon** for every page:
 
 Use native image generation when available:
 
-1. Generate two or three structurally different direction probes when the direction is ambiguous.
+1. Generate two or three structurally different direction probes when the direction is ambiguous. Use the same real product content and assets in every probe; do not place internal labels such as `Option A`, style metadata, or prompt notes inside the proposed interface.
 2. Confirm one direction or proceed under explicit delegation.
 3. Lock the project design contract before generating the full set.
 4. Generate a named high-fidelity desktop reference for **every page**, then derive its mobile prompt from the locked page canon and desktop asset manifest. The mobile result is an intentional recomposition, not an independent invention.
@@ -167,7 +172,9 @@ Implement in deliberate passes:
 
 Preserve the approved reference's major ingredients: silhouette, hierarchy, density, imagery, crops, layering, motifs, navigation, CTA treatment, and motion cues. Translate it into semantic, maintainable code rather than tracing pixels blindly. Use real assets and real copy at presentation time. Do not ship dead controls, fake metrics, guessed image URLs, placeholder rectangles, or a second design language.
 
-Read [implementation.md](references/implementation.md) for the implementation contract and card decision test. Read [media-and-image-transitions.md](references/media-and-image-transitions.md) whenever images or reference transitions matter.
+Keep components focused and composable. Separate data/state orchestration from presentation when their responsibilities diverge, and place state at the narrowest durable owner: local, lifted, shared context, URL, server, then global only when the previous levels cannot own it correctly. For generated or reference-led iteration, choose explicitly between targeted edit, variant exploration, and full regeneration; prefer targeted edits when the structure is sound.
+
+Read [implementation.md](references/implementation.md) for the implementation contract and card decision test. Read [design-system-governance.md](references/design-system-governance.md) when shared tokens or components change. Read [media-and-image-transitions.md](references/media-and-image-transitions.md) whenever images or reference transitions matter.
 
 ## Phase 7: Audit Before Motion
 
@@ -196,6 +203,7 @@ A button press plus one toast fade is not complete motion delivery for an approv
 
 - Product motion is fast and state-led. Frequent and keyboard-driven actions get no choreography.
 - Brand motion may carry voice, but use one signature sequence instead of repeated fade-and-rise sections.
+- For narrative public pages, borrow presentation-style choreography only as page beats: orchestrate reading order, media reveals, and section continuity around the page's real content. Preserve normal web reflow, scrolling, semantics, responsive composition, and user control; do not impose a fixed-ratio stage, forced slide navigation, or full-screen sections by default.
 - Prefer CSS or the project's existing capable motion library for simple transitions. Use GSAP timelines for coordinated multi-step or image choreography, ScrollTrigger for genuine scroll-linked/pinned/scrubbed sequences, and Flip for shared layout transitions when the project lacks an equivalent. Do not add GSAP merely for a hover fade.
 - Use transform and opacity as defaults. Bound paint-heavy effects, avoid casual layout animation, and never use `transition: all`.
 - Make gesture motion interruptible and velocity-aware.

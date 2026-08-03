@@ -46,6 +46,8 @@ When visual direction is not already fixed:
 4. Explain the tradeoff of each direction in product terms.
 5. Ask the user to choose, combine specific traits, or delegate the decision.
 
+Use the approved expressive-variance, information-density, and motion-energy dials to keep the probes meaningfully distinct. Put probe names, tradeoffs, and design commentary outside the generated interface. Do not render `Option A`, style labels, prompt text, or internal design metadata inside the proposed product UI.
+
 Use one direction approval gate. After approval or delegation, lock the project design contract and produce the full page set. Do not repeatedly pause after every page unless a page reveals a real contradiction.
 
 Skip probes when the user supplied an exact visual target or the repository has an established system. Still produce page references that apply that direction to the requested scope.

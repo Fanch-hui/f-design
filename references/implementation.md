@@ -73,6 +73,27 @@ Keep dimensions stable across states. A spinner, error label, icon, or count mus
 
 State changes must use a consistent combination of foreground, surface, border, outline, icon, text, elevation, or motion. Hue may reinforce meaning but may not be the only indication of availability, focus, selection, validation, success, warning, error, or destructive intent. Hover applies only to hover-capable input; focus-visible remains independently obvious.
 
+### Component Responsibility And State Ownership
+
+- Prefer small composable parts over one component controlled by many unrelated flags.
+- Keep one-off page composition local; share behavior or structure only when the same intent repeats or a critical accessibility contract needs one owner.
+- Separate data fetching, mutation, permissions, navigation, and workflow orchestration from presentation when combining them obscures responsibility or makes states hard to test.
+- Place state at the narrowest durable owner: component-local, lifted to the nearest shared parent, shared context, URL, server cache/state, then global store only when the earlier levels cannot represent the ownership correctly.
+- Follow repository conventions for colocating implementation, styles, hooks, types, tests, and stories/examples.
+- Use optimistic updates only for low-risk reversible changes, provide rollback and error recovery, and keep the authoritative server result visible.
+
+When a shared component or token changes, follow `design-system-governance.md` and verify representative consumers. Do not treat a page-specific generated style as a new global default.
+
+## Generated And Reference-Led Iteration
+
+Choose the smallest iteration mode that solves the verified problem:
+
+- **targeted edit:** change named regions, assets, states, tokens, copy, or behavior while locking the approved architecture and identity;
+- **variant exploration:** compare explicit axes such as layout, palette, imagery, typography, content density, or motion while locking everything else;
+- **full regeneration:** use only when the governing hierarchy, architecture, or visual thesis is wrong.
+
+For every mode, restate the page purpose, platform, content canon, structure, locked system decisions, and exact allowed changes. Prefer targeted edits after the core direction is approved. Surface useful generation or inspection findings to the user; do not silently broaden the redesign.
+
 ## Pass 4: Real Content And Data
 
 - Use actual product copy or credible domain-specific content.

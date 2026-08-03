@@ -80,6 +80,35 @@ Power users should never wait for choreography.
 - Motion may use masks, media, type, depth, or 3D when the subject earns it.
 - Keep navigation, CTA, and content accessible before and during the sequence.
 
+## Narrative Choreography For Web Pages
+
+Presentation-style choreography can improve ordinary webpages when it is translated into web-native behavior rather than copied as a slide deck.
+
+Create a short beat map for each expressive page:
+
+| Beat | Content purpose | Visual focus | Entrance/transition | User control | Mobile/reduced result |
+|---|---|---|---|---|---|
+
+Transfer these principles:
+
+- orchestrate one high-impact entrance or section sequence around the intended reading order;
+- reveal text, media, and supporting evidence as coordinated beats instead of unrelated fades;
+- use stagger only when it clarifies sequence or grouping, and cap it so visible content does not wait;
+- match motion character to product tone: cinematic can use slower scale, mask, depth, or parallax; playful can use a restrained spring; professional should remain subtle and fast; calm should move gently; editorial pages can coordinate type and imagery;
+- alternate high- and low-density moments so users can scan, read, and recover attention;
+- restructure, split, or progressively disclose overflowing content instead of shrinking type or allowing overlap;
+- preserve a meaningful static first frame and final composition so content is never trapped behind a failed trigger.
+
+Do not transfer these presentation constraints into ordinary webpages:
+
+- a fixed `16:9` stage or page-wide no-reflow layout;
+- forced slide navigation, scroll hijacking, or mandatory snapping;
+- making every section exactly one viewport tall;
+- disabling normal document semantics, deep links, browser history, text selection, or accessibility navigation;
+- desktop choreography reused unchanged on phone.
+
+Normal responsive reflow, content-driven height, semantic reading order, user-controlled scrolling, and mobile task priority remain authoritative. On small screens, simplify or remove decorative movement before reducing legibility or interaction space.
+
 ## Timing Budget
 
 Use duration as a function of distance and consequence:

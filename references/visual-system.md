@@ -58,6 +58,34 @@ Lock these decisions before generating the full reference set. For material or m
 
 If a repository already has `DESIGN.md`, tokens, or a documented system, treat them as the starting contract. Change them only when the user approved a redesign. For a new direction, use `design-reference-synthesis.md` to extract concrete qualities from selected references without cloning a brand.
 
+## Subject-World Identity
+
+Before choosing a visual style, inventory the product's real world:
+
+- materials, tools, instruments, places, processes, and artifacts;
+- domain vocabulary, verbs, measurements, notation, and recurring shapes;
+- actual media, product states, documents, or evidence users recognize;
+- emotional conditions in which the interface is used;
+- familiar interaction metaphors that preserve usability.
+
+Use this inventory to choose imagery, texture, type roles, structural devices, copy, and one signature visual or motion move. The hero on a brand surface should act as the page's thesis and foreground the most characteristic subject signal, not default to a generic dashboard preview or abstract gradient. A product surface may express identity more quietly through language, density, data treatment, and interaction detail.
+
+Numbering, timelines, rulers, chapter markers, or technical annotations must encode real order, progress, scale, or meaning. Do not add structural decoration that looks informative but carries no information.
+
+Spend boldness in one place. After choosing the signature, remove effects that compete with it. Minimal directions still require precise spacing, typography, states, assets, and motion; visual quiet is not permission for generic output.
+
+## Design Calibration Dials
+
+Record three independent levels before generating a material direction:
+
+| Dial | Low | Medium | High |
+|---|---|---|---|
+| Expressive variance | familiar and restrained | one distinctive compositional move | strongly art-directed but still usable |
+| Information density | focused and progressive | balanced scanning and detail | evidence-rich or expert-dense |
+| Motion energy | immediate state feedback | selective continuity and one signature cue | narrative sequencing justified by the brief |
+
+The user may select, customize, mix, or delegate these levels. Do not infer that a bold palette requires high motion, that a product interface must be dense, or that a minimal direction should be static. Persist the approved combination in the project design contract.
+
 ## Hierarchy Before Decoration
 
 Establish hierarchy through:

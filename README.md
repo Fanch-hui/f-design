@@ -13,6 +13,8 @@ F-design 不是 Codex 专属扩展。它采用开放的 [Agent Skills](https://a
 - 根据参考图还原页面结构、图片关系、响应式构图和动效
 - 优化已经写好的网页，而不只是重新生成一套代码
 - 建立页面与状态清单、视觉系统、色彩角色和组件状态
+- 从产品真实材料、语言和场景中建立视觉身份，并用“表现力、信息密度、动效能量”三项刻度控制方向
+- 管理设计 Token、组件契约、页面级覆盖、版本迁移和设计到代码交接
 - 为桌面端和移动端分别审查构图，同时保持内容与功能一致
 - 评估成熟的 GitHub 开源组件，并适配当前项目风格
 - 补齐图片过渡、交互动效、降级策略和性能检查
@@ -25,6 +27,8 @@ F-design 不是 Codex 专属扩展。它采用开放的 [Agent Skills](https://a
 - **移动端不是缩小版：** 移动端需要重新排序、收纳和定位内容，并单独检查首屏、触控、键盘和安全区域。
 - **图片属于构图：** 图片的主体、裁切、焦点、边缘、层级和过渡需要与页面结构一起设计。
 - **动效必须交付：** 动效需要有明确目的、触发条件、终止状态、性能策略和 `prefers-reduced-motion` 结果。
+- **叙事动效保持 Web 原生：** 普通网页可以采用分镜、节奏、错峰和媒体转场，但不能因此套用固定 16:9 舞台、强制翻页或滚动劫持。
+- **设计系统有主次：** 保留一个主设计系统，页面级差异用明确覆盖表达，不让单张生成图反向改写全局规则。
 - **组件选择有证据：** 优先复用项目现有组件；需要外部组件时检查维护状态、许可证、无障碍、兼容性和主题适配能力。
 - **卡片必须有理由：** 不把仪表盘卡片布局当作默认答案，不嵌套卡片，优先使用直接布局、列表、分隔线和内容区带。
 - **浏览器结果才算完成：** 构建和静态检查不能替代真实页面、关键交互与多视口截图验证。
@@ -153,11 +157,11 @@ $f-design 根据这组参考图实现桌面端和移动端页面
 3. 提供产品/页面架构与技术架构选项、推荐理由和后果，由用户选择、自定义或明确授权代理决定。
 4. 补齐未明确的产品、风格、色彩、图片、动效和额外需求。
 5. 建立产品简报、页面与状态清单，以及桌面/移动端共享的内容基线。
-6. 确定视觉系统、色彩角色、组件状态、图片语言和响应式规则。
+6. 确定主题来源、表现力/密度/动效刻度、视觉系统、色彩角色、组件状态、图片语言和响应式规则。
 7. 评估项目现有组件与必要的成熟开源组件。
 8. 分阶段实现结构、系统、组件、媒体、响应式和无障碍。
 9. 在真实浏览器中审查功能、布局和多视口结果。
-10. 实现并验证交互动效、参考图过渡和 reduced-motion 降级。
+10. 实现并验证交互动效、参考图过渡、网页叙事分镜和 reduced-motion 降级。
 11. 完成构建、测试、截图对比和交付说明。
 
 F-design 对每个阶段保留执行状态，避免把“写进规范”误当成“已经实现”。
@@ -182,6 +186,7 @@ f-design/
 └── references/
     ├── discovery-and-architecture.md
     ├── design-reference-synthesis.md
+    ├── design-system-governance.md
     ├── visual-system.md
     ├── color-system-and-states.md
     ├── responsive-mobile.md
@@ -220,4 +225,4 @@ F-design 使用 [Apache License 2.0](LICENSE) 发布。
 
 ## English
 
-F-design is a self-contained frontend product design and delivery skill built on the open Agent Skills structure. It is not limited to Codex: any compatible host that can discover a `SKILL.md` folder and load its referenced files can use it. The workflow covers discovery, UI/UX, responsive composition, component research, imagery, motion, accessibility, existing-interface optimization, and browser QA.
+F-design is a self-contained frontend product design and delivery skill built on the open Agent Skills structure. It is not limited to Codex: any compatible host that can discover a `SKILL.md` folder and load its referenced files can use it. The workflow covers discovery, subject-derived creative direction, UI/UX, responsive composition, design-system governance, component research, imagery, web-native narrative motion, accessibility, existing-interface optimization, and browser QA.

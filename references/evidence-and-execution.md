@@ -44,10 +44,13 @@ At minimum consider:
 - Architecture Decision Record covering experience and technical options, recommendation, consequences, and the user's selection, custom answer, or explicit delegation;
 - Product Brief, Page and State Map, and success measures;
 - project design contract, Color Role Table, Theme Matrix, and state coverage;
+- Visual Calibration Record for expressive variance, information density, and motion energy, plus the subject-world inventory and selected signature;
+- Design System Governance Record naming the master source, allowed surface overrides, component contracts, and compatibility/migration impact;
 - Page Content Canon and desktop/mobile parity;
 - Component Decision Register;
 - media contract when prominent imagery exists;
 - Motion Coverage Matrix and, when cues exist, Motion Fidelity Manifest;
+- Iteration Decision naming targeted edit, variant exploration, or full regeneration and the locked/changeable axes;
 - responsive, accessibility, browser, state, performance, and build verification.
 
 A phase is not complete because a file was edited. Its row needs observable product or test evidence. Update the ledger when implementation reveals a new component, state, breakpoint, asset, or motion requirement.

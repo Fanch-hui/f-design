@@ -41,6 +41,28 @@ Good borrow statements are specific:
 
 Reject vague statements such as "make it like Apple" or "use Linear style." Reject source rules that violate the current project's constraints, including inaccessible contrast, unsuitable tracking, excessive radius, card walls, motion that delays work, or a mobile layout that only stacks desktop.
 
+## Direction Probe Protocol
+
+When the user has not chosen a clear visual direction, show two or three compact, structurally different probes before producing the full reference set. This is progressive disclosure: make the direction visible first, then expand only the selected system.
+
+Each probe must:
+
+- use the same approved product name, copy, content IDs, state, and representative assets;
+- vary meaningful composition, typography, density, image treatment, and motion intent rather than recoloring one template;
+- state outside the image which subject-derived quality, tradeoff, and calibration-dial combination it represents;
+- include a restrained fit, a bolder fit, and an evidence-backed wildcard only when all three are plausible;
+- remain a real interface proposal, without internal labels such as `Option A`, prompt text, style names, or design commentary rendered inside it.
+
+Ask the user to select, combine, reject, or write a custom direction. If direction is explicitly delegated, record the chosen probe and rationale. Do not generate a full desktop/mobile page set from several unresolved visual systems.
+
+When revising a generated design, classify the next move:
+
+- **targeted edit:** structure and identity are sound; change named regions, states, assets, or tokens;
+- **variant exploration:** the product contract is sound but one or more axes need comparison, such as layout, palette, imagery, type, content density, or motion;
+- **full regeneration:** the hierarchy, architecture, or governing visual idea is fundamentally wrong.
+
+Prefer targeted edits over regeneration so approved content, assets, and system decisions do not drift. Every variant must state which axes may change and which remain locked.
+
 ## Synthesize The Project DESIGN.md
 
 Write or update a project-specific `DESIGN.md` when the work introduces a new system or materially changes several surfaces. If one already exists, revise the smallest relevant sections instead of replacing it.
@@ -75,6 +97,8 @@ The contract must contain implementable decisions rather than adjectives:
 - motion purpose, energy, timing family, reduced-motion result, and library policy;
 - desktop, tablet, and mobile transformation rules;
 - known departures from existing identity and who approved them.
+
+Also identify the master design-system source, permitted page/surface overrides, token-to-component mappings, and the compatibility policy for shared changes. Use `design-system-governance.md` for the maintained contract.
 
 Mark uncertain reconstructed rules as `verified`, `inferred`, or `proposed`. Keep exact volatile values canonical in code token files; in `DESIGN.md`, document semantic roles, invariants, ownership paths, rationale, and durable exceptions rather than duplicating every number.
 

@@ -20,6 +20,8 @@ Inspect the Phase Accountability Ledger before evaluating visual quality:
 - the Component Decision Register covers every nontrivial primitive, including explicit existing/local decisions when no dependency was added;
 - the Motion Coverage Matrix audits direct controls, state/overlays, async feedback, navigation/layout, media, and brand/narrative motion;
 - every approved/reference-derived cue has a Motion Fidelity Manifest item;
+- the Visual Calibration Record and subject-world inventory explain the chosen level of distinctiveness, density, motion, and signature;
+- shared token/component changes identify their canonical source, overrides, affected consumers, and compatibility or migration impact;
 - every claimed implementation or verification links to code, rendered evidence, or an actual test result;
 - accepted omissions state approval, risk, and revisit condition.
 
@@ -166,6 +168,10 @@ Automated scans do not verify comprehension, focus logic, or correct announcemen
 - Controls retain stable dimensions across states.
 - No card-within-card, decorative blob/orb, fake screenshot, or generic filler remains.
 - Brand and product surfaces use the right register.
+- The visual identity is traceable to the product's real subject, content, materials, language, or workflows rather than a generic template.
+- One justified signature element or sequence is legible; decorative effects do not compete with it.
+- Structural devices such as numbering, timelines, rulers, or annotations carry real information.
+- Direction probes use the same real content and do not render option labels, prompt notes, or style metadata inside the proposed interface.
 
 ## Gate 8A: Color System And Themes
 
@@ -183,6 +189,16 @@ Automated scans do not verify comprehension, focus logic, or correct announcemen
 - Automated contrast output is confirmed manually in the real state; screenshots show no color noise, accidental competition, or unreadable muted text.
 
 Treat hidden focus, indistinguishable states, inaccessible status, wrong-theme flash, or low-contrast essential content as P1 by default.
+
+## Gate 8B: Design System Governance
+
+- The canonical source for primitive tokens, semantic tokens, component mappings, shared components, and usage documentation is identified.
+- Master-system rules and page/surface overrides are separate; one generated page does not silently redefine the master.
+- Shared components have documented purpose, anatomy, variants, full states, responsive behavior, accessibility behavior, token mapping, and test expectations.
+- Components remain focused and composable; data/workflow orchestration is separated from presentation when responsibilities diverge.
+- State lives at the narrowest durable owner and is not promoted to shared/global storage without a cross-surface need.
+- Shared changes include affected-consumer browser evidence. Breaking changes include migration and deprecation handling.
+- Generated references, implementation, and maintained documentation agree on the same master system plus approved overrides.
 
 ## Gate 9: Performance And Resilience
 
@@ -273,6 +289,8 @@ After Phase 8, repeat responsive, accessibility, interaction, performance, and s
 - ScrollTrigger markers, GSDevTools, debug controls, and accidental duplicate runtimes are absent from production;
 - animation/plugin bundle cost and low-end device behavior are acceptable;
 - reduced motion produces a complete static composition rather than a broken or half-initialized sequence.
+- narrative webpages use a purposeful beat map when expressive motion is approved, while preserving normal reflow, semantic reading order, user-controlled scrolling, deep links, and mobile composition;
+- no fixed-ratio presentation stage, forced slide navigation, scroll hijacking, or full-screen-section requirement was transferred without an explicit product reason.
 
 ## Delivery Evidence
 
@@ -313,6 +331,8 @@ The final report should state:
 
 ## Design contract
 - DESIGN.md status: updated / verified current / not needed
+- Master design-system source and approved surface overrides:
+- Shared token/component compatibility or migration impact:
 - Evidence and reason:
 
 ## Remaining risks
