@@ -22,7 +22,9 @@ F-design 不是 Codex 专属扩展。它采用开放的 [Agent Skills](https://a
 
 ## 核心原则
 
-- **先问再分析：** 重要设计任务先进行简短的引导式提问；是否使用参考完全由用户决定，可以上传参考图、提供想模仿的网站 URL、使用当前页面，也可以直接选择“不使用参考”。同时，用户可以自行选择或授权代理决定产品/页面架构与技术架构。每个方向题都允许自由填写，最后还会单独询问额外要求。
+- **先选择交付模式：** 重要设计任务开始时由用户选择“设计后生图再复刻”“设计后直接实现”或“只给关键页面生图的混合模式”，也可以自定义或授权代理决定。
+- **先问再分析：** 是否使用外部参考与是否生成新的页面参考图是两个独立选择。用户可以上传参考图、提供网站 URL、使用当前页面或选择“不使用参考”；每个方向题都允许自由填写，最后还会单独询问额外要求。
+- **先设计再生图：** 产品范围、页面状态、视觉系统、桌面/移动构图、内容基线、媒体与动效意图确认后，才允许按所选模式生成页面参考图。生成图用于呈现已完成的设计，不负责替代设计。
 - **不依赖其他设计 Skill：** F-design 的设计、组件、响应式、色彩、图片、动效和质量规范均已包含在本仓库中。
 - **移动端不是缩小版：** 移动端需要重新排序、收纳和定位内容，并单独检查首屏、触控、键盘和安全区域。
 - **图片属于构图：** 图片的主体、裁切、焦点、边缘、层级和过渡需要与页面结构一起设计。
@@ -148,23 +150,40 @@ Codex 中也可以使用：
 $f-design 根据这组参考图实现桌面端和移动端页面
 ```
 
-对于较完整的新建或改版任务，F-design 通常会先询问产品目标、视觉方向、配色、图片、动效和额外要求，再开始实质分析与实现。用户也可以明确回复“你决定”，让代理记录假设后继续执行。
+对于较完整的新建或改版任务，F-design 会先询问设计交付模式，再询问产品目标、可选外部参考、架构、视觉方向、配色、图片、动效和额外要求。选择“直接实现”后不会生成新的页面参考图，也不会在后续要求逐图对照；用户也可以明确回复“你决定”，让代理记录假设后继续执行。
 
 ## 工作流程
 
 1. 读取项目事实、现有规范、组件、资源和运行方式。
-2. 让用户自行决定是否使用参考；可选上传文件、网站 URL、当前页面或“不使用参考”，选择不使用时不继续索要参考。
-3. 提供产品/页面架构与技术架构选项、推荐理由和后果，由用户选择、自定义或明确授权代理决定。
-4. 补齐未明确的产品、风格、色彩、图片、动效和额外需求。
-5. 建立产品简报、页面与状态清单，以及桌面/移动端共享的内容基线。
-6. 确定主题来源、表现力/密度/动效刻度、视觉系统、色彩角色、组件状态、图片语言和响应式规则。
-7. 评估项目现有组件与必要的成熟开源组件。
-8. 分阶段实现结构、系统、组件、媒体、响应式和无障碍。
-9. 在真实浏览器中审查功能、布局和多视口结果。
-10. 实现并验证交互动效、参考图过渡、网页叙事分镜和 reduced-motion 降级。
-11. 完成构建、测试、截图对比和交付说明。
+2. 让用户选择设计交付模式：生图后复刻、直接实现、混合、自定义或授权代理决定。
+3. 让用户自行决定是否使用外部参考；可选上传文件、网站 URL、当前页面或“不使用参考”。
+4. 提供产品/页面架构与技术架构选项、推荐理由和后果，由用户选择、自定义或明确授权代理决定。
+5. 补齐未明确的产品、风格、色彩、图片、动效和额外需求。
+6. 建立产品简报、页面与状态清单，以及桌面/移动端共享的内容基线。
+7. 完成设计包：主题来源、表现力/密度/动效刻度、视觉系统、色彩角色、组件状态、媒体、动效和响应式规则。
+8. 仅在生图或混合模式中，为选定页面生成桌面/移动参考图并确认；直接实现模式跳过此步。
+9. 评估项目现有组件与必要的成熟开源组件。
+10. 分阶段实现结构、系统、组件、媒体、响应式和无障碍。
+11. 在真实浏览器中审查功能、布局和多视口结果；只有生图页面才进行生成参考图对照。
+12. 实现并验证交互动效、网页叙事分镜和 reduced-motion 降级。
+13. 完成构建、测试、浏览器截图和交付说明。
 
 F-design 对每个阶段保留执行状态，避免把“写进规范”误当成“已经实现”。
+
+### 可选择和可跳过的步骤
+
+| 步骤 | 是否可跳过 | 规则 |
+|---|---|---|
+| 选择设计交付模式 | 重大设计任务不可跳过 | 用户选择、自定义或明确授权代理决定 |
+| 外部参考输入 | 可跳过 | 可以选择“不使用参考” |
+| 架构选择 | 条件执行 | 现有项目通常保持原架构；新项目或重大迁移时需要选择 |
+| 多方向设计方案 | 条件执行 | 方向已明确、已有设计系统或用户已指定时跳过 |
+| 生成页面参考图 | 可跳过 | 直接实现模式全部跳过；混合模式只生成指定页面/状态 |
+| 参考图清单与桌面/移动成对检查 | 可跳过 | 只对生成参考图的页面执行 |
+| 生成参考图与代码逐图对照 | 可跳过 | 直接实现页面不执行；用户明确要求还原外部目标时除外 |
+| 外部开源组件搜索 | 条件执行 | 现有组件或本地语义实现足够时跳过 |
+| 特殊媒体与复杂动效 | 条件执行 | 由产品、设计与参考证据决定，但基础交互反馈和 reduced motion 仍需检查 |
+| 浏览器、响应式和无障碍验收 | 不可跳过 | 所有模式都必须执行 |
 
 ## 优化已有网页
 
@@ -225,4 +244,4 @@ F-design 使用 [Apache License 2.0](LICENSE) 发布。
 
 ## English
 
-F-design is a self-contained frontend product design and delivery skill built on the open Agent Skills structure. It is not limited to Codex: any compatible host that can discover a `SKILL.md` folder and load its referenced files can use it. The workflow covers discovery, subject-derived creative direction, UI/UX, responsive composition, design-system governance, component research, imagery, web-native narrative motion, accessibility, existing-interface optimization, and browser QA.
+F-design is a self-contained frontend product design and delivery skill built on the open Agent Skills structure. It is not limited to Codex: any compatible host that can discover a `SKILL.md` folder and load its referenced files can use it. Users choose design-then-generate-reference, design-then-build-directly, or a page-scoped hybrid. Every mode completes the design before optional image generation and retains responsive, accessibility, and browser QA.

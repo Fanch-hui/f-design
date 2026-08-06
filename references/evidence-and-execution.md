@@ -40,13 +40,15 @@ Maintain this ledger for material builds, redesigns, and broad optimizations. A 
 At minimum consider:
 
 - discovery response record with free-form choices and a separate additional-requirements answer;
+- Design Delivery Mode Record naming generated-reference, direct, hybrid, custom, or delegated mode; page/state boundaries; required artifacts; and explicit skips;
 - Reference Intake Record covering upload, URL, local/current page, named inspiration, no-reference, custom, or delegated input, including inspection limits and asset rights;
 - Architecture Decision Record covering experience and technical options, recommendation, consequences, and the user's selection, custom answer, or explicit delegation;
 - Product Brief, Page and State Map, and success measures;
 - project design contract, Color Role Table, Theme Matrix, and state coverage;
 - Visual Calibration Record for expressive variance, information density, and motion energy, plus the subject-world inventory and selected signature;
 - Design System Governance Record naming the master source, allowed surface overrides, component contracts, and compatibility/migration impact;
-- Page Content Canon and desktop/mobile parity;
+- Page Content Canon and desktop/mobile design parity in all modes;
+- generated Reference Manifest, generated desktop/mobile pair audit, and reference-to-code comparison only for pages selected under generated-reference or hybrid mode;
 - Component Decision Register;
 - media contract when prominent imagery exists;
 - Motion Coverage Matrix and, when cues exist, Motion Fidelity Manifest;
@@ -113,7 +115,9 @@ Do not invent user-test results or turn a small qualitative sample into precise 
 Treat these as release failures:
 
 - a material phase is declared complete without a ledger status and evidence;
-- a material build starts visual analysis or scaffolding without a resolved reference-input path and user-selected or explicitly delegated architecture;
+- a material build starts visual analysis or scaffolding without a resolved delivery mode, reference-input path, and user-selected or explicitly delegated architecture;
+- generated page images are created before the Design Package is complete, or are created for direct-mode pages without the user changing the mode;
+- direct-mode pages are failed for missing generated references, manifests, parity audits, or generated-reference comparison;
 - a supplied website is described as inspected without browser/web evidence, or its proprietary copy, brand assets, or unlicensed media are reproduced without permission;
 - a nontrivial primitive is absent from the Component Decision Register;
 - the final report omits component evaluation merely because no dependency was added;

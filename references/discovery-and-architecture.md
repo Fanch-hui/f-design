@@ -81,7 +81,7 @@ If the primary job is to complete one workflow, open that workflow. If it is to 
 
 ## Discovery Gate
 
-Run the repository-first scan, summarize only directly evidenced facts and unresolved choices, then stop. For a material new build, redesign, multi-page addition, or ambiguous image-led request, ask up to four guided direction questions plus one separate open-ended additional-requirements question and wait for the answer before producing a Product Brief, comparing visual directions, generating references, choosing a new architecture, or implementing UI. The first round must include reference intake and architecture selection when either remains unresolved.
+Run the repository-first scan, summarize only directly evidenced facts and unresolved choices, then stop. For a material new build, redesign, multi-page addition, or ambiguous image-led request, ask up to four guided direction questions plus one separate open-ended additional-requirements question and wait for the answer before producing a Product Brief, comparing visual directions, generating references, choosing a new architecture, or implementing UI. The first round must include delivery-mode selection, plus reference intake and architecture selection when either remains unresolved.
 
 The gate is already satisfied only when:
 
@@ -91,6 +91,33 @@ The gate is already satisfied only when:
 - the task is a focused repair whose visual and behavioral contract is already clear.
 
 Do not interpret silence as approval. If the user delegates, record the selected defaults and the evidence behind them.
+
+## Design Delivery Mode Choice
+
+Reference input answers what evidence may inform the design. Delivery mode separately answers whether F-design should generate new page images after the design is complete. Do not combine these decisions.
+
+For material design work, offer:
+
+1. **Design -> Generate References -> Implement:** approve the product, page, visual, responsive, media, and motion design first; then generate selected desktop/mobile page references and implement against them. This adds an image approval and fidelity loop.
+2. **Design -> Direct Implementation:** approve the same design decisions, then implement without generating page references. This is faster and avoids image-model drift; browser screenshots remain required for QA.
+3. **Hybrid:** generate references only for user-named key pages, states, or high-risk compositions, then implement the rest directly.
+4. **Custom / 自定义:** let the user describe another boundary or combine the modes.
+5. **你定 / Delegate:** choose based on ambiguity, visual risk, number of pages, available image tools, time, and desired fidelity, then record the rationale.
+
+Do not label direct implementation as lower quality. Do not recommend image generation merely because a tool is available. A focused repair with an established design contract may proceed directly unless the user asks for a new visual target.
+
+Create a **Design Delivery Mode Record**:
+
+```text
+Mode selected: generated-reference / direct / hybrid / custom / delegated
+Pages and states using generated references:
+Pages and states implemented directly:
+Design Package approval point:
+Generated artifacts required:
+Artifacts explicitly skipped:
+Fidelity target for user-supplied references, if any:
+User selection or delegation:
+```
 
 ## Optional Reference Input Choice
 
@@ -158,7 +185,7 @@ Rejected alternatives:
 
 ## Guided Question Cadence
 
-Ask up to four direction questions and one additional-requirements question in the discovery round. Reserve visible questions for reference input and architecture whenever they are unresolved; combine already-known purpose, visual, palette, imagery, and motion details efficiently. Ask a second round only if the answers reveal a new material branch. Keep suggested options short, mutually distinct, and grounded in the product rather than fashion labels.
+Ask up to four direction questions and one additional-requirements question in the discovery round. Reserve one visible question for delivery mode, and reserve reference input and architecture questions whenever they are unresolved; combine already-known purpose, visual, palette, imagery, and motion details efficiently. Ask a second round only if the answers reveal a new material branch. Keep suggested options short, mutually distinct, and grounded in the product rather than fashion labels.
 
 For every direction question:
 
@@ -179,42 +206,54 @@ Do not bury this prompt inside another question or replace it with fixed choices
 
 Cover questions in this order, skipping only what direct evidence or an explicit user answer already resolves:
 
-1. Who uses this, in what context, and what are they trying to finish?
-2. What is the observable success event for the user and the business?
-3. Which reference-input path will be used, and exactly what qualities may be imitated or must be avoided?
-4. Which experience architecture and, when applicable, technical architecture does the user select after seeing viable tradeoffs?
-5. What product class and scope are intended?
-6. What real content/data enters the interface, and at what minimum, typical, and maximum ranges?
-7. Which roles, permissions, authentication, payments, or high-stakes actions exist?
-8. Which platforms, browsers, languages, accessibility level, and performance constraints matter?
-9. Which palette strategy fits: neutral-led with one accent, brand-color field, editorial monochrome, or another named approach? Ask about light/dark preference and hue families to favor or reject when unresolved.
-10. What should imagery feel like and do: product evidence, photography, illustration, texture/material, 3D, or deliberate restraint?
-11. What calibration fits the product: low/medium/high expressive variance, focused/balanced/dense information, and nearly static/functional/signature/expressive motion? Let the user set each dial independently.
+1. Which design delivery mode will be used: generated-reference, direct implementation, hybrid, custom, or delegated?
+2. Who uses this, in what context, and what are they trying to finish?
+3. What is the observable success event for the user and the business?
+4. Which reference-input path will be used, and exactly what qualities may be imitated or must be avoided?
+5. Which experience architecture and, when applicable, technical architecture does the user select after seeing viable tradeoffs?
+6. What product class and scope are intended?
+7. What real content/data enters the interface, and at what minimum, typical, and maximum ranges?
+8. Which roles, permissions, authentication, payments, or high-stakes actions exist?
+9. Which platforms, browsers, languages, accessibility level, and performance constraints matter?
+10. Which palette strategy fits: neutral-led with one accent, brand-color field, editorial monochrome, or another named approach? Ask about light/dark preference and hue families to favor or reject when unresolved.
+11. What should imagery feel like and do: product evidence, photography, illustration, texture/material, 3D, or deliberate restraint?
+12. What calibration fits the product: low/medium/high expressive variance, focused/balanced/dense information, and nearly static/functional/signature/expressive motion? Let the user set each dial independently.
 
 In the first round, combine one purpose question with one or two direction questions when the repository already establishes the basics. For example:
 
 ```text
-1. Reference input / 参考来源？
+1. Design delivery mode / 设计交付模式？
+   A. Design -> generate desktop/mobile references -> implement and compare.
+   B. Design -> implement directly; skip generated page references and their comparison loop.
+   C. Hybrid -> name only the key pages/states that need generated references.
+   D. Custom / 自定义，或回复“你定”授权代理选择。
+2. Reference input / 参考来源？
    A. Upload screenshots, mockups, GIFs, or recordings / 上传文件。
    B. Provide a website URL for desktop/mobile inspection / 提供网站链接。
    C. Use the current or local page as the baseline / 使用当前页面。
    D. No direct reference; derive from the brief / 不使用直接参考。
    E. Custom / 自定义：请填写或组合，并说明想模仿与不想复制的部分。
-2. Experience architecture / 产品与页面架构？
+3. Experience architecture / 产品与页面架构？
    A. One focused narrative or conversion page — smallest scope and clearest path.
    B. Multi-page site — separates content, search, SEO, and navigation responsibilities.
    C. Task-focused app/workspace — prioritizes repeated actions, states, and signed-in navigation.
    D. Hybrid — public brand pages plus a restrained signed-in product.
    E. Custom / 自定义，或回复“你定”授权代理选择。
-3. Technical architecture / 技术架构？
-   A. Recommended option grounded in hosting, content, data, and maintenance — explain the consequence.
-   B. Second viable option — explain its distinct tradeoff.
-   C. Third option only when genuinely competitive — explain its distinct tradeoff.
-   D. Custom / 自定义，或回复“你定”授权代理选择。
+   Include the technical architecture options here when they are also unresolved, or ask one short follow-up.
 4. Visual, color, imagery, and motion direction / 视觉方向？
    A-C. Offer product-specific, structurally distinct choices with consequences and name each choice's expressive-variance, information-density, and motion-energy levels.
    D. Custom / 自定义：请填写，或组合以上方向。
 5. Additional requirements / 额外要求：还有哪些名称、文案、功能、内容、素材、必须保留、禁止出现或技术限制需要补充？没有可回答“无”，希望代为决定可回答“你定”。
+```
+
+When technical architecture cannot be combined safely, use a short second-round question:
+
+```text
+Technical architecture / 技术架构？
+   A. Recommended option grounded in hosting, content, data, and maintenance — explain the consequence.
+   B. Second viable option — explain its distinct tradeoff.
+   C. Third option only when genuinely competitive — explain its distinct tradeoff.
+   D. Custom / 自定义，或回复“你定”授权代理选择。
 ```
 
 Ask about visual taste after enough purpose and content are known to make the options meaningful. Replace vague adjectives with named anchors or physical-context sentences. "Modern" is not direction; "a quiet clinical workspace used by a support lead under time pressure" is.
@@ -239,6 +278,7 @@ For material work, produce this compact brief:
 **Scope and fidelity:**
 **Platforms and inputs:**
 **Reference intake:** Source, inspected states, qualities to emulate, prohibitions, access/rights limits
+**Design delivery mode:** Generated-reference / direct / hybrid / custom / delegated, with page/state boundary
 **Experience architecture:** Selected topology and user decision/delegation
 **Technical architecture:** Selected stack and user decision/delegation
 **Constraints:**

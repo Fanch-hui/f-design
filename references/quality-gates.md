@@ -16,6 +16,7 @@ Fix P0 and P1 before release. Fix P2 unless explicitly deferred. Avoid manufactu
 Inspect the Phase Accountability Ledger before evaluating visual quality:
 
 - every applicable phase is `implemented`, `evaluated-local`, `not applicable`, `blocked`, or `accepted omission`;
+- the Design Delivery Mode Record identifies which pages use generated references and which proceed directly;
 - every material decision distinguishes project truth, current standards, official system guidance, professional research, and community inspiration at the authority needed for the claim;
 - the Component Decision Register covers every nontrivial primitive, including explicit existing/local decisions when no dependency was added;
 - the Motion Coverage Matrix audits direct controls, state/overlays, async feedback, navigation/layout, media, and brand/narrative motion;
@@ -32,6 +33,7 @@ Treat a silently skipped component or motion phase as P1 when it materially chan
 - Every implemented route appears in the Page and State Map.
 - Every planned route either exists or is explicitly deferred.
 - Material discovery gave every suggested-choice question a visible free-form response path and separately captured additional requirements, `none`, or explicit delegation before analysis.
+- Material discovery captured generated-reference, direct, hybrid, custom, or delegated delivery mode before design work; reference input was treated as a separate choice.
 - Material discovery visibly offered reference upload, website URL, current/local page, no-reference, and custom paths; the Reference Intake Record states what may be emulated, what must not be copied, and any access or asset-rights limits.
 - Greenfield or materially changed work presented viable experience and technical architecture options with consequences and a recommendation; the Architecture Decision Record contains the user's selection, custom answer, or explicit delegation before scaffolding.
 - Existing projects preserve their detected architecture unless a material migration was explicitly selected; focused repairs are not blocked by irrelevant architecture ceremony.
@@ -44,7 +46,9 @@ Treat a silently skipped component or motion phase as P1 when it materially chan
 
 ## Gate 2: Reference Fidelity
 
-At matching viewports, compare implementation screenshots against every approved desktop and mobile reference:
+Apply this gate only to generated-reference pages and to user-supplied visual targets whose requested fidelity requires comparison. Mark it `not applicable: direct implementation selected` for direct pages without an explicit target. Never require a generated reference retroactively.
+
+At matching viewports, compare implementation screenshots against every applicable approved desktop and mobile reference:
 
 - silhouette and first-viewport composition;
 - primary and secondary hierarchy;
@@ -171,7 +175,7 @@ Automated scans do not verify comprehension, focus logic, or correct announcemen
 - The visual identity is traceable to the product's real subject, content, materials, language, or workflows rather than a generic template.
 - One justified signature element or sequence is legible; decorative effects do not compete with it.
 - Structural devices such as numbering, timelines, rulers, or annotations carry real information.
-- Direction probes use the same real content and do not render option labels, prompt notes, or style metadata inside the proposed interface.
+- Generated page images were created only after the Design Package was approved and do not contain option labels, prompt notes, or internal design metadata.
 
 ## Gate 8A: Color System And Themes
 
@@ -198,7 +202,7 @@ Treat hidden focus, indistinguishable states, inaccessible status, wrong-theme f
 - Components remain focused and composable; data/workflow orchestration is separated from presentation when responsibilities diverge.
 - State lives at the narrowest durable owner and is not promoted to shared/global storage without a cross-surface need.
 - Shared changes include affected-consumer browser evidence. Breaking changes include migration and deprecation handling.
-- Generated references, implementation, and maintained documentation agree on the same master system plus approved overrides.
+- Generated references when selected, implementation, and maintained documentation agree on the same master system plus approved overrides. Direct pages are checked against the Design Package without inventing generated-reference evidence.
 
 ## Gate 9: Performance And Resilience
 
@@ -310,6 +314,12 @@ The final report should state:
 - Color themes/states checked:
 - Performance checks:
 
+## Delivery mode
+- Selected mode:
+- Generated-reference pages/states:
+- Direct pages/states:
+- Optional artifacts explicitly skipped:
+
 ## Open-source provenance
 - Package/repository, version, license, and local adaptations:
 - If none added: needs evaluated, existing/local decision, and reason:
@@ -324,6 +334,7 @@ The final report should state:
 - Reduced-motion result:
 
 ## Reference fidelity
+- Status: verified / not applicable for direct pages / limited to explicit user-supplied target
 - References matched:
 - Desktop/mobile content parity:
 - Image and transition keyframes:

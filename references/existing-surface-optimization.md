@@ -29,7 +29,7 @@ Use when the page works but information architecture, workflow shape, content pr
 
 ### Visual Redesign
 
-Use when the user explicitly requests a new direction or the current design system fundamentally prevents the desired outcome. Document what remains, what changes, and why. Generate approved desktop and mobile references before broad implementation.
+Use when the user explicitly requests a new direction or the current design system fundamentally prevents the desired outcome. Document what remains, what changes, and why, then ask for the design delivery mode. Generate approved desktop and mobile references before broad implementation only for generated-reference or selected hybrid pages; direct pages implement from the approved Design Package.
 
 ### Standards Repair
 
@@ -311,7 +311,7 @@ When the user asks for optimization, implement the verified items that fit scope
 
 Use the existing live page and before screenshots as the baseline for tune-ups and standards repair.
 
-Generate new references when:
+Consider generated references when:
 
 - the user requests a redesign or alternate direction;
 - the existing hierarchy/composition is fundamentally wrong;
@@ -319,7 +319,7 @@ Generate new references when:
 - a major new page or flow has no visual evidence;
 - image-led composition cannot be resolved safely in code alone.
 
-Do not generate references only to adjust spacing, typography, responsive behavior, component states, accessibility, metadata, or performance. When references are needed, create desktop and dedicated mobile references from the same Page Content Canon for every affected page and preserve approved existing identity where required. Reject a pair that changes core copy, data/state, asset subject, navigation meaning, or action outcome between viewports.
+Do not generate references only to adjust spacing, typography, responsive behavior, component states, accessibility, metadata, or performance. Even when the cases above apply, generate only when the user selects generated-reference or hybrid mode. For selected pages, create desktop and dedicated mobile references from the same Page Content Canon and preserve approved existing identity where required. Reject a pair that changes core copy, data/state, asset subject, navigation meaning, or action outcome between viewports. Direct pages skip this generated-reference loop.
 
 ## Before And After Verification
 

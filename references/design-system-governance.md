@@ -83,4 +83,4 @@ Evaluate system health through adoption, repeated defects, divergence, delivery 
 - Shared component contracts cover behavior, states, accessibility, responsiveness, and tokens.
 - Affected consumers were identified and rendered after shared changes.
 - Breaking changes include migration and deprecation handling.
-- Generated references and implementation use the same master system plus approved overrides.
+- Generated references when selected and all implementation use the same master system plus approved overrides.

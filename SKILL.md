@@ -1,6 +1,6 @@
 ---
 name: f-design
-description: End-to-end frontend product design, implementation, and existing-interface optimization. Use when an AI coding agent must plan, design, redesign, prototype, implement, audit, or polish websites, web apps, dashboards, marketing or responsive mobile surfaces, design systems, reference-to-code builds, color/themes, interaction states, imagery, or motion. Also use for hierarchy, layout, typography, card restraint, accessibility, media transitions, motion fidelity, performance, and standards compliance. Before material analysis, run guided discovery, optionally let the user upload or link a reference website or decline references, and present experience and technical architecture choices for selection or explicit delegation. Keep desktop/mobile on one content canon, record component and motion decisions, adapt mature open-source components to the project, implement faithfully, and verify in a real browser without silent phase skips.
+description: End-to-end frontend product design, implementation, and existing-interface optimization. Use when an AI coding agent must plan, design, redesign, prototype, implement, audit, or polish websites, web apps, dashboards, marketing or responsive mobile surfaces, design systems, reference-to-code builds, color/themes, interaction states, imagery, or motion. Also use for hierarchy, layout, typography, card restraint, accessibility, media transitions, motion fidelity, performance, and standards compliance. Before material analysis, run guided discovery and let the user choose design-then-generate-reference, design-then-build-directly, or a page-scoped hybrid; optional reference input and architecture choices remain user-controlled. Design before any generated page reference, keep desktop/mobile on one content canon, adapt mature open-source components, and verify in a real browser without silent phase skips.
 ---
 
 # F-design
@@ -12,13 +12,13 @@ Design and deliver frontend products through one self-contained process. The syn
 Apply these rules before any stylistic preference:
 
 1. **Reconcile existing project truth.** Read the nearest `AGENTS.md`, `DESIGN.md`, product requirements, design system, components, assets, routes, rendered UI, and conventions before proposing technology or visuals. Distinguish functional truth, documented intent, and accidental implementation drift instead of trusting any one source silently.
-2. **Ask before material analysis.** After a factual repository scan, ask a short guided round about unresolved product, optional reference source, experience/technical architecture, style, palette, imagery, and motion choices. The first material round must visibly let the user upload reference screenshots or recordings, provide a website URL or local page, proceed without any reference, or write a custom combination. Using a reference is entirely optional: accept `no reference` without persuasion or a follow-up demand. Present viable architecture choices with consequences and a recommendation, but let the user select, customize, or explicitly delegate the decision. Every choice question must include a visible free-form answer path, and the round must end with a separate open-ended question for additional requirements. Do not publish a Product Brief, analyze visual directions, generate references, choose a new architecture, or code until the user answers, already supplied equivalent detail, explicitly says there are no additional requirements, or delegates the choices.
+2. **Ask before material analysis.** After a factual repository scan, ask a short guided round about the delivery mode, unresolved product, optional reference source, experience/technical architecture, style, palette, imagery, and motion choices. For material design work, the first round must let the user choose `design -> generated references -> implementation`, `design -> direct implementation`, a page-scoped hybrid, a custom mode, or explicit delegation. It must also visibly let the user upload reference screenshots or recordings, provide a website URL or local page, proceed without any reference, or write a custom combination. Reference input and generated output are separate choices. Every choice question must include a visible free-form answer path, and the round must end with a separate open-ended question for additional requirements. Do not publish a Product Brief, analyze visual directions, generate references, choose a new architecture, or code until the user answers, already supplied equivalent detail, explicitly says there are no additional requirements, or delegates the choices.
 3. **User task wins over visual fashion.** Classify the product and identify the primary job before choosing a layout.
 4. **Distinctiveness comes from the subject.** Derive materials, imagery, language, structure, and one signature move from the product's real world. Do not manufacture identity from generic gradients, decorative effects, or fashionable component demos.
 5. **No page without purpose.** Define routes, states, first-viewport priority, and success criteria before generating references.
-6. **One content canon across viewports.** Desktop and mobile references are different compositions of the same approved copy, content IDs, asset identities, data, user state, navigation, and actions. Mobile may reorder, condense, or progressively disclose; it may not silently invent or replace the product.
+6. **One content canon across viewports.** Desktop and mobile designs are different compositions of the same approved copy, content IDs, asset identities, data, user state, navigation, and actions. Generated references, when selected, must visualize this canon rather than redefine it. Mobile may reorder, condense, or progressively disclose; it may not silently invent or replace the product.
 7. **No code before direction.** For material new builds or redesigns, confirm the Product Brief, Page and State Map, project design contract, and visual direction before implementation. If the user explicitly delegates decisions, record assumptions and proceed.
-8. **Reference images are contracts when direction changes.** For new builds and substantial redesigns, produce a named desktop and mobile reference for every planned page. For focused optimization, use the live page and before screenshots as the baseline unless a new direction is required.
+8. **Generated references are optional delivery artifacts.** Create them only for pages/states selected by the user under generated-reference or hybrid mode, and only after the design package is approved. Direct implementation mode skips generated page references, their manifests, parity audits, and reference-to-code comparison. User-supplied targets remain evidence only to the fidelity level the user explicitly requested.
 9. **Media belongs to the composition.** Preserve image identity, crop intent, focal point, layering, edge treatment, and reference transition behavior. Do not insert imagery as an unrelated rectangle after layout is finished.
 10. **Color is role-based communication.** Use semantic tokens, controlled salience, complete component states, and deliberate theme mappings. Treat `60-30-10` as a diagnostic heuristic, never a quota; never rely on hue alone for meaning; never create dark mode by inversion.
 11. **Open source is evidence-based.** Prefer mature, maintained GitHub projects, but adapt them to the current product. Never paste a library's demo styling into the project unchanged.
@@ -39,6 +39,17 @@ Apply these rules before any stylistic preference:
 
 For substantial work, keep a live checklist and the Phase Accountability Ledger described in [evidence-and-execution.md](references/evidence-and-execution.md). Do not quietly skip a phase; state the reason and evidence when a phase is inapplicable.
 
+## Choose The Delivery Mode
+
+For every material new build, redesign, or page addition, record one user-selected or explicitly delegated mode before visual analysis:
+
+1. **Design -> Generate References -> Implement:** complete and approve the design package, generate approved desktop/mobile page references, then implement and compare against them.
+2. **Design -> Direct Implementation:** complete and approve the same design package, skip generated page references, and implement directly. Browser screenshots prove quality but are not compared to nonexistent generated references.
+3. **Hybrid:** name the pages or states that use generated references; all others use direct implementation.
+4. **Custom or delegated:** record the exact boundary and consequences.
+
+The mode controls artifacts, not design quality. All modes still require product definition, page/state scope, visual and responsive decisions, implementation, accessibility, and browser QA. A focused repair whose design contract is already established may default to direct implementation unless the user asks for a generated target.
+
 ## Existing Surface Optimization Loop
 
 Use this loop for a webpage, component, flow, or application that already renders:
@@ -50,7 +61,7 @@ Use this loop for a webpage, component, flow, or application that already render
 5. **Improve in passes.** Correct structure and hierarchy, layout and rhythm, typography and copy, design-system alignment, responsive/mobile composition, interaction states and accessibility, then implement approved reference motion and add any other motion only when useful.
 6. **Verify the delta.** Re-run build/tests, repeat the browser matrix, compare before and after at identical viewports, and check that function and identity were preserved.
 
-For a normal optimization request, implement verified improvements instead of only proposing them. Generate new reference images when the user requests a redesign, the current direction is fundamentally wrong, or several pages need a newly approved system. Do not generate references merely to adjust spacing, typography, responsiveness, or standards compliance.
+For a normal optimization request, implement verified improvements instead of only proposing them. When the user requests a redesign, the current direction is fundamentally wrong, or several pages need a new system, confirm the delivery mode before proceeding. Generate new reference images only for generated-reference or hybrid pages. Do not generate references merely to adjust spacing, typography, responsiveness, or standards compliance.
 
 ## Phase 1: Establish The Foundation
 
@@ -67,10 +78,11 @@ Read [discovery-and-architecture.md](references/discovery-and-architecture.md) f
 
 ## Phase 2: Discover And Classify The Product
 
-For material new work, visual redesign, or ambiguous image-led work, stop at a **Discovery Gate** after the factual scan. Ask one guided round of up to four high-leverage questions plus one separate open-ended additional-requirements question, then wait for the answer before analyzing directions. When unresolved, this first round must include an optional **Reference Input Choice** with a first-class `no reference` path and an **Architecture Choice**; do not bury either inside the additional-requirements prompt. Every direction question must offer a `Custom / 自定义：请填写` response in addition to suggested options. Ask a second round only when the answer exposes a material branch. Skip the gate only when the prompt and repository already answer the same questions and additional requirements, the user explicitly delegates the decisions, or the task is a small repair whose direction is established.
+For material new work, visual redesign, or ambiguous image-led work, stop at a **Discovery Gate** after the factual scan. Ask one guided round of up to four high-leverage questions plus one separate open-ended additional-requirements question, then wait for the answer before analyzing directions. This first round must include a **Design Delivery Mode Choice**; when unresolved, it must also include an optional **Reference Input Choice** with a first-class `no reference` path and an **Architecture Choice**. Do not bury these inside the additional-requirements prompt. Every direction question must offer a `Custom / 自定义：请填写` response in addition to suggested options. Ask a second round only when the answer exposes a material branch. Skip the gate only when the prompt and repository already answer the same questions and additional requirements, the user explicitly delegates the decisions, or the task is a small repair whose direction is established.
 
 Resolve at least:
 
+- design delivery mode: generated-reference, direct implementation, page/state-scoped hybrid, custom, or explicitly delegated;
 - audience, context, mental state, and primary job;
 - success event and business outcome;
 - product class and per-surface register: brand, product, or hybrid;
@@ -84,7 +96,7 @@ Resolve at least:
 - palette strategy or hue families, light/dark preference, imagery/material treatment, and the three calibration dials: expressive variance, information density, and motion energy;
 - user-authored custom directions, extra functionality or content, naming/copy, must-preserve details, prohibited elements, technical constraints, and any other requirements not covered by the suggested options.
 
-Offer concrete choices grounded in the product instead of asking only "what style do you like?" Explain each option in one sentence, include a visible free-form option for each question, and allow the user to combine traits or ignore the suggestions and write their own direction. A reference choice must accept attachments and URLs, not only named style options. An architecture choice must distinguish experience topology from implementation stack when both are unresolved. The final additional-requirements question must remain open-ended rather than another fixed choice list. Produce a compact **Product Brief**, **Reference Intake Record**, and **Architecture Decision Record** only after this gate. For a material build, present them for confirmation before visual exploration. If the user asks for autonomous execution, state the assumptions instead of blocking.
+Offer concrete choices grounded in the product instead of asking only "what style do you like?" Explain each option in one sentence, include a visible free-form option for each question, and allow the user to combine traits or ignore the suggestions and write their own direction. A reference choice must accept attachments and URLs, not only named style options. An architecture choice must distinguish experience topology from implementation stack when both are unresolved. The final additional-requirements question must remain open-ended rather than another fixed choice list. Produce a compact **Design Delivery Mode Record**, **Product Brief**, **Reference Intake Record**, and **Architecture Decision Record** only after this gate. For a material build, present them for confirmation before visual exploration. If the user asks for autonomous execution, state the assumptions instead of blocking.
 
 Never call something a dashboard merely because it contains data. A dashboard is justified only when monitoring, comparison, or triage across multiple signals is the primary recurring job.
 
@@ -101,7 +113,7 @@ Turn the brief into an implementation-sized scope:
 
 The result is the **Page and State Map**. Do not generate references or code until every planned page has an accountable role.
 
-## Phase 4: Set The Visual System And Generate References
+## Phase 4: Complete The Design, Then Optionally Generate References
 
 First define one visual system for the entire product:
 
@@ -124,20 +136,26 @@ Define a **Color Role Table**, **Theme Matrix**, and **Component State Matrix** 
 
 For a material new build, redesign, or multi-page system, synthesize a project-specific `DESIGN.md` from the Product Brief, existing project identity, user-provided references, and [design-reference-synthesis.md](references/design-reference-synthesis.md). Existing project design documentation remains authoritative.
 
-Before generating any reference, freeze a **Page Content Canon** for every page: stable content IDs, approved copy, data/state, asset IDs, navigation, actions, and what mobile may reorder, condense, or defer. Both viewport prompts must consume this same canon.
+Before generating any reference or implementing the interface, complete a **Design Package** containing the confirmed Product Brief, Page and State Map, project design contract, desktop/mobile composition rules, Color Role Table, Theme Matrix, Component State Matrix, media/motion intent, and a **Page Content Canon** for every page. The canon freezes stable content IDs, approved copy, data/state, asset IDs, navigation, actions, and what mobile may reorder, condense, or defer. Present the package for confirmation or record explicit delegation.
 
-Use native image generation when available:
+Then follow the selected mode.
 
-1. Generate two or three structurally different direction probes when the direction is ambiguous. Use the same real product content and assets in every probe; do not place internal labels such as `Option A`, style metadata, or prompt notes inside the proposed interface.
-2. Confirm one direction or proceed under explicit delegation.
-3. Lock the project design contract before generating the full set.
-4. Generate a named high-fidelity desktop reference for **every page**, then derive its mobile prompt from the locked page canon and desktop asset manifest. The mobile result is an intentional recomposition, not an independent invention.
-5. Include critical alternative states when they materially change composition.
-6. Keep shared shell, tokens, copy, state, asset identities, type, and component language consistent across all references.
-7. Run a desktop/mobile parity audit after each pair. Regenerate any pair that changes core content, copy, asset identity, user state, navigation, or actions without an approved reason.
-8. Maintain a reference manifest that links each image to its page, viewport, state, required assets, motion cues, and implementation notes.
+### Generated-Reference Or Hybrid Pages
 
-Never rasterize core interface text or treat generated copy as approved product copy. Read [visual-system.md](references/visual-system.md) and [reference-images.md](references/reference-images.md) before this phase.
+1. Use image generation only after the Design Package exists; generated images visualize approved design decisions and may not invent the design system or scope.
+2. If direction is still ambiguous, return to structured design alternatives and finish the Design Package. Do not use generated page images to discover or choose an undefined design direction.
+3. Generate a named high-fidelity desktop reference for each selected page/state, then derive its mobile prompt from the same locked canon and asset manifest.
+4. Keep shell, tokens, copy, state, asset identities, type, and component language consistent across the selected reference set.
+5. Run desktop/mobile parity and reference-manifest checks only for selected pages/states. Regenerate any image that contradicts the approved Design Package.
+
+### Direct-Implementation Pages
+
+- Do not generate direction probes or page references unless the user changes the mode.
+- Do not create a generated-reference manifest, generated desktop/mobile pair audit, or generated-reference fidelity gate.
+- Implement from the approved Design Package and Page Content Canon.
+- Use browser screenshots for responsive, accessibility, visual, and before/after QA. Do not describe those screenshots as pre-implementation design references.
+
+Never rasterize core interface text or treat generated copy as approved product copy. Read [visual-system.md](references/visual-system.md) in every mode. Read [reference-images.md](references/reference-images.md) only for user-supplied reference work, generated-reference mode, or the selected pages in hybrid mode.
 
 ## Phase 5: Research Components And Plan Implementation
 
@@ -170,7 +188,7 @@ Implement in deliberate passes:
 6. **Resilience:** realistic loading, empty, error, permission, long-text, large-data, localization, and offline states.
 7. **Accessibility:** names, semantics, keyboard behavior, focus, announcements, contrast, touch targets, and reduced motion.
 
-Preserve the approved reference's major ingredients: silhouette, hierarchy, density, imagery, crops, layering, motifs, navigation, CTA treatment, and motion cues. Translate it into semantic, maintainable code rather than tracing pixels blindly. Use real assets and real copy at presentation time. Do not ship dead controls, fake metrics, guessed image URLs, placeholder rectangles, or a second design language.
+Preserve the approved Design Package in every mode. For pages with an approved visual target, also preserve its major ingredients: silhouette, hierarchy, density, imagery, crops, layering, motifs, navigation, CTA treatment, and evidenced motion cues. Translate the design into semantic, maintainable code rather than tracing pixels blindly. Use real assets and real copy at presentation time. Do not ship dead controls, fake metrics, guessed image URLs, placeholder rectangles, or a second design language.
 
 Keep components focused and composable. Separate data/state orchestration from presentation when their responsibilities diverge, and place state at the narrowest durable owner: local, lifted, shared context, URL, server, then global only when the previous levels cannot own it correctly. For generated or reference-led iteration, choose explicitly between targeted edit, variant exploration, and full regeneration; prefer targeted edits when the structure is sound.
 
@@ -189,7 +207,7 @@ Verify at minimum:
 - light/dark themes, component-state distinction, grayscale, high-contrast or forced-colors behavior, and color meaning without hue when relevant;
 - console errors, broken assets, layout shift, horizontal overflow, overlays, sticky elements, and soft-keyboard behavior.
 
-Compare screenshots to every approved reference. Confirm desktop/mobile content parity and static media start/end compositions. Run a dedicated card audit and a dedicated mobile first-viewport audit. Fix verified defects before adding motion.
+For generated-reference and selected hybrid pages, compare implementation screenshots to each approved reference. For direct pages, compare the rendered result to the Design Package, Page Content Canon, responsive rules, and any explicit user-supplied target only when fidelity was requested. In all modes, confirm desktop/mobile content parity and static media start/end compositions, run a dedicated card audit and mobile first-viewport audit, and fix verified defects before adding motion.
 
 Read [responsive-mobile.md](references/responsive-mobile.md) and [quality-gates.md](references/quality-gates.md).
 
@@ -222,7 +240,8 @@ Repeat the browser matrix after motion. Release only when:
 - no content is hidden, clipped, overlapped, or needlessly oversized;
 - every interactive element has complete states and works with keyboard and touch;
 - all planned states exist and recover cleanly;
-- the implementation matches the approved references or documents accepted deviations;
+- the implementation matches the approved Design Package and, where applicable, approved visual targets, or documents accepted deviations;
+- the selected delivery mode was respected: direct pages have no invented generated-reference obligations, while generated-reference pages completed their selected manifest, parity, and fidelity checks;
 - desktop and mobile preserve one content canon while using intentional viewport-specific composition;
 - images retain approved identity, crop intent, focal point, layering, edge treatment, and fallback behavior;
 - color hierarchy supports the primary task, semantic feedback never relies on hue alone, component states remain distinct, and light/dark themes preserve role and contrast;

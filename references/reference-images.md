@@ -1,6 +1,6 @@
 # Reference Images
 
-Use this reference in Phase 4 and during visual comparison in Phases 6, 7, and 9. A reference set is a page-by-page design contract, not loose inspiration.
+Use this reference for user-supplied visual targets and for pages selected under generated-reference or hybrid delivery mode. Do not load it merely because a direct implementation will produce browser QA screenshots. A generated reference set visualizes an already approved Design Package; it does not create the product scope or design system.
 
 ## User-Supplied Website Or Upload
 
@@ -23,6 +23,7 @@ A reference website is evidence, not a license. Recreate approved principles and
 
 Before generating images, have:
 
+- a Design Delivery Mode Record that names the pages/states selected for generated references;
 - a confirmed or explicitly delegated Product Brief;
 - a Reference Intake Record, including an explicit `no reference` or delegated result when applicable;
 - an Architecture Decision Record selected or delegated by the user;
@@ -34,23 +35,13 @@ Before generating images, have:
 - a list of existing assets and media gaps;
 - desktop and mobile first-viewport priorities for every page.
 
-Do not generate a polished homepage while the rest of the product is undefined. Do not ask the image model to invent product scope.
+Do not generate a polished homepage while the product, page scope, visual system, responsive rules, media intent, or content canon remain undefined. Do not ask the image model to invent product scope or make unresolved design decisions. Direct implementation pages stop here and do not create generated artifacts.
 
-## Direction Probe
+## Design Before Image Generation
 
-When visual direction is not already fixed:
+Resolve visual direction through the Product Brief, structured design alternatives, layout plans or wireframes, token/type/media decisions, responsive composition, and the project design contract. Then approve or explicitly delegate the complete Design Package.
 
-1. Generate two or three probes using the same product facts and content.
-2. Change topology, hierarchy, density, image treatment, or typographic voice between probes. Do not make palette-only variants.
-3. Show enough content to demonstrate the system beyond the first viewport.
-4. Explain the tradeoff of each direction in product terms.
-5. Ask the user to choose, combine specific traits, or delegate the decision.
-
-Use the approved expressive-variance, information-density, and motion-energy dials to keep the probes meaningfully distinct. Put probe names, tradeoffs, and design commentary outside the generated interface. Do not render `Option A`, style labels, prompt text, or internal design metadata inside the proposed product UI.
-
-Use one direction approval gate. After approval or delegation, lock the project design contract and produce the full page set. Do not repeatedly pause after every page unless a page reveals a real contradiction.
-
-Skip probes when the user supplied an exact visual target or the repository has an established system. Still produce page references that apply that direction to the requested scope.
+Only after that approval may generated-reference or hybrid pages be rendered. Generated page images must visualize the selected design; they may not choose the layout, palette, component language, content, or product scope. If an image exposes a contradiction, correct the Design Package first and regenerate from it rather than treating image drift as a new design decision.
 
 ## Page Content Canon
 
@@ -74,13 +65,13 @@ Desktop and mobile references are two compositions of this same canon. Mobile ma
 
 ## Reference Matrix
 
-Every planned page receives:
+Every page/state selected for generated references receives:
 
 - one named desktop reference at a realistic target viewport;
 - one named mobile reference with an independently composed first viewport derived from the same Page Content Canon and asset manifest;
 - additional references for critical states whose composition materially differs, such as empty, error, onboarding, editor-fullscreen, checkout confirmation, or destructive recovery.
 
-Pages that share a shell may share navigation and token decisions, but they still need separate references showing their actual content and primary task. Do not call one generic dashboard image a reference for five different routes.
+Selected pages that share a shell may share navigation and token decisions, but they still need separate references showing their actual content and primary task. Direct pages require no generated image. Do not call one generic dashboard image a reference for five different routes.
 
 Use filenames that sort and remain traceable:
 
@@ -239,7 +230,7 @@ A static image can define a transition's visual state, crop, overlap, or mask, b
 
 ## Reference-To-Code Comparison
 
-At implementation review, compare:
+Run this comparison only for generated-reference pages or when the user explicitly requested fidelity to a supplied visual target. At implementation review, compare:
 
 - first-viewport silhouette;
 - primary/secondary hierarchy;
@@ -263,10 +254,10 @@ Fix blocking and material drift. Do not chase generated pixel noise that would h
 
 ## When Native Image Generation Is Unavailable
 
-State the limitation once. Use one of these fallbacks:
+If the user selected generated-reference or hybrid mode for affected pages, state the limitation once and ask whether to switch those pages to direct implementation, wait for an image-capable tool, or use one of these explicit fallbacks:
 
 - a user-provided visual target;
 - code-rendered high-fidelity static compositions captured as screenshots;
 - a structured wireframe set plus the project design contract when high-fidelity generation is impossible.
 
-Do not silently skip the per-page reference contract.
+Do not silently change the selected mode. Direct implementation is a valid user-approved mode, not a failure or fallback artifact.

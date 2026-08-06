@@ -43,9 +43,9 @@ Reject vague statements such as "make it like Apple" or "use Linear style." Reje
 
 ## Direction Probe Protocol
 
-When the user has not chosen a clear visual direction, show two or three compact, structurally different probes before producing the full reference set. This is progressive disclosure: make the direction visible first, then expand only the selected system.
+When the user has not chosen a clear visual direction, present two or three compact, structurally different design proposals before implementation or any optional reference set. Use written composition plans, token/type/media samples, and structured wireframes. Do not use generated page images to discover the direction. This is progressive disclosure: resolve the design direction first, then expand only the selected system.
 
-Each probe must:
+Each proposal or probe must:
 
 - use the same approved product name, copy, content IDs, state, and representative assets;
 - vary meaningful composition, typography, density, image treatment, and motion intent rather than recoloring one template;
@@ -53,7 +53,7 @@ Each probe must:
 - include a restrained fit, a bolder fit, and an evidence-backed wildcard only when all three are plausible;
 - remain a real interface proposal, without internal labels such as `Option A`, prompt text, style names, or design commentary rendered inside it.
 
-Ask the user to select, combine, reject, or write a custom direction. If direction is explicitly delegated, record the chosen probe and rationale. Do not generate a full desktop/mobile page set from several unresolved visual systems.
+Ask the user to select, combine, reject, or write a custom direction. If direction is explicitly delegated, record the chosen proposal and rationale. Complete and approve the Design Package before generating any page reference. Do not generate a desktop/mobile page set from several unresolved visual systems.
 
 When revising a generated design, classify the next move:
 
