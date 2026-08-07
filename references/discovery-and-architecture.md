@@ -81,9 +81,11 @@ If the primary job is to complete one workflow, open that workflow. If it is to 
 
 ## Discovery Gate
 
-Run the repository-first scan, summarize only directly evidenced facts and unresolved choices, then stop. For a material new build, redesign, multi-page addition, or ambiguous image-led request, ask up to four guided direction questions plus one separate open-ended additional-requirements question and wait for the answer before producing a Product Brief, comparing visual directions, generating references, choosing a new architecture, or implementing UI. The first round must include delivery-mode selection, plus reference intake and architecture selection when either remains unresolved.
+Run the repository-first scan, summarize only directly evidenced facts and unresolved choices, then stop. For a material new build, redesign, multi-page addition, or ambiguous image-led request, make delivery mode the first visible standalone question, ask up to three other guided direction questions plus one separate open-ended additional-requirements question, and wait for the answer before producing a Product Brief, comparing visual directions, generating references, choosing a new architecture, or implementing UI. The first round must include reference intake and architecture selection when either remains unresolved.
 
-The gate is already satisfied only when:
+The delivery-mode part of the gate is already satisfied only when the user explicitly selected generated-reference, direct, hybrid, or custom mode, or explicitly delegated that decision. The following do not satisfy it: an empty repository, no reference input, a request to move quickly, a request for only one homepage, a request to see an initial result, or unavailable image tooling.
+
+The rest of the gate is already satisfied only when:
 
 - the user's prompt already supplies equivalent product, visual, palette, imagery, motion, and additional-requirement decisions;
 - an established project design system resolves those decisions and the user asked to preserve it;
@@ -96,7 +98,7 @@ Do not interpret silence as approval. If the user delegates, record the selected
 
 Reference input answers what evidence may inform the design. Delivery mode separately answers whether F-design should generate new page images after the design is complete. Do not combine these decisions.
 
-For material design work, offer:
+For material design work, ask this as the first standalone choice and offer:
 
 1. **Design -> Generate References -> Implement:** approve the product, page, visual, responsive, media, and motion design first; then generate selected desktop/mobile page references and implement against them. This adds an image approval and fidelity loop.
 2. **Design -> Direct Implementation:** approve the same design decisions, then implement without generating page references. This is faster and avoids image-model drift; browser screenshots remain required for QA.
@@ -104,7 +106,7 @@ For material design work, offer:
 4. **Custom / 自定义:** let the user describe another boundary or combine the modes.
 5. **你定 / Delegate:** choose based on ambiguity, visual risk, number of pages, available image tools, time, and desired fidelity, then record the rationale.
 
-Do not label direct implementation as lower quality. Do not recommend image generation merely because a tool is available. A focused repair with an established design contract may proceed directly unless the user asks for a new visual target.
+Do not label direct implementation as lower quality. Do not recommend image generation merely because a tool is available. Do not mark direct implementation as recommended for an empty project unless the user asked for a recommendation and then explicitly accepts it. A focused repair with an established design contract may proceed directly unless the user asks for a new visual target.
 
 Create a **Design Delivery Mode Record**:
 
@@ -117,6 +119,7 @@ Generated artifacts required:
 Artifacts explicitly skipped:
 Fidelity target for user-supplied references, if any:
 User selection or delegation:
+Verbatim user wording that authorized the mode:
 ```
 
 ## Optional Reference Input Choice
@@ -185,7 +188,9 @@ Rejected alternatives:
 
 ## Guided Question Cadence
 
-Ask up to four direction questions and one additional-requirements question in the discovery round. Reserve one visible question for delivery mode, and reserve reference input and architecture questions whenever they are unresolved; combine already-known purpose, visual, palette, imagery, and motion details efficiently. Ask a second round only if the answers reveal a new material branch. Keep suggested options short, mutually distinct, and grounded in the product rather than fashion labels.
+Ask up to four direction questions and one additional-requirements question in the discovery round. Delivery mode is always the first visible standalone question for material work. Reserve reference input and architecture questions whenever they are unresolved; combine already-known purpose, visual, palette, imagery, and motion details efficiently. Ask a second round only if the answers reveal a new material branch. Keep suggested options short, mutually distinct, and grounded in the product rather than fashion labels.
+
+If the host limits one structured round to three questions, delivery mode consumes the first slot. Use the next slots for reference input and architecture when unresolved, then ask visual direction and additional requirements in a short follow-up. Never omit or auto-resolve delivery mode to fit the host's question limit. When the host automatically provides a free-form `Other` field, the three visible mode options may be generated-reference, direct, and hybrid; `Other` carries custom wording or explicit delegation.
 
 For every direction question:
 

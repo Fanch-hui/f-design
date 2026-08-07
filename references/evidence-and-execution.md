@@ -40,7 +40,7 @@ Maintain this ledger for material builds, redesigns, and broad optimizations. A 
 At minimum consider:
 
 - discovery response record with free-form choices and a separate additional-requirements answer;
-- Design Delivery Mode Record naming generated-reference, direct, hybrid, custom, or delegated mode; page/state boundaries; required artifacts; and explicit skips;
+- Design Delivery Mode Record naming generated-reference, direct, hybrid, custom, or delegated mode; the user's verbatim selection/delegation; page/state boundaries; required artifacts; and explicit skips;
 - Reference Intake Record covering upload, URL, local/current page, named inspiration, no-reference, custom, or delegated input, including inspection limits and asset rights;
 - Architecture Decision Record covering experience and technical options, recommendation, consequences, and the user's selection, custom answer, or explicit delegation;
 - Product Brief, Page and State Map, and success measures;
@@ -116,6 +116,7 @@ Treat these as release failures:
 
 - a material phase is declared complete without a ledger status and evidence;
 - a material build starts visual analysis or scaffolding without a resolved delivery mode, reference-input path, and user-selected or explicitly delegated architecture;
+- a greenfield or material design task records direct mode without an explicit user selection or explicit delegation;
 - generated page images are created before the Design Package is complete, or are created for direct-mode pages without the user changing the mode;
 - direct-mode pages are failed for missing generated references, manifests, parity audits, or generated-reference comparison;
 - a supplied website is described as inspected without browser/web evidence, or its proprietary copy, brand assets, or unlicensed media are reproduced without permission;

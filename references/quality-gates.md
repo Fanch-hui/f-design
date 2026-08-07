@@ -16,7 +16,7 @@ Fix P0 and P1 before release. Fix P2 unless explicitly deferred. Avoid manufactu
 Inspect the Phase Accountability Ledger before evaluating visual quality:
 
 - every applicable phase is `implemented`, `evaluated-local`, `not applicable`, `blocked`, or `accepted omission`;
-- the Design Delivery Mode Record identifies which pages use generated references and which proceed directly;
+- the Design Delivery Mode Record identifies which pages use generated references and which proceed directly, and quotes the user wording that selected or delegated the mode;
 - every material decision distinguishes project truth, current standards, official system guidance, professional research, and community inspiration at the authority needed for the claim;
 - the Component Decision Register covers every nontrivial primitive, including explicit existing/local decisions when no dependency was added;
 - the Motion Coverage Matrix audits direct controls, state/overlays, async feedback, navigation/layout, media, and brand/narrative motion;
@@ -33,7 +33,8 @@ Treat a silently skipped component or motion phase as P1 when it materially chan
 - Every implemented route appears in the Page and State Map.
 - Every planned route either exists or is explicitly deferred.
 - Material discovery gave every suggested-choice question a visible free-form response path and separately captured additional requirements, `none`, or explicit delegation before analysis.
-- Material discovery captured generated-reference, direct, hybrid, custom, or delegated delivery mode before design work; reference input was treated as a separate choice.
+- Material discovery presented delivery mode as the first visible standalone choice and captured generated-reference, direct, hybrid, custom, or delegated mode before design work; reference input was treated as a separate choice.
+- Greenfield direct mode has explicit user selection or delegation evidence; it was not inferred from an empty repository, absent reference, urgency, limited scope, or unavailable image tooling.
 - Material discovery visibly offered reference upload, website URL, current/local page, no-reference, and custom paths; the Reference Intake Record states what may be emulated, what must not be copied, and any access or asset-rights limits.
 - Greenfield or materially changed work presented viable experience and technical architecture options with consequences and a recommendation; the Architecture Decision Record contains the user's selection, custom answer, or explicit delegation before scaffolding.
 - Existing projects preserve their detected architecture unless a material migration was explicitly selected; focused repairs are not blocked by irrelevant architecture ceremony.

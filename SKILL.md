@@ -1,18 +1,29 @@
 ---
 name: f-design
-description: End-to-end frontend product design, implementation, and existing-interface optimization. Use when an AI coding agent must plan, design, redesign, prototype, implement, audit, or polish websites, web apps, dashboards, marketing or responsive mobile surfaces, design systems, reference-to-code builds, color/themes, interaction states, imagery, or motion. Also use for hierarchy, layout, typography, card restraint, accessibility, media transitions, motion fidelity, performance, and standards compliance. Before material analysis, run guided discovery and let the user choose design-then-generate-reference, design-then-build-directly, or a page-scoped hybrid; optional reference input and architecture choices remain user-controlled. Design before any generated page reference, keep desktop/mobile on one content canon, adapt mature open-source components, and verify in a real browser without silent phase skips.
+description: "End-to-end frontend product design, implementation, and existing-interface optimization. Use when an AI coding agent must plan, design, redesign, prototype, implement, audit, or polish websites, web apps, dashboards, marketing or responsive mobile surfaces, design systems, reference-to-code builds, color/themes, interaction states, imagery, or motion. Also use for hierarchy, layout, typography, card restraint, accessibility, media transitions, motion fidelity, performance, and standards compliance. For greenfield or material design work, after a factual scan, MUST stop and ask delivery mode as the first standalone choice: design-then-generate-reference, design-then-build-directly, hybrid, custom, or explicit delegation; never infer direct mode. Design before optional image generation, keep desktop/mobile on one content canon, and verify in a real browser."
 ---
 
 # F-design
 
 Design and deliver frontend products through one self-contained process. The synthesized design, component, accessibility, responsive, media, color, motion, and quality guidance needed for this workflow is included here. Use the native tools available in the current harness and own the work from discovery through browser verification.
 
+## Hard Stop: Greenfield Delivery Mode Gate
+
+When the repository has no established UI and the request will create a website, page, or application, perform only a factual repository scan, then make **Design Delivery Mode** the first visible standalone choice before visual analysis, architecture selection, scaffolding, image generation, or implementation:
+
+1. **Design -> Generate References -> Implement**
+2. **Design -> Direct Implementation**
+3. **Hybrid:** generate references only for named pages/states
+4. **Custom / 自定义** or explicit `你定 / decide for me`
+
+Stop and wait for the answer. Greenfield has no default mode. An empty repository, no external reference, a short prompt, urgency, unavailable image tooling, or phrases such as `start now`, `build it`, `make the homepage first`, or `let me see the result` do not select direct implementation and do not delegate this choice. Bypass this gate only when the user explicitly named a mode or explicitly delegated the mode decision; record the user's wording.
+
 ## Operating Contract
 
 Apply these rules before any stylistic preference:
 
 1. **Reconcile existing project truth.** Read the nearest `AGENTS.md`, `DESIGN.md`, product requirements, design system, components, assets, routes, rendered UI, and conventions before proposing technology or visuals. Distinguish functional truth, documented intent, and accidental implementation drift instead of trusting any one source silently.
-2. **Ask before material analysis.** After a factual repository scan, ask a short guided round about the delivery mode, unresolved product, optional reference source, experience/technical architecture, style, palette, imagery, and motion choices. For material design work, the first round must let the user choose `design -> generated references -> implementation`, `design -> direct implementation`, a page-scoped hybrid, a custom mode, or explicit delegation. It must also visibly let the user upload reference screenshots or recordings, provide a website URL or local page, proceed without any reference, or write a custom combination. Reference input and generated output are separate choices. Every choice question must include a visible free-form answer path, and the round must end with a separate open-ended question for additional requirements. Do not publish a Product Brief, analyze visual directions, generate references, choose a new architecture, or code until the user answers, already supplied equivalent detail, explicitly says there are no additional requirements, or delegates the choices.
+2. **Ask before material analysis.** After a factual repository scan, ask a short guided round about the delivery mode, unresolved product, optional reference source, experience/technical architecture, style, palette, imagery, and motion choices. For material design work, delivery mode must be the first visible standalone question, not an inferred default or a detail hidden inside a visual-style question. It must let the user choose `design -> generated references -> implementation`, `design -> direct implementation`, a page-scoped hybrid, a custom mode, or explicit delegation. It must also visibly let the user upload reference screenshots or recordings, provide a website URL or local page, proceed without any reference, or write a custom combination. Reference input and generated output are separate choices. Every choice question must include a visible free-form answer path, and the round must end with a separate open-ended question for additional requirements. Do not publish a Product Brief, analyze visual directions, generate references, choose a new architecture, or code until the user answers, already supplied equivalent detail, explicitly says there are no additional requirements, or delegates the choices.
 3. **User task wins over visual fashion.** Classify the product and identify the primary job before choosing a layout.
 4. **Distinctiveness comes from the subject.** Derive materials, imagery, language, structure, and one signature move from the product's real world. Do not manufacture identity from generic gradients, decorative effects, or fashionable component demos.
 5. **No page without purpose.** Define routes, states, first-viewport priority, and success criteria before generating references.
@@ -31,7 +42,7 @@ Apply these rules before any stylistic preference:
 ## Choose The Work Path
 
 - **New product or substantial redesign:** run all nine phases.
-- **New page inside an established product:** inspect the foundation, run focused discovery and page/state definition, create references for that page on desktop and mobile, then continue from implementation.
+- **New page inside an established product:** inspect the foundation, run focused discovery and page/state definition, then follow the selected delivery mode. Create desktop/mobile generated references only when that page is assigned to generated-reference or hybrid mode.
 - **Reference image or motion target to code:** preserve the repository foundation, inventory the static composition, media treatment, transition choreography, missing states, and mobile behavior, then continue from implementation.
 - **Optimize an already-written webpage or product surface:** capture the live baseline, diagnose evidence, make prioritized improvements to structure, layout, typography, visual system, responsive composition, accessibility, and states, then compare before and after. Read [existing-surface-optimization.md](references/existing-surface-optimization.md) and follow the loop below.
 - **Focused audit or repair:** inspect the product context, run the applicable quality gates, repair verified defects, and repeat browser checks. Do not stop at a report when the user asked to improve the code. Do not force unnecessary discovery artifacts.
@@ -41,14 +52,14 @@ For substantial work, keep a live checklist and the Phase Accountability Ledger 
 
 ## Choose The Delivery Mode
 
-For every material new build, redesign, or page addition, record one user-selected or explicitly delegated mode before visual analysis:
+For every material new build, redesign, or page addition, obtain and record one user-selected or explicitly delegated mode before visual analysis. Do not choose direct implementation from silence or convenience:
 
 1. **Design -> Generate References -> Implement:** complete and approve the design package, generate approved desktop/mobile page references, then implement and compare against them.
 2. **Design -> Direct Implementation:** complete and approve the same design package, skip generated page references, and implement directly. Browser screenshots prove quality but are not compared to nonexistent generated references.
 3. **Hybrid:** name the pages or states that use generated references; all others use direct implementation.
 4. **Custom or delegated:** record the exact boundary and consequences.
 
-The mode controls artifacts, not design quality. All modes still require product definition, page/state scope, visual and responsive decisions, implementation, accessibility, and browser QA. A focused repair whose design contract is already established may default to direct implementation unless the user asks for a generated target.
+The mode controls artifacts, not design quality. All modes still require product definition, page/state scope, visual and responsive decisions, implementation, accessibility, and browser QA. Only a focused repair of an established surface may default to direct implementation; an empty project, new page, redesign, or material structural change may not.
 
 ## Existing Surface Optimization Loop
 
@@ -78,7 +89,7 @@ Read [discovery-and-architecture.md](references/discovery-and-architecture.md) f
 
 ## Phase 2: Discover And Classify The Product
 
-For material new work, visual redesign, or ambiguous image-led work, stop at a **Discovery Gate** after the factual scan. Ask one guided round of up to four high-leverage questions plus one separate open-ended additional-requirements question, then wait for the answer before analyzing directions. This first round must include a **Design Delivery Mode Choice**; when unresolved, it must also include an optional **Reference Input Choice** with a first-class `no reference` path and an **Architecture Choice**. Do not bury these inside the additional-requirements prompt. Every direction question must offer a `Custom / 自定义：请填写` response in addition to suggested options. Ask a second round only when the answer exposes a material branch. Skip the gate only when the prompt and repository already answer the same questions and additional requirements, the user explicitly delegates the decisions, or the task is a small repair whose direction is established.
+For material new work, visual redesign, or ambiguous image-led work, stop at a **Discovery Gate** after the factual scan. Ask one guided round of up to four high-leverage questions plus one separate open-ended additional-requirements question, then wait for the answer before analyzing directions. The first visible question must be a **Design Delivery Mode Choice**; when unresolved, the round must also include an optional **Reference Input Choice** with a first-class `no reference` path and an **Architecture Choice**. Do not bury these inside the additional-requirements prompt. Every direction question must offer a `Custom / 自定义：请填写` response in addition to suggested options. Ask a second round only when the answer exposes a material branch. Skip the delivery-mode question only when the user explicitly named a mode or explicitly delegated it. Skip the broader gate only when the prompt and repository already answer the remaining questions and additional requirements, the user explicitly delegates the remaining decisions, or the task is a small repair whose direction is established.
 
 Resolve at least:
 
