@@ -89,7 +89,7 @@ When a shared component or token changes, follow `design-system-governance.md` a
 Choose the smallest iteration mode that solves the verified problem:
 
 - **targeted edit:** change named regions, assets, states, tokens, copy, or behavior while locking the approved architecture and identity;
-- **variant exploration:** compare explicit axes such as layout, palette, imagery, typography, content density, or motion while locking everything else;
+- **variant exploration:** compare explicit approved axes such as local composition, palette, imagery, typography, content density, or motion while locking everything else; if primary task path, information architecture, navigation, or object relationships may change, reopen the structural-exploration gate instead;
 - **full regeneration:** use only when the governing hierarchy, architecture, or visual thesis is wrong.
 
 For every mode, restate the page purpose, platform, content canon, structure, locked system decisions, and exact allowed changes. Prefer targeted edits after the core direction is approved. Surface useful generation or inspection findings to the user; do not silently broaden the redesign.

@@ -27,6 +27,8 @@ Before generating images, have:
 - a confirmed or explicitly delegated Product Brief;
 - a Reference Intake Record, including an explicit `no reference` or delegated result when applicable;
 - an Architecture Decision Record selected or delegated by the user;
+- a Surface Strategy Record for every selected page/state;
+- a selected or explicitly delegated Structural Direction Record when exploration was required, or concrete evidence that it was not required;
 - a complete Page and State Map;
 - a confirmed project design contract;
 - a project `DESIGN.md` when this work creates or changes a multi-page visual system;
@@ -39,7 +41,7 @@ Do not generate a polished homepage while the product, page scope, visual system
 
 ## Design Before Image Generation
 
-Resolve visual direction through the Product Brief, structured design alternatives, layout plans or wireframes, token/type/media decisions, responsive composition, and the project design contract. Then approve or explicitly delegate the complete Design Package.
+Resolve structure through the Surface Strategy Record and any required Structural Direction Matrix before resolving visual direction through the Product Brief, visual-system alternatives, layout plans or wireframes, token/type/media decisions, responsive composition, and the project design contract. Then approve or explicitly delegate the complete Design Package.
 
 Only after that approval may generated-reference or hybrid pages be rendered. Generated page images must visualize the selected design; they may not choose the layout, palette, component language, content, or product scope. If an image exposes a contradiction, correct the Design Package first and regenerate from it rather than treating image drift as a new design decision.
 

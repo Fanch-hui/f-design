@@ -79,6 +79,12 @@ Use the dashboard label only when the recurring primary job is to monitor, compa
 
 If the primary job is to complete one workflow, open that workflow. If it is to browse records, use a strong list/table and details. If it is to create, lead with the creation context. If it is to understand one report, build a report, not a wall of widgets.
 
+## Per-Surface Strategy
+
+Product taxonomy does not select a layout. After the Product Brief is resolved, classify every route or meaningfully distinct full-screen state by its dominant job and create the **Surface Strategy Record** defined in `surface-strategy-and-structure.md`. A hybrid project may require different strategies for its public site, authenticated workspace, checkout, account area, and support content.
+
+For each surface, determine whether structural exploration is `required`, `not required`, or an `accepted omission`. This decision happens before visual-system exploration and before the Page and State Map locks composition. Do not ask users to choose from generic layout labels before enough product, content, and workflow evidence exists.
+
 ## Discovery Gate
 
 Run the repository-first scan, summarize only directly evidenced facts and unresolved choices, then stop. For a material new build, redesign, multi-page addition, or ambiguous image-led request, make delivery mode the first visible standalone question, ask up to three other guided direction questions plus one separate open-ended additional-requirements question, and wait for the answer before producing a Product Brief, comparing visual directions, generating references, choosing a new architecture, or implementing UI. The first round must include reference intake and architecture selection when either remains unresolved.
@@ -93,6 +99,8 @@ The rest of the gate is already satisfied only when:
 - the task is a focused repair whose visual and behavioral contract is already clear.
 
 Do not interpret silence as approval. If the user delegates, record the selected defaults and the evidence behind them.
+
+The Discovery Gate gathers product and direction facts; it does not need to overload the first question round with premature layout options. When structural exploration is required, present the Structural Direction Matrix as a separate selection gate after the Product Brief and Surface Strategy Record exist. This selection must happen before the final Design Package, image generation, scaffolding, or UI implementation.
 
 ## Design Delivery Mode Choice
 
@@ -223,6 +231,7 @@ Cover questions in this order, skipping only what direct evidence or an explicit
 10. Which palette strategy fits: neutral-led with one accent, brand-color field, editorial monochrome, or another named approach? Ask about light/dark preference and hue families to favor or reject when unresolved.
 11. What should imagery feel like and do: product evidence, photography, illustration, texture/material, 3D, or deliberate restraint?
 12. What calibration fits the product: low/medium/high expressive variance, focused/balanced/dense information, and nearly static/functional/signature/expressive motion? Let the user set each dial independently.
+13. After the brief is established, which surfaces require structural exploration, and which viable structural direction does the user select, customize, reject, combine, or delegate?
 
 In the first round, combine one purpose question with one or two direction questions when the repository already establishes the basics. For example:
 
@@ -273,6 +282,7 @@ For material work, produce this compact brief:
 ## Product Brief
 
 **Product class:**
+**Surface strategies:** Dominant job, interaction topology, and exploration decision per surface
 **Primary audience and context:**
 **Primary job:**
 **Success event:**
@@ -286,6 +296,7 @@ For material work, produce this compact brief:
 **Design delivery mode:** Generated-reference / direct / hybrid / custom / delegated, with page/state boundary
 **Experience architecture:** Selected topology and user decision/delegation
 **Technical architecture:** Selected stack and user decision/delegation
+**Structural direction:** Selected, custom, delegated, not required, or accepted omission, with evidence
 **Constraints:**
 **References:**
 **Anti-references:**
@@ -297,6 +308,8 @@ For material work, produce this compact brief:
 ```
 
 Create this only after the Discovery Gate. Confirm it before visual exploration unless the user explicitly asks for autonomous execution or the task is a small addition to an established product.
+
+The Product Brief may identify provisional surface strategies, but the **Surface Strategy Record** and any **Structural Direction Matrix** remain separate auditable artifacts. Follow `surface-strategy-and-structure.md`; do not hide structural selection inside a color or style choice.
 
 ## Technology Decision
 
@@ -357,6 +370,8 @@ Distinguish:
 - **State:** loading, empty, error, success, permission, or data variation of the same page.
 
 Do not create a route for every modal, or a modal for every secondary task. Exhaust inline and route-based options before defaulting to a dialog.
+
+Create this map only after required structural directions have been selected, customized, or explicitly delegated. For surfaces where exploration is not required, cite the existing suitable structure or explicit target that resolves it.
 
 ## State Inventory
 

@@ -6,7 +6,7 @@ Use this reference in Phase 4 and whenever implementation drifts. Build a produc
 
 ### Brand Surface
 
-The interface communicates identity, offer, evidence, or story. It may use stronger imagery, composition, scale contrast, pacing, and a signature visual move. The brand, product, place, or offer must be a first-viewport signal. The next section should remain visibly hinted below the hero on common desktop and mobile viewports.
+The interface communicates identity, offer, evidence, or story. It may use stronger imagery, composition, scale contrast, pacing, and a signature visual move. The brand, product, place, or offer must be a first-viewport signal. A continuous public page should normally hint at the next content beat on common desktop and mobile viewports, but it does not need a conventional hero when another product-grounded opening serves the task better.
 
 ### Product Surface
 
@@ -68,7 +68,7 @@ Before choosing a visual style, inventory the product's real world:
 - emotional conditions in which the interface is used;
 - familiar interaction metaphors that preserve usability.
 
-Use this inventory to choose imagery, texture, type roles, structural devices, copy, and one signature visual or motion move. The hero on a brand surface should act as the page's thesis and foreground the most characteristic subject signal, not default to a generic dashboard preview or abstract gradient. A product surface may express identity more quietly through language, density, data treatment, and interaction detail.
+Use this inventory to choose imagery, texture, type roles, structural devices, copy, and one signature visual or motion move. On a brand surface, the first viewport should act as the page's thesis and foreground the most characteristic subject signal; a conventional hero is one valid structure, not a requirement. A product surface may express identity more quietly through language, density, data treatment, and interaction detail.
 
 Numbering, timelines, rulers, chapter markers, or technical annotations must encode real order, progress, scale, or meaning. Do not add structural decoration that looks informative but carries no information.
 
@@ -209,7 +209,7 @@ Do not replace a real screenshot, product view, place, photograph, or object wit
 
 Define how media joins the composition: asset identity, focal point, approved desktop/mobile crop, edge or mask, overlap, negative space, background relationship, and transition states. An image is not integrated merely because it shares the page's radius and shadow. Read `media-and-image-transitions.md` when imagery is prominent or animated.
 
-For a hero, use a real or generated bitmap image or an immersive interactive scene when the subject calls for it. Overlay text directly in the composition, not in a split card layout. Ensure the hero leaves a visible hint of the following content.
+When the selected structure includes a media-led hero, use a real or generated bitmap image or an immersive interactive scene when the subject calls for it. Overlay text directly in the composition rather than placing the primary experience in a decorative split card. On a continuous page, retain a visible hint of the following content. Do not add a hero to authentication, workspace, editor, checkout, report, or other task surfaces when it delays their primary job.
 
 ## Copy And Voice
 
@@ -235,5 +235,11 @@ Reject a direction if several of these appear without product-specific reason:
 - decoration where real imagery or evidence should be;
 - every section using the same spacing and topology;
 - invented copy that could belong to any product.
+- the same sidebar, top bar, summary-tile row, chart row, and activity feed for every signed-in product;
+- a list-detail shell used when the primary work is creation, timeline manipulation, comparison, diagnosis, or a bounded flow;
+- a desktop region stack transferred unchanged to mobile;
+- one signature decoration added to an otherwise unchanged generic skeleton.
 
 Replace the pattern with real content structure, one specific visual idea, and the page's actual primary task.
+
+Similarity is not automatically failure. A familiar structure passes when the Surface Strategy Record explains why it matches the task, content, and user expectations. The failure is unexamined reuse or style-only variation. Follow `surface-strategy-and-structure.md` for structural exploration and convergence checks.

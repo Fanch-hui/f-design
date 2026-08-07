@@ -22,6 +22,7 @@ Inspect the Phase Accountability Ledger before evaluating visual quality:
 - the Motion Coverage Matrix audits direct controls, state/overlays, async feedback, navigation/layout, media, and brand/narrative motion;
 - every approved/reference-derived cue has a Motion Fidelity Manifest item;
 - the Visual Calibration Record and subject-world inventory explain the chosen level of distinctiveness, density, motion, and signature;
+- the Surface Strategy Record covers every material surface, and required Structural Direction Matrices record meaningful differences, bounded-originality results, and user selection or delegation;
 - shared token/component changes identify their canonical source, overrides, affected consumers, and compatibility or migration impact;
 - every claimed implementation or verification links to code, rendered evidence, or an actual test result;
 - accepted omissions state approval, risk, and revisit condition.
@@ -41,9 +42,29 @@ Treat a silently skipped component or motion phase as P1 when it materially chan
 - The primary job and success event are clear.
 - Material product work defines effectiveness, efficiency, errors/recovery, and user confidence measures; clicks alone are not treated as success.
 - Navigation labels and information architecture match the user's mental model.
+- Every material route or full-screen state has a dominant product job and structural-exploration decision; hybrid projects do not force public, workspace, commerce, content, analytics, editor, and bounded-flow surfaces into one layout grammar.
 - The page is not called or designed as a dashboard without a monitoring/comparison job.
 - The first action is evident without reading explanatory prose.
 - No dead controls, placeholder routes, or invented product claims remain.
+
+## Gate 1A: Structural Fit And Bounded Originality
+
+Apply this gate before visual-system approval and repeat it against the rendered product.
+
+- Every surface marked `required` has two or three credible structural directions, or fewer only when the record explains why additional candidates would be artificial.
+- Each pair differs on at least three applicable structural axes, including primary task path, information architecture, or object relationship; recoloring, typography, radius, imagery style, and motion intensity alone do not qualify.
+- Candidate directions use the same approved product facts, content IDs, representative data, and asset identities.
+- At least one candidate is a low-risk fit. A bolder candidate has one governing unconventional move and names the task benefit, teaching/orientation cost, mobile consequence, accessibility path, implementation cost, and risk.
+- No candidate survives only because it appears novel, premium, dramatic, or unlike other products.
+- The selected direction records the user's selection, compatible combination, custom structure, rejection/retry, or explicit delegation before the Design Package is locked.
+- The final structural-selection prompt visibly offers select, combine, custom, reject/regenerate, and delegate paths rather than requiring an A/B/C-only answer.
+- When delegated, the selected direction has the strongest product evidence and lowest unresolved task risk rather than the greatest visual novelty.
+- Surfaces marked `not required` cite an established suitable structure, approved target, or narrow repair boundary. Existing code alone is insufficient evidence.
+- Existing-product work explores only the affected surfaces and structural axes; unrelated routes, learned behavior, and shared contracts remain intact.
+- The rendered interface does not silently revert to a generic marketing sequence, dashboard tile wall, universal list-detail shell, or desktop stack on mobile.
+- Familiar structures remain allowed when the Surface Strategy Record explains their fit. Similarity by itself is not a defect; unexamined reuse is.
+
+Treat a missing required exploration or a style-only candidate set as P1 before implementation. Treat an unjustified experimental interaction that obscures the primary task or blocks access as P1 in the rendered product.
 
 ## Gate 2: Reference Fidelity
 
@@ -320,6 +341,13 @@ The final report should state:
 - Generated-reference pages/states:
 - Direct pages/states:
 - Optional artifacts explicitly skipped:
+
+## Surface and structural strategy
+- Surface Strategy Record coverage:
+- Exploration required/not required/accepted omission:
+- Structural directions compared and meaningful axes:
+- User selection/delegation evidence:
+- Bounded-originality and convergence result:
 
 ## Open-source provenance
 - Package/repository, version, license, and local adaptations:

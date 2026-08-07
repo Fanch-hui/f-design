@@ -1,6 +1,6 @@
 ---
 name: f-design
-description: "End-to-end frontend product design, implementation, and existing-interface optimization. Use when an AI coding agent must plan, design, redesign, prototype, implement, audit, or polish websites, web apps, dashboards, marketing or responsive mobile surfaces, design systems, reference-to-code builds, color/themes, interaction states, imagery, or motion. Also use for hierarchy, layout, typography, card restraint, accessibility, media transitions, motion fidelity, performance, and standards compliance. For greenfield or material design work, after a factual scan, MUST stop and ask delivery mode as the first standalone choice: design-then-generate-reference, design-then-build-directly, hybrid, custom, or explicit delegation; never infer direct mode. Design before optional image generation, keep desktop/mobile on one content canon, and verify in a real browser."
+description: "End-to-end frontend product design, implementation, and existing-interface optimization. Use when an AI coding agent must plan, design, redesign, prototype, implement, audit, or polish websites, web apps, workspaces, editors, commerce, content, analytics, forms, responsive mobile surfaces, design systems, reference-to-code builds, color/themes, interaction states, imagery, or motion. Also use for hierarchy, layout, structural differentiation, card restraint, accessibility, media transitions, motion fidelity, performance, and standards compliance. For greenfield or material design work, after a factual scan, MUST stop and ask delivery mode as the first standalone choice; never infer direct mode. Classify each surface by its primary job, explore genuinely different structures only when needed, reject novelty without task value, design before optional image generation, keep desktop/mobile on one content canon, and verify in a real browser."
 ---
 
 # F-design
@@ -26,25 +26,27 @@ Apply these rules before any stylistic preference:
 2. **Ask before material analysis.** After a factual repository scan, ask a short guided round about the delivery mode, unresolved product, optional reference source, experience/technical architecture, style, palette, imagery, and motion choices. For material design work, delivery mode must be the first visible standalone question, not an inferred default or a detail hidden inside a visual-style question. It must let the user choose `design -> generated references -> implementation`, `design -> direct implementation`, a page-scoped hybrid, a custom mode, or explicit delegation. It must also visibly let the user upload reference screenshots or recordings, provide a website URL or local page, proceed without any reference, or write a custom combination. Reference input and generated output are separate choices. Every choice question must include a visible free-form answer path, and the round must end with a separate open-ended question for additional requirements. Do not publish a Product Brief, analyze visual directions, generate references, choose a new architecture, or code until the user answers, already supplied equivalent detail, explicitly says there are no additional requirements, or delegates the choices.
 3. **User task wins over visual fashion.** Classify the product and identify the primary job before choosing a layout.
 4. **Distinctiveness comes from the subject.** Derive materials, imagery, language, structure, and one signature move from the product's real world. Do not manufacture identity from generic gradients, decorative effects, or fashionable component demos.
-5. **No page without purpose.** Define routes, states, first-viewport priority, and success criteria before generating references.
-6. **One content canon across viewports.** Desktop and mobile designs are different compositions of the same approved copy, content IDs, asset identities, data, user state, navigation, and actions. Generated references, when selected, must visualize this canon rather than redefine it. Mobile may reorder, condense, or progressively disclose; it may not silently invent or replace the product.
-7. **No code before direction.** For material new builds or redesigns, confirm the Product Brief, Page and State Map, project design contract, and visual direction before implementation. If the user explicitly delegates decisions, record assumptions and proceed.
-8. **Generated references are optional delivery artifacts.** Create them only for pages/states selected by the user under generated-reference or hybrid mode, and only after the design package is approved. Direct implementation mode skips generated page references, their manifests, parity audits, and reference-to-code comparison. User-supplied targets remain evidence only to the fidelity level the user explicitly requested.
-9. **Media belongs to the composition.** Preserve image identity, crop intent, focal point, layering, edge treatment, and reference transition behavior. Do not insert imagery as an unrelated rectangle after layout is finished.
-10. **Color is role-based communication.** Use semantic tokens, controlled salience, complete component states, and deliberate theme mappings. Treat `60-30-10` as a diagnostic heuristic, never a quota; never rely on hue alone for meaning; never create dark mode by inversion.
-11. **Open source is evidence-based.** Prefer mature, maintained GitHub projects, but adapt them to the current product. Never paste a library's demo styling into the project unchanged.
-12. **Cards must be earned.** Do not use dashboard-card composition as the default grammar. Never nest cards. Use spacing, dividers, lists, tables, bands, or direct layout when content does not need an independent container.
-13. **Mobile is a separate composition, not a separate product.** Re-prioritize, reorder, collapse, and reposition for phone use while preserving the content canon.
-14. **Function before motion does not mean motion is optional.** Stabilize content, states, responsiveness, accessibility, and interaction behavior first; then implement every approved or reference-derived motion cue, or document an accepted omission.
-15. **Browser evidence is required.** Builds, linters, and detectors support the review; screenshots, captured keyframes, and real interaction paths decide whether the UI is ready.
-16. **No silent phase completion.** Keep a Phase Accountability Ledger. Every applicable phase must end as `implemented`, `evaluated-local`, `not applicable`, `blocked`, or `accepted omission`, with its decision and verification evidence. A written rule is not a delivered feature until the rendered product proves it.
+5. **No surface without a strategy.** Classify each meaningful page or full-screen state by its primary job, not its appearance. Record whether structural exploration is required before locking routes or composition.
+6. **Bound originality with product evidence.** When structure is unresolved, compare two or three genuinely different, product-grounded directions. Reject style-only variants and novelty without task value; preserve at least one low-risk fit.
+7. **No page without purpose.** Define routes, states, first-viewport priority, and success criteria before generating references.
+8. **One content canon across viewports.** Desktop and mobile designs are different compositions of the same approved copy, content IDs, asset identities, data, user state, navigation, and actions. Generated references, when selected, must visualize this canon rather than redefine it. Mobile may reorder, condense, or progressively disclose; it may not silently invent or replace the product.
+9. **No code before direction.** For material new builds or redesigns, confirm the Product Brief, Surface Strategy Record, selected structural direction, Page and State Map, project design contract, and visual direction before implementation. If the user explicitly delegates decisions, record assumptions and proceed.
+10. **Generated references are optional delivery artifacts.** Create them only for pages/states selected by the user under generated-reference or hybrid mode, and only after the design package is approved. Direct implementation mode skips generated page references, their manifests, parity audits, and reference-to-code comparison. User-supplied targets remain evidence only to the fidelity level the user explicitly requested.
+11. **Media belongs to the composition.** Preserve image identity, crop intent, focal point, layering, edge treatment, and reference transition behavior. Do not insert imagery as an unrelated rectangle after layout is finished.
+12. **Color is role-based communication.** Use semantic tokens, controlled salience, complete component states, and deliberate theme mappings. Treat `60-30-10` as a diagnostic heuristic, never a quota; never rely on hue alone for meaning; never create dark mode by inversion.
+13. **Open source is evidence-based.** Prefer mature, maintained GitHub projects, but adapt them to the current product. Never paste a library's demo styling into the project unchanged.
+14. **Cards must be earned.** Do not use dashboard-card composition as the default grammar. Never nest cards. Use spacing, dividers, lists, tables, bands, or direct layout when content does not need an independent container.
+15. **Mobile is a separate composition, not a separate product.** Re-prioritize, reorder, collapse, and reposition for phone use while preserving the content canon.
+16. **Function before motion does not mean motion is optional.** Stabilize content, states, responsiveness, accessibility, and interaction behavior first; then implement every approved or reference-derived motion cue, or document an accepted omission.
+17. **Browser evidence is required.** Builds, linters, and detectors support the review; screenshots, captured keyframes, and real interaction paths decide whether the UI is ready.
+18. **No silent phase completion.** Keep a Phase Accountability Ledger. Every applicable phase must end as `implemented`, `evaluated-local`, `not applicable`, `blocked`, or `accepted omission`, with its decision and verification evidence. A written rule is not a delivered feature until the rendered product proves it.
 
 ## Choose The Work Path
 
 - **New product or substantial redesign:** run all nine phases.
 - **New page inside an established product:** inspect the foundation, run focused discovery and page/state definition, then follow the selected delivery mode. Create desktop/mobile generated references only when that page is assigned to generated-reference or hybrid mode.
 - **Reference image or motion target to code:** preserve the repository foundation, inventory the static composition, media treatment, transition choreography, missing states, and mobile behavior, then continue from implementation.
-- **Optimize an already-written webpage or product surface:** capture the live baseline, diagnose evidence, make prioritized improvements to structure, layout, typography, visual system, responsive composition, accessibility, and states, then compare before and after. Read [existing-surface-optimization.md](references/existing-surface-optimization.md) and follow the loop below.
+- **Optimize an already-written webpage or product surface:** capture the live baseline, diagnose whether defects are local presentation, component behavior, responsive composition, page hierarchy, or product structure, then improve only the affected scope and compare before and after. Trigger structural exploration only when structure is materially changing. Read [existing-surface-optimization.md](references/existing-surface-optimization.md) and follow the loop below.
 - **Focused audit or repair:** inspect the product context, run the applicable quality gates, repair verified defects, and repeat browser checks. Do not stop at a report when the user asked to improve the code. Do not force unnecessary discovery artifacts.
 - **Motion-only request:** first confirm that the surface works and has stable layout. Then run the motion phase and final review.
 
@@ -67,7 +69,7 @@ Use this loop for a webpage, component, flow, or application that already render
 
 1. **Preserve the contract.** Identify the page's purpose, primary task, existing identity, shared design system, functional behavior, user-authored changes, and out-of-scope areas.
 2. **Capture the baseline.** Start the real app and inspect desktop, tablet, and phone. Save and read before screenshots; exercise the primary flow and important states.
-3. **Diagnose causes, not symptoms.** Separate information-architecture, hierarchy, layout, spacing, typography, color/surface, component, responsive, mobile, accessibility, content, state, motion, performance, and metadata problems. Cite concrete source locations and browser evidence.
+3. **Diagnose causes, not symptoms.** Separate local presentation, component behavior, responsive composition, page hierarchy, product structure, typography, color/surface, accessibility, content, state, motion, performance, and metadata problems. Cite concrete source locations and browser evidence.
 4. **Prioritize.** Fix task blockers and mobile/accessibility defects first, then structural and system drift, then visual polish. Avoid broad restyling when a smaller change solves the cause.
 5. **Improve in passes.** Correct structure and hierarchy, layout and rhythm, typography and copy, design-system alignment, responsive/mobile composition, interaction states and accessibility, then implement approved reference motion and add any other motion only when useful.
 6. **Verify the delta.** Re-run build/tests, repeat the browser matrix, compare before and after at identical viewports, and check that function and identity were preserved.
@@ -85,7 +87,7 @@ Run a factual scan before asking questions:
 - Record what is known, directly evidenced, and unresolved. Do not turn the scan into a visual-direction decision before the discovery gate.
 - Classify external guidance by authority and freshness. Current standards and platform documentation outrank design-system examples, professional research, and community inspiration; none silently overrides explicit product evidence.
 
-Read [discovery-and-architecture.md](references/discovery-and-architecture.md) for the product taxonomy, interview cadence, technology decision rules, and page-map contract.
+Read [discovery-and-architecture.md](references/discovery-and-architecture.md) for the product taxonomy, interview cadence, technology decision rules, and page-map contract. Read [surface-strategy-and-structure.md](references/surface-strategy-and-structure.md) before locking any material page structure.
 
 ## Phase 2: Discover And Classify The Product
 
@@ -97,6 +99,7 @@ Resolve at least:
 - audience, context, mental state, and primary job;
 - success event and business outcome;
 - product class and per-surface register: brand, product, or hybrid;
+- per-surface primary job, interaction topology, first-viewport priority, and structural-exploration decision;
 - content/data shape, roles, authentication, permissions, and realistic ranges;
 - target platforms, accessibility level, localization, performance, SEO, and browser constraints;
 - reference input mode: uploaded screenshot/video, public website URL, local/current page, named inspiration, no reference, or a custom combination; plus exactly what may be imitated and what must not be copied;
@@ -107,7 +110,7 @@ Resolve at least:
 - palette strategy or hue families, light/dark preference, imagery/material treatment, and the three calibration dials: expressive variance, information density, and motion energy;
 - user-authored custom directions, extra functionality or content, naming/copy, must-preserve details, prohibited elements, technical constraints, and any other requirements not covered by the suggested options.
 
-Offer concrete choices grounded in the product instead of asking only "what style do you like?" Explain each option in one sentence, include a visible free-form option for each question, and allow the user to combine traits or ignore the suggestions and write their own direction. A reference choice must accept attachments and URLs, not only named style options. An architecture choice must distinguish experience topology from implementation stack when both are unresolved. The final additional-requirements question must remain open-ended rather than another fixed choice list. Produce a compact **Design Delivery Mode Record**, **Product Brief**, **Reference Intake Record**, and **Architecture Decision Record** only after this gate. For a material build, present them for confirmation before visual exploration. If the user asks for autonomous execution, state the assumptions instead of blocking.
+Offer concrete choices grounded in the product instead of asking only "what style do you like?" Explain each option in one sentence, include a visible free-form option for each question, and allow the user to combine traits or ignore the suggestions and write their own direction. A reference choice must accept attachments and URLs, not only named style options. An architecture choice must distinguish experience topology from implementation stack when both are unresolved. The final additional-requirements question must remain open-ended rather than another fixed choice list. Produce a compact **Design Delivery Mode Record**, **Product Brief**, **Reference Intake Record**, and **Architecture Decision Record** only after this gate. Then create the **Surface Strategy Record** before structural or visual exploration. For a material build, present the resolved records for confirmation. If the user asks for autonomous execution, state the assumptions instead of blocking.
 
 Never call something a dashboard merely because it contains data. A dashboard is justified only when monitoring, comparison, or triage across multiple signals is the primary recurring job.
 
@@ -116,13 +119,16 @@ Never call something a dashboard merely because it contains data. A dashboard is
 Turn the brief into an implementation-sized scope:
 
 1. Map the primary and secondary user flows.
-2. When more than one information architecture is plausible, present the viable page/app topology choices and let the user select, customize, or delegate before locking routes. Then separate routes from tabs, overlays, drawers, dialogs, and data states.
-3. List every page with purpose, audience, entry, primary action, key content, desktop composition, mobile first-viewport priority, and completion condition.
-4. Add loading, empty, error, offline, success, disabled, permission, first-run, overflow, and long-content states where relevant.
-5. Identify shared shells and templates without erasing page-specific needs.
-6. Defer low-value features explicitly instead of leaving vague placeholders.
+2. Create a **Surface Strategy Record** for every route or meaningfully distinct full-screen state. Classify its dominant product job, core objects/content, interaction topology, first-viewport priority, mobile task change, existing constraints, and whether structural exploration is `required`, `not required`, or an `accepted omission`.
+3. When exploration is required, create two or three product-grounded structural directions and a **Structural Direction Matrix**. Each pair must differ on at least three applicable structural axes, including the primary task path, information architecture, or object relationship. Palette, typeface, radius, illustration style, and motion intensity alone do not count.
+4. Run the bounded-originality gate: reject directions whose value is only novelty, that obscure the primary task, break familiar orientation without benefit, fail mobile/accessibility/state needs, or demand disproportionate implementation and assets. Keep at least one low-risk fit; do not invent a weak wildcard to fill a quota.
+5. Present viable directions and end with a visible choice to select, combine named compatible parts, write a custom structure, reject/regenerate the set, or explicitly delegate. Do not reduce this to an A/B/C-only prompt. Record the wording and rationale before locking routes or composition.
+6. Separate routes from tabs, overlays, drawers, dialogs, and data states. List every page with purpose, audience, entry, primary action, key content, selected desktop composition, mobile first-viewport priority, and completion condition.
+7. Add loading, empty, error, offline, success, disabled, permission, first-run, overflow, and long-content states where relevant.
+8. Identify shared shells and templates without erasing page-specific needs. Do not force public, workspace, commerce, content, analytics, editor, and bounded-flow surfaces into one project-wide layout grammar.
+9. Defer low-value features explicitly instead of leaving vague placeholders.
 
-The result is the **Page and State Map**. Do not generate references or code until every planned page has an accountable role.
+The result is the **Surface Strategy Record**, selected **Structural Direction Record**, and **Page and State Map**. Do not generate references or code until every planned page has an accountable role and every required structural exploration has a recorded selection or explicit delegation. Follow [surface-strategy-and-structure.md](references/surface-strategy-and-structure.md).
 
 ## Phase 4: Complete The Design, Then Optionally Generate References
 
@@ -147,7 +153,7 @@ Define a **Color Role Table**, **Theme Matrix**, and **Component State Matrix** 
 
 For a material new build, redesign, or multi-page system, synthesize a project-specific `DESIGN.md` from the Product Brief, existing project identity, user-provided references, and [design-reference-synthesis.md](references/design-reference-synthesis.md). Existing project design documentation remains authoritative.
 
-Before generating any reference or implementing the interface, complete a **Design Package** containing the confirmed Product Brief, Page and State Map, project design contract, desktop/mobile composition rules, Color Role Table, Theme Matrix, Component State Matrix, media/motion intent, and a **Page Content Canon** for every page. The canon freezes stable content IDs, approved copy, data/state, asset IDs, navigation, actions, and what mobile may reorder, condense, or defer. Present the package for confirmation or record explicit delegation.
+Before generating any reference or implementing the interface, complete a **Design Package** containing the confirmed Product Brief, Surface Strategy Record, selected Structural Direction Record, Page and State Map, project design contract, desktop/mobile composition rules, Color Role Table, Theme Matrix, Component State Matrix, media/motion intent, and a **Page Content Canon** for every page. The canon freezes stable content IDs, approved copy, data/state, asset IDs, navigation, actions, and what mobile may reorder, condense, or defer. Present the package for confirmation or record explicit delegation. Visual refinement may not silently replace the selected structure with a familiar generic skeleton.
 
 Then follow the selected mode.
 
@@ -220,6 +226,8 @@ Verify at minimum:
 
 For generated-reference and selected hybrid pages, compare implementation screenshots to each approved reference. For direct pages, compare the rendered result to the Design Package, Page Content Canon, responsive rules, and any explicit user-supplied target only when fidelity was requested. In all modes, confirm desktop/mobile content parity and static media start/end compositions, run a dedicated card audit and mobile first-viewport audit, and fix verified defects before adding motion.
 
+Also run the structural-convergence audit from [surface-strategy-and-structure.md](references/surface-strategy-and-structure.md). Familiar patterns pass when the Surface Strategy Record explains their task fit; unexplained reuse of the same marketing, dashboard, list-detail, or mobile-stacking skeleton across unrelated products does not.
+
 Read [responsive-mobile.md](references/responsive-mobile.md) and [quality-gates.md](references/quality-gates.md).
 
 ## Phase 8: Add Motion And Microinteractions
@@ -247,6 +255,9 @@ Read [motion-and-interaction.md](references/motion-and-interaction.md) before im
 Repeat the browser matrix after motion. Release only when:
 
 - the primary task is immediately clear on every page and viewport;
+- every material surface has a Surface Strategy Record and every required exploration has a selected or explicitly delegated structural direction;
+- the selected structure is justified by product evidence rather than copied from a familiar website, dashboard, editor, commerce, or content skeleton;
+- structural alternatives were meaningfully different where required, while rejected novelty did not enter the final interface;
 - mobile first viewports prioritize the page's actual job;
 - no content is hidden, clipped, overlapped, or needlessly oversized;
 - every interactive element has complete states and works with keyboard and touch;

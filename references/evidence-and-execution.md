@@ -44,6 +44,8 @@ At minimum consider:
 - Reference Intake Record covering upload, URL, local/current page, named inspiration, no-reference, custom, or delegated input, including inspection limits and asset rights;
 - Architecture Decision Record covering experience and technical options, recommendation, consequences, and the user's selection, custom answer, or explicit delegation;
 - Product Brief, Page and State Map, and success measures;
+- Surface Strategy Record covering each material surface's dominant job, core objects/content, interaction topology, first-viewport priority, mobile task change, constraints, and structural-exploration decision;
+- Structural Direction Matrix and selected Structural Direction Record when exploration is required, including meaningful structural axes, bounded-originality results, the user's wording, and rejected alternatives; otherwise concrete evidence for `not required` or an approved omission;
 - project design contract, Color Role Table, Theme Matrix, and state coverage;
 - Visual Calibration Record for expressive variance, information density, and motion energy, plus the subject-world inventory and selected signature;
 - Design System Governance Record naming the master source, allowed surface overrides, component contracts, and compatibility/migration impact;
@@ -116,6 +118,9 @@ Treat these as release failures:
 
 - a material phase is declared complete without a ledger status and evidence;
 - a material build starts visual analysis or scaffolding without a resolved delivery mode, reference-input path, and user-selected or explicitly delegated architecture;
+- a material surface reaches visual-system work, image generation, scaffolding, or implementation without a Surface Strategy Record;
+- required structural exploration is skipped, hidden inside a style/palette choice, or presented as several recolors of one skeleton;
+- a structural direction is selected without user choice/delegation, or survives only because it is novel despite failing task clarity, familiar orientation, mobile, accessibility, state, feasibility, or content-evidence checks;
 - a greenfield or material design task records direct mode without an explicit user selection or explicit delegation;
 - generated page images are created before the Design Package is complete, or are created for direct-mode pages without the user changing the mode;
 - direct-mode pages are failed for missing generated references, manifests, parity audits, or generated-reference comparison;

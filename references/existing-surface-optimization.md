@@ -53,12 +53,22 @@ Before changing files, determine:
 
 Use repository evidence first: product/design docs, existing neighboring pages, tokens, components, assets, screenshots, tests, and source history when useful. For structural improvement or visual redesign, run the guided Discovery Gate in `discovery-and-architecture.md` before presenting a new direction or coding it. A tune-up or standards repair should not force an interview when the contract is already evident.
 
+Classify the target surface and its dominant job using `surface-strategy-and-structure.md`. Record whether structural exploration is required:
+
+- tune-up and standards repair normally record `not required` with the suitable existing structure as evidence;
+- structural improvement records `required` when more than one viable task, information, or interaction topology exists;
+- visual redesign records `required` unless an approved target or established structure already resolves topology;
+- a mixed request may explore only named pages or structural axes while preserving the rest.
+
+Do not use a visual redesign as permission to replace learned product behavior. Do not use preservation as a reason to keep a structure proven to block the task.
+
 Write a compact contract:
 
 ```text
 Target surface:
 Primary task:
 Optimization mode:
+Surface strategy and exploration decision:
 Identity and behavior to preserve:
 Evidence that defines the system:
 Requested improvements:
@@ -176,6 +186,7 @@ Classify each issue before editing.
 Name the root cause as one of:
 
 - missing or incorrect product decision;
+- unsuitable or unexamined product structure;
 - design-system drift;
 - missing shared token/component;
 - one-off implementation;
@@ -358,6 +369,7 @@ Report:
 
 - target and optimization mode;
 - root causes fixed, ordered by user impact;
+- Surface Strategy Record, structural-exploration decision, selected direction when applicable, and preserved structural boundaries;
 - important layout, typography, visual-system, responsive, and standards changes;
 - before/after viewports and states inspected;
 - build/tests/accessibility checks run;
@@ -372,6 +384,8 @@ Report:
 
 - Do not rewrite the whole interface to express personal taste.
 - Do not erase a recognizable identity during a polish request.
+- Do not expand a structural exploration to unrelated routes, workflows, or shared patterns.
+- Do not present recolors or typography swaps as structural alternatives.
 - Do not stop at recommendations when implementation was requested.
 - Do not fix isolated pixels while leaving the wrong hierarchy or flow.
 - Do not wrap every section in cards or convert mobile rows to cards by default.

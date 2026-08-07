@@ -43,17 +43,20 @@ Reject vague statements such as "make it like Apple" or "use Linear style." Reje
 
 ## Direction Probe Protocol
 
-When the user has not chosen a clear visual direction, present two or three compact, structurally different design proposals before implementation or any optional reference set. Use written composition plans, token/type/media samples, and structured wireframes. Do not use generated page images to discover the direction. This is progressive disclosure: resolve the design direction first, then expand only the selected system.
+Separate structural and visual uncertainty. First complete the Surface Strategy Record. When structural exploration is required, use `surface-strategy-and-structure.md`, present the Structural Direction Matrix, and record the user's selection or delegation before visual-system probes. Do not smuggle a layout decision into a palette or style choice.
+
+When structure is already selected or evidenced but the visual direction remains unclear, present two or three compact visual-system proposals before implementation or any optional reference set. Use written composition plans, token/type/media samples, and structured wireframes. Do not use generated page images to discover the direction. This is progressive disclosure: resolve structure first, then visual direction, then expand only the selected system.
 
 Each proposal or probe must:
 
 - use the same approved product name, copy, content IDs, state, and representative assets;
-- vary meaningful composition, typography, density, image treatment, and motion intent rather than recoloring one template;
+- preserve the selected structural contract unless the proposal is explicitly part of a still-open structural exploration;
+- vary meaningful typography, hierarchy, density, image treatment, material language, and motion intent rather than recoloring one template;
 - state outside the image which subject-derived quality, tradeoff, and calibration-dial combination it represents;
 - include a restrained fit, a bolder fit, and an evidence-backed wildcard only when all three are plausible;
 - remain a real interface proposal, without internal labels such as `Option A`, prompt text, style names, or design commentary rendered inside it.
 
-Ask the user to select, combine, reject, or write a custom direction. If direction is explicitly delegated, record the chosen proposal and rationale. Complete and approve the Design Package before generating any page reference. Do not generate a desktop/mobile page set from several unresolved visual systems.
+Ask the user to select, combine, reject, or write a custom direction. If direction is explicitly delegated, record the chosen proposal and rationale. Complete and approve the Design Package before generating any page reference. Do not generate a desktop/mobile page set from several unresolved structures or visual systems.
 
 When revising a generated design, classify the next move:
 

@@ -25,6 +25,8 @@ F-design 不是 Codex 专属扩展。它采用开放的 [Agent Skills](https://a
 - **先选择交付模式：** 空项目或重要设计任务完成事实扫描后，首个可见问题必须让用户选择“设计后生图再复刻”“设计后直接实现”或“只给关键页面生图的混合模式”，也可以自定义或明确授权代理决定。空项目、没有外部参考、赶时间或“先做首页看看”都不能被当作默认直接实现。
 - **先问再分析：** 是否使用外部参考与是否生成新的页面参考图是两个独立选择。用户可以上传参考图、提供网站 URL、使用当前页面或选择“不使用参考”；每个方向题都允许自由填写，最后还会单独询问额外要求。
 - **先设计再生图：** 产品范围、页面状态、视觉系统、桌面/移动构图、内容基线、媒体与动效意图确认后，才允许按所选模式生成页面参考图。生成图用于呈现已完成的设计，不负责替代设计。
+- **逐页面判断结构：** 官网、工作台、编辑器、电商、内容、数据、登录与混合产品不会共用一套默认骨架。F-design 会按页面识别主要任务、对象、交互拓扑、首屏优先级和移动端变化，再判断是否需要结构探索。
+- **受约束地发散：** 空项目、重大改版或结构不明确时，比较 2–3 个真正不同且有产品依据的结构方向；已有合适结构或局部修复可以跳过。只换配色、字体和圆角不算新方向，也不会为了不同而采用奇怪交互。
 - **不依赖其他设计 Skill：** F-design 的设计、组件、响应式、色彩、图片、动效和质量规范均已包含在本仓库中。
 - **移动端不是缩小版：** 移动端需要重新排序、收纳和定位内容，并单独检查首屏、触控、键盘和安全区域。
 - **图片属于构图：** 图片的主体、裁切、焦点、边缘、层级和过渡需要与页面结构一起设计。
@@ -159,14 +161,15 @@ $f-design 根据这组参考图实现桌面端和移动端页面
 3. 让用户自行决定是否使用外部参考；可选上传文件、网站 URL、当前页面或“不使用参考”。
 4. 提供产品/页面架构与技术架构选项、推荐理由和后果，由用户选择、自定义或明确授权代理决定。
 5. 补齐未明确的产品、风格、色彩、图片、动效和额外需求。
-6. 建立产品简报、页面与状态清单，以及桌面/移动端共享的内容基线。
-7. 完成设计包：主题来源、表现力/密度/动效刻度、视觉系统、色彩角色、组件状态、媒体、动效和响应式规则。
-8. 仅在生图或混合模式中，为选定页面生成桌面/移动参考图并确认；直接实现模式跳过此步。
-9. 评估项目现有组件与必要的成熟开源组件。
-10. 分阶段实现结构、系统、组件、媒体、响应式和无障碍。
-11. 在真实浏览器中审查功能、布局和多视口结果；只有生图页面才进行生成参考图对照。
-12. 实现并验证交互动效、网页叙事分镜和 reduced-motion 降级。
-13. 完成构建、测试、浏览器截图和交付说明。
+6. 建立产品简报，并逐页面记录主要任务、内容对象、交互拓扑、首屏优先级、移动端变化和结构探索决定。
+7. 对需要探索的页面提出 2–3 个在任务路径、信息架构、对象关系等方面真正不同的方向；淘汰无依据猎奇方案，让用户选择、组合、自定义、拒绝或授权代理决定。
+8. 根据选定结构建立页面与状态清单、桌面/移动端共享内容基线和完整设计包。
+9. 仅在生图或混合模式中，为选定页面生成桌面/移动参考图并确认；直接实现模式跳过此步。
+10. 评估项目现有组件与必要的成熟开源组件。
+11. 分阶段实现结构、系统、组件、媒体、响应式和无障碍。
+12. 在真实浏览器中审查任务、结构、布局和多视口结果；只有生图页面才进行生成参考图对照。
+13. 实现并验证交互动效、网页叙事分镜和 reduced-motion 降级。
+14. 完成结构趋同检查、构建、测试、浏览器截图和交付说明。
 
 F-design 对每个阶段保留执行状态，避免把“写进规范”误当成“已经实现”。
 
@@ -177,7 +180,10 @@ F-design 对每个阶段保留执行状态，避免把“写进规范”误当�
 | 选择设计交付模式 | 重大设计任务不可跳过 | 用户选择、自定义或明确授权代理决定 |
 | 外部参考输入 | 可跳过 | 可以选择“不使用参考” |
 | 架构选择 | 条件执行 | 现有项目通常保持原架构；新项目或重大迁移时需要选择 |
-| 多方向设计方案 | 条件执行 | 方向已明确、已有设计系统或用户已指定时跳过 |
+| 页面形态与结构策略记录 | 重大设计任务不可跳过 | 每个页面都需说明主要任务和是否需要结构探索；局部修复可使用简版记录 |
+| 多结构方向探索 | 条件执行 | 空项目、重大改版、结构不明确或存在多个合理拓扑时执行；合适的既有结构、明确可用目标或局部修复可跳过并记录依据 |
+| 结构方向选择 | 条件执行 | 仅在结构探索触发时执行；用户可选择、组合、自定义、拒绝或明确授权代理决定 |
+| 多视觉方向设计 | 条件执行 | 结构已经确定但视觉方向仍不明确时执行；不得把换色或换字体冒充结构方案 |
 | 生成页面参考图 | 可跳过 | 直接实现模式全部跳过；混合模式只生成指定页面/状态 |
 | 参考图清单与桌面/移动成对检查 | 可跳过 | 只对生成参考图的页面执行 |
 | 生成参考图与代码逐图对照 | 可跳过 | 直接实现页面不执行；用户明确要求还原外部目标时除外 |
@@ -191,9 +197,10 @@ F-design 不只用于从零生成页面。面对已经存在的界面时，它�
 
 1. 启动真实项目并记录桌面、平板和手机基线。
 2. 区分信息架构、层级、布局、排版、色彩、组件、移动端、无障碍、动效和性能问题。
-3. 优先修复任务阻塞、遮挡溢出、移动端首屏和无障碍缺陷。
-4. 在保留项目身份与功能的前提下做针对性修改。
-5. 使用相同视口比较修改前后结果，并重新走关键交互。
+3. 判断问题属于局部呈现、组件行为、响应式构图、页面层级还是产品结构；只有结构本身需要改变时才触发结构探索。
+4. 优先修复任务阻塞、遮挡溢出、移动端首屏和无障碍缺陷。
+5. 在保留项目身份、已学会行为和未涉及页面的前提下做针对性修改。
+6. 使用相同视口比较修改前后结果，并重新走关键交互。
 
 ## 目录结构
 
@@ -204,6 +211,7 @@ f-design/
 │   └── openai.yaml
 └── references/
     ├── discovery-and-architecture.md
+    ├── surface-strategy-and-structure.md
     ├── design-reference-synthesis.md
     ├── design-system-governance.md
     ├── visual-system.md
@@ -244,4 +252,4 @@ F-design 使用 [Apache License 2.0](LICENSE) 发布。
 
 ## English
 
-F-design is a self-contained frontend product design and delivery skill built on the open Agent Skills structure. It is not limited to Codex: any compatible host that can discover a `SKILL.md` folder and load its referenced files can use it. Users choose design-then-generate-reference, design-then-build-directly, or a page-scoped hybrid. Every mode completes the design before optional image generation and retains responsive, accessibility, and browser QA.
+F-design is a self-contained frontend product design and delivery skill built on the open Agent Skills structure. It is not limited to Codex: any compatible host that can discover a `SKILL.md` folder and load its referenced files can use it. Users choose design-then-generate-reference, design-then-build-directly, or a page-scoped hybrid. F-design classifies each surface by its primary job, explores genuinely different structures only when needed, rejects novelty without task value, and completes the selected design before optional image generation, implementation, responsive/accessibility work, motion, and browser QA.
