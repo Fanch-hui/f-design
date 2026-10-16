@@ -11,7 +11,7 @@ Create a Motion Coverage Matrix for every material build, redesign, broad optimi
 
 Audit direct-control feedback, state/overlay continuity, async feedback, navigation/layout continuity, media transitions, and brand/narrative motion. Not every category needs animation, but every category needs a recorded decision. A quiet task surface may use restrained state motion. An approved expressive, brand-led, or image-led surface needs its signature or reference-derived sequence; a button press plus one toast fade is not complete coverage.
 
-Use `implemented`, `not applicable`, or `accepted omission` for each row. Do not choose a library until the coverage and purpose are known. See `evidence-and-execution.md` for the full accountability contract.
+Before implementation, record intended decisions and pending checks without assigning a completion outcome. Completed rows use `implemented`, `not applicable`, or `accepted omission`; use [execution accountability](evidence-and-execution.md#allowed-phase-statuses) for evaluation, blockers, and outstanding manual acceptance. Do not choose a library until the coverage and purpose are known.
 
 ## Motion Gate
 

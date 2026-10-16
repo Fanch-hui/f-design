@@ -4,7 +4,7 @@ F-design is an original, self-contained synthesis informed by ideas and public d
 
 | Project | Repository | License |
 |---|---|---|
-| taste-skill | https://github.com/Leonxlnx/taste-skill | MIT |
+| taste-skill (v1 and v2 guidance) | https://github.com/Leonxlnx/taste-skill | MIT |
 | impeccable | https://github.com/pbakaus/impeccable | Apache-2.0 |
 | skills by Emil Kowalski | https://github.com/emilkowalski/skills | MIT |
 | awesome-design-md | https://github.com/VoltAgent/awesome-design-md | MIT |
@@ -16,6 +16,8 @@ F-design is an original, self-contained synthesis informed by ideas and public d
 | UI Design System | https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/ui-design-system | MIT |
 | Frontend Slides | https://github.com/zarazhangrui/frontend-slides | MIT |
 | generate-design | https://github.com/google-labs-code/stitch-skills/tree/main/plugins/stitch-design/skills/generate-design | Apache-2.0 |
+
+Taste-skill v2 source: [commit f624f37](https://github.com/Leonxlnx/taste-skill/tree/f624f37a8c650b9cc550253104925efe4c8de246/skills/taste-skill). Its subject-specific concept, content-led composition, asset truthfulness, and critique methods are adapted to F-design's product scope and delivery modes.
 
 The repository links above identify the upstream copyright notices and license texts. Project names and trademarks remain the property of their respective owners. Inclusion here does not imply endorsement.
 

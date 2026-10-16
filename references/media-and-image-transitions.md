@@ -9,6 +9,7 @@ Treat the image as a layout participant from the start. Before implementation, r
 | Field | Decision |
 |---|---|
 | Asset ID and subject identity | The exact person, product, place, object, or scene that must remain consistent |
+| Source and attribution | Existing business asset, contextual third-party material, or generated illustration; verified source, license, and required credit |
 | Product role | Evidence, orientation, explanation, atmosphere, navigation, comparison, or decoration |
 | Prominence | First-viewport priority and intended visual weight |
 | Desktop/mobile source | Same asset identity with approved responsive source or crop |
@@ -20,6 +21,8 @@ Treat the image as a layout participant from the start. Before implementation, r
 | Transition | Evidence, states, trigger, choreography, and reduced-motion result |
 
 An image feels integrated when its crop, edge, negative space, and layer relationship support the page hierarchy. Do not finish a text layout and then drop an image into the nearest rounded rectangle. Do not add a card merely to make the image look contained.
+
+Contextual photographs, archive material, and generated illustrations may explain a subject's world, but must not be presented as the actual business's product, premises, team, or customer evidence. Use authentic assets for those claims and provide attribution in the form required by the verified license.
 
 ## Match The Reference Material
 

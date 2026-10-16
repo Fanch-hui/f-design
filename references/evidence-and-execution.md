@@ -28,6 +28,8 @@ Every applicable phase or required artifact ends with one of these exact statuse
 - `blocked`: implementation cannot proceed, with the blocker and impact reported;
 - `accepted omission`: an applicable item was deliberately omitted with the user/product owner's acceptance, reason, risk, and revisit condition.
 
+These are completion outcomes. Before a phase is performed, state the planned work and leave its completion outcome unset. Record implementation evidence and outstanding manual acceptance separately in Verification; a design decision or planned check does not establish a verified product outcome.
+
 `Skipped`, `later`, silence, or a final report section that says only `none` is not an acceptable status. An agent may narrow a focused repair to applicable rows, but it may not erase the rows.
 
 ## Phase Accountability Ledger

@@ -1,6 +1,6 @@
 # Quality Gates
 
-Use this reference before motion and again before delivery. Automated output is evidence of defects, never proof of design quality. Inspect the real product in a browser and walk the actual task.
+Use the applicable sections before motion and delivery, within the user's and host's permitted verification scope. Automated output is evidence of defects, never proof of design quality. Browser checks and task walkthroughs provide visual evidence when allowed; when acceptance is manual, keep those results unverified and provide the relevant checks to the user. Repeat checks only for new changes or unresolved findings.
 
 ## Severity
 
@@ -195,6 +195,8 @@ Automated scans do not verify comprehension, focus logic, or correct announcemen
 - No card-within-card, decorative blob/orb, fake screenshot, or generic filler remains.
 - Brand and product surfaces use the right register.
 - The visual identity is traceable to the product's real subject, content, materials, language, or workflows rather than a generic template.
+- For a new brand direction, the governing concept uses distinguishing subject facts and informs supporting sections, not only the first viewport.
+- The approved content remains substantive after decorative elements are removed, and the initial and reduced-motion compositions retain a clear hierarchy and primary task.
 - One justified signature element or sequence is legible; decorative effects do not compete with it.
 - Structural devices such as numbering, timelines, rulers, or annotations carry real information.
 - Generated page images were created only after the Design Package was approved and do not contain option labels, prompt notes, or internal design metadata.

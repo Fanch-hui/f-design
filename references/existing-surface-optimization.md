@@ -1,6 +1,6 @@
 # Existing Surface Optimization
 
-Use this reference when a webpage, component, flow, or application already exists and the user asks to optimize layout, typography, visual design, responsiveness, accessibility, consistency, standards, or overall quality. Preserve working behavior and identity while removing verified defects.
+Use this route when a webpage, component, flow, or application already exists and the user asks to improve its quality. Preserve working behavior and identity while resolving verified defects in the affected scope.
 
 ## Contents
 
@@ -19,378 +19,173 @@ Use this reference when a webpage, component, flow, or application already exist
 
 Select the smallest mode that matches the request:
 
-### Tune-Up
+| Mode | Trigger | Scope |
+|---|---|---|
+| **Tune-Up** | Direction is sound but execution is rough | Improve hierarchy, spacing, typography, consistency, responsiveness, states, accessibility, and polish within the existing architecture and identity. |
+| **Structural Improvement** | Information architecture, workflow, content priority, or mobile composition blocks the task | Reorganize the affected surface while preserving product scope, data behavior, and recognizable identity. Resolve unclear material flow changes before implementing them. |
+| **Visual Redesign** | The user requests a new direction or the existing system prevents the desired outcome | Identify what changes and what stays, resolve the delivery mode, and implement from the approved Design Package or generated references for selected pages. |
+| **Standards Repair** | Accessibility, responsiveness, metadata, performance, state coverage, system drift, or code quality is the primary defect | Repair the relevant standard without unnecessary visual churn. |
 
-Use when the product direction is sound but execution is rough. Improve hierarchy, layout, spacing, typography, component consistency, responsive behavior, states, accessibility, and polish. Keep architecture and visual identity intact. The existing page and before screenshots are the visual baseline.
-
-### Structural Improvement
-
-Use when the page works but information architecture, workflow shape, content priority, or mobile composition is wrong. Reorganize the surface while preserving product scope, data behavior, and recognizable identity. Confirm material changes to user flow before implementation when the intent is not clear.
-
-### Visual Redesign
-
-Use when the user explicitly requests a new direction or the current design system fundamentally prevents the desired outcome. Document what remains, what changes, and why, then ask for the design delivery mode. Generate approved desktop and mobile references before broad implementation only for generated-reference or selected hybrid pages; direct pages implement from the approved Design Package.
-
-### Standards Repair
-
-Use when the primary need is accessibility, responsiveness, metadata, performance, state coverage, design-system drift, or code quality. Fix standards defects without unnecessary visual churn.
-
-Do not turn every request into a redesign. Do not limit a redesign request to tiny cosmetic patches.
+Do not turn a polish request into a redesign or reduce an explicit redesign to cosmetic patches.
 
 ## Establish The Contract
 
-Before changing files, determine:
+Before editing, establish the target, primary task, audience, requested scope, existing identity, functional states, and shared system. Identify user-authored and in-progress changes so edits preserve their intent. Include supported contexts and explicit anti-goals.
 
-- page/surface and primary task;
-- target audience and usage context;
-- existing visual identity and design evidence;
-- shared tokens, components, icons, motion, and layout patterns;
-- functional behaviors and states that must remain unchanged;
-- known user-authored or in-progress changes;
-- supported viewports, browsers, languages, and accessibility requirements;
-- requested quality level and scope;
-- explicit anti-goals and out-of-scope areas.
+Use repository evidence first: product/design documentation, neighboring surfaces, tokens, components, assets, screenshots, tests, and relevant history. Resolve contradictions using [evidence authority](evidence-and-execution.md#evidence-authority). Update project `DESIGN.md` only when a change establishes a durable rule.
 
-Use repository evidence first: product/design docs, existing neighboring pages, tokens, components, assets, screenshots, tests, and source history when useful. For structural improvement or visual redesign, run the guided Discovery Gate in `discovery-and-architecture.md` before presenting a new direction or coding it. A tune-up or standards repair should not force an interview when the contract is already evident.
+For structural improvement or visual redesign, follow the [Discovery Gate](discovery-and-architecture.md#discovery-gate). Tune-ups and standards repairs need no interview when their contract is already evident.
 
-Classify the target surface and its dominant job using `surface-strategy-and-structure.md`. Record whether structural exploration is required:
+Classify each affected surface using [surface strategy and structural exploration](surface-strategy-and-structure.md):
 
-- tune-up and standards repair normally record `not required` with the suitable existing structure as evidence;
-- structural improvement records `required` when more than one viable task, information, or interaction topology exists;
-- visual redesign records `required` unless an approved target or established structure already resolves topology;
-- a mixed request may explore only named pages or structural axes while preserving the rest.
+- tune-up and standards repair normally need no exploration; identify the suitable existing structure;
+- structural improvement needs exploration when multiple viable task, information, or interaction topologies remain;
+- visual redesign needs exploration unless an approved target or established structure resolves topology;
+- mixed requests may explore named pages or axes while preserving the rest.
 
-Do not use a visual redesign as permission to replace learned product behavior. Do not use preservation as a reason to keep a structure proven to block the task.
+Confirm or use existing authorization for material changes to learned behavior. Preservation must not retain a structure proven to block the task.
 
-Write a compact contract:
+Keep the contract compact:
 
 ```text
-Target surface:
-Primary task:
+Target and primary task:
 Optimization mode:
 Surface strategy and exploration decision:
-Identity and behavior to preserve:
+Identity, behavior, and user changes to preserve:
 Evidence that defines the system:
-Requested improvements:
-Out of scope:
-Viewports/states to verify:
+Requested improvements and exclusions:
+Viewports/states and permitted verification:
 ```
 
 ## Capture The Baseline
 
-Start the real development server. Do not audit source code in isolation when the surface can render.
+Use evidence available within the user's and host's permitted verification scope:
 
-Capture and inspect:
+- inspected user-supplied screenshots, recordings, or approved references;
+- source, design documentation, tokens, tests, and existing runtime evidence;
+- rendered desktop/mobile states and interaction observations when browser inspection is authorized.
 
-- initial desktop viewport;
-- wide desktop if max-width behavior matters;
-- tablet portrait and landscape;
-- phone at 320, 375/390, and 430 pixels;
-- primary interaction flow;
-- navigation, overlays, menus, forms, and sticky/fixed UI;
-- loading, empty, error, success, disabled, permission, and long-content states that can occur;
-- keyboard focus path and reduced motion;
-- current interaction feedback, async status, view continuity, media transitions, and any brand/signature sequence;
-- soft keyboard or realistic mobile form behavior when relevant.
+When permitted and useful, start the real development server and inspect the rendered surface. Do not require automated browsing for a task whose experience acceptance belongs to the user. Source evidence supports implementation findings; it does not prove rendered quality or successful interaction.
 
-Read every screenshot you create. Record observable symptoms and source ownership. A screenshot path without visual inspection is not evidence.
+Choose representative viewports and states from the affected behavior: first viewport, long content, overlays, forms, loading/error/empty states, keyboard, or reduced motion as applicable. Expand only when the change or an unresolved concern justifies it. Follow [responsive review](responsive-mobile.md) for mobile composition.
 
-When the page is long, capture major sections separately. A scaled full-page thumbnail hides spacing, clipping, and hierarchy defects.
+Read every screenshot used as evidence. Use section-sized captures for long pages; a scaled full-page thumbnail can hide defects. Record each material symptom, intended behavior, responsible code, and whether it is verified, inferred, or proposed. Distinguish intentional design, implementation drift, and stale documentation before editing.
 
-Reconcile documented intent with rendered reality before treating either as truth:
-
-| Rule/surface | Intended evidence | Rendered observation | Code owner | Confidence: verified/inferred/proposed | Intentional / code drift / docs stale | Action |
-|---|---|---|---|---|---|---|
-
-When changing a shared token or component, identify its consumers and verify representative neighboring surfaces. Update the project `DESIGN.md` only when the change creates a durable rule; do not record one-off polish as a system principle.
+For a shared token or component, identify consumers and select representative neighboring surfaces within the allowed scope. If visual or interaction comparison remains manual, name it as unverified until results arrive.
 
 ## Diagnose Root Causes
 
-Classify each issue before editing.
+Classify the defect before choosing a fix:
 
-### Product And Information Architecture
+| Area | Typical symptoms | Likely cause |
+|---|---|---|
+| Product and information architecture | Wrong primary task, competing actions, unclear completion, disconnected decision context, excessive steps | Missing product decision or unsuitable structure |
+| Layout and composition | Weak grouping, arbitrary spacing, unsuitable density/grid, nested containers, unstable dimensions | Design-system drift, local implementation, or unsuitable hierarchy |
+| Typography and content | Weak role hierarchy, unreadable text, overflowing labels/translations, vague actions or errors | Content problem, missing tokens, or local implementation |
+| Visual system and media | Ambiguous color meaning, inconsistent surfaces/icons, generic identity, imagery disconnected from its composition | Design-system drift or missing shared contract |
+| Components and interaction | Duplicate primitives, missing feedback, inaccessible controls, clipped overlays, lost input | Missing shared component or incomplete state/accessibility behavior |
+| Responsive and mobile | Compressed desktop layout, overflow, hidden actions, keyboard/sticky collisions | Responsive composition failure |
+| Standards and engineering | Semantic failures, missing recovery, broken metadata, layout shift, rendering/build errors, orphaned code | Incomplete behavior or performance/engineering defect |
 
-- wrong primary task or action;
-- unclear entry, next step, cancellation, or completion;
-- competing actions with equal emphasis;
-- necessary decision context separated from the action;
-- dashboard framing where a list, report, workflow, or creation surface fits better;
-- excessive choices or unnecessary steps;
-- mobile first viewport serving decoration instead of the task.
-
-### Layout And Composition
-
-- arbitrary spacing or one gap used everywhere;
-- weak grouping and alignment;
-- inappropriate grid, column count, max-width, or density;
-- card walls, nested cards, or unnecessary framed sections;
-- content stretching on wide screens;
-- fixed dimensions that break realistic data;
-- decorative empty space displacing important content;
-- unstable dimensions across loading, hover, focus, or dynamic states.
-
-### Typography And Content
-
-- unclear role hierarchy;
-- too many nearby sizes or weights;
-- display typography used in controls or data;
-- unreadable line length, line height, or mobile size;
-- viewport-proportional type that becomes too large or too small;
-- negative/tracked letter spacing used as decoration;
-- long labels, translations, CJK, or identifiers overflowing;
-- vague buttons, redundant explanation, inconsistent terminology, or unrecoverable errors.
-
-### Visual System
-
-- hard-coded values bypassing tokens;
-- inconsistent color meaning, radius, border, shadow, icon, or surface treatment;
-- saturated color spread across too many regions, leaving no clear attention hierarchy;
-- brand, primary action, focus, selection, status, and destructive colors sharing ambiguous meaning;
-- light/dark themes produced by inversion or local overrides instead of semantic mappings;
-- state or feedback meaning conveyed only by red/green/yellow or by lighter/darker color;
-- a generic one-note palette or AI-gradient treatment;
-- low contrast or gray text on colored surfaces;
-- a new component visually importing another product's design language;
-- imagery that is decorative when users need to inspect a real product, place, object, or state.
-- imagery inserted as an isolated rectangle without preserving reference crop, focal point, edge, overlap, or background relationship;
-- image or section transitions reduced to generic fades despite approved reference evidence.
-
-### Components And Interaction
-
-- duplicate primitives or competing component systems;
-- missing hover, focus-visible, active, disabled, loading, error, or success states;
-- divs acting as buttons, placeholder-only labels, or hover-only functionality;
-- clipped overlays and incorrect focus trap/restoration;
-- unstable controls or content shift during interaction;
-- custom behavior where a mature accessible primitive would lower risk.
-
-### Responsive And Mobile
-
-- desktop compressed into one column without reprioritization;
-- wrong first-viewport content;
-- horizontal overflow, clipping, overlap, or excessive fixed/sticky space;
-- desktop tables, sidebars, filters, or toolbars made tiny instead of transformed;
-- action placement outside useful reach;
-- keyboard, safe area, browser chrome, or orientation covering content;
-- touch targets below practical size or controls depending on hover.
-
-### Standards And Engineering
-
-- semantic/accessibility failures;
-- missing realistic states and recovery;
-- broken metadata or asset provenance;
-- layout shift, oversized media, avoidable JavaScript, or motion jank;
-- console, hydration, build, type, lint, or test failures;
-- duplicated styles, orphaned code, or abstractions that no longer match use.
-
-Name the root cause as one of:
-
-- missing or incorrect product decision;
-- unsuitable or unexamined product structure;
-- design-system drift;
-- missing shared token/component;
-- one-off implementation;
-- responsive composition failure;
-- incomplete state/accessibility behavior;
-- content problem;
-- performance/engineering defect.
-
-Fix the cause, not only the visible symptom.
+Fix the responsible decision, shared primitive, or composition rather than masking its visible symptom. Keep uncertain findings separate from confirmed defects.
 
 ## Prioritize Findings
 
-Use impact and sequence:
+Use [quality severity](quality-gates.md#severity):
 
-1. **P0:** primary task blocked, data loss, blank render, or dangerous behavior.
-2. **P1:** major confusion, WCAG failure, mobile first-viewport failure, clipping/overlap, broken navigation/state, or severe responsive defect.
-3. **P2:** material hierarchy, layout, typography, design-system, content, or performance problem with a workaround.
-4. **P3:** optical alignment and small polish with no task impact.
+- **P0:** blocked primary task, data loss, blank render, or dangerous behavior;
+- **P1:** major confusion, accessibility failure, broken navigation/state, severe clipping, or mobile task failure;
+- **P2:** material hierarchy, typography, system, content, or performance defect with a workaround;
+- **P3:** minor optical polish with no task impact.
 
-Prioritize in this order:
+Resolve functional and mobile/accessibility blockers first, then structure and hierarchy, shared-system consistency, responsive/state completeness, visual craft, and purposeful motion.
 
-1. function and task clarity;
-2. mobile/accessibility blockers;
-3. structure and hierarchy;
-4. design-system consistency;
-5. responsive behavior and state completeness;
-6. typography, color, imagery, and component craft;
-7. purposeful motion and final polish.
-
-When the user asks for optimization, implement the verified items that fit scope. A findings-only report is incomplete unless the user explicitly asked for an audit or plan.
+An optimization request includes implementing verified in-scope findings. Return findings only when the user requests an audit or plan.
 
 ## Optimization Passes
 
-### Pass 1: Structure And Hierarchy
+Apply only relevant passes; each module owns its detailed rules and existing artifacts.
 
-- Make the page's purpose and primary action obvious.
-- Remove, defer, or regroup competing secondary content.
-- Match navigation and flow shape to neighboring product surfaces.
-- Use progressive disclosure only when the hidden content remains discoverable and available at the decision point.
-- Replace unnecessary dialogs with inline or route-based flow when that improves context.
-- Preserve URLs, data ownership, and expected behavior unless the change is explicitly in scope.
+### Structure And Hierarchy
 
-### Pass 2: Layout And Rhythm
+Make the purpose and primary action clear. Regroup secondary content, keep necessary decision context available, and preserve URLs, data ownership, and expected behavior unless change is authorized. Follow [structural selection](surface-strategy-and-structure.md#selection-gate) when topology changes.
 
-- Establish a consistent spacing scale and use `gap` for sibling relationships.
-- Tighten related elements and separate distinct groups.
-- Choose grid, flex, table, list, or direct flow from content relationships.
-- Set max-width, columns, aspect ratios, and stable dimensions intentionally.
-- Remove card wrappers that fail the card decision test; never nest cards.
-- Align visually and optically without speculative nudges.
-- Keep page sections unframed unless a real boundary is needed.
+For brand surfaces, trace the governing concept through affected content and composition using [Subject-World Identity](visual-system.md#subject-world-identity). Keep familiar task patterns where they already serve the work.
 
-### Pass 3: Typography And Copy
+### Layout, Typography, And Copy
 
-- Define a small role-based type scale using project tokens.
-- Strengthen hierarchy through size, weight, position, and space.
-- Keep body text readable and prose roughly 45-75 characters wide.
-- Use stable `rem` sizes with explicit responsive steps, not viewport-proportional type.
-- Keep letter spacing at `0`.
-- Use one product UI family unless the existing brand requires a second.
-- Fix labels, buttons, empty states, errors, and terminology at the same time as layout so text and containers are tested together.
+Repair grouping, alignment, density, reading order, and content fit. Select layout from content relationships rather than a preferred template. Use the existing role-based type/spacing system and improve labels, errors, and terminology with their containers.
 
-### Pass 4: Visual System Alignment
+Use [visual-system rules](visual-system.md) for layout grammar, card decisions, typography, and copy. Avoid unrelated styling changes when a narrower responsible fix resolves the defect.
 
-- Reuse or repair semantic tokens instead of adding local color values.
-- Normalize radius, border, surface, shadow, icon, focus, and status treatment.
-- Preserve existing identity before introducing a new visual language.
-- Use color for meaning and hierarchy, not decoration.
-- Replace generic gradients, blobs/orbs, fake metrics, and filler imagery with real product evidence or intentional restraint.
-- Keep controls recognizable and use the project's icon family.
-- Reconcile lasting design rules with the nearest project `DESIGN.md`; mark uncertain observations as verified, inferred, or proposed.
+### Visual System, Color, And Media
 
-### Pass 4A: Color System And States
+Repair shared tokens and components before adding one-off values. Preserve approved identity and reconcile durable changes with the [design-system source of truth](design-system-governance.md#source-of-truth).
 
-- Inventory primitive values, semantic roles, theme mappings, and component state usage before changing swatches.
-- Use `60-30-10` only to diagnose base/support/accent visual weight; do not force literal percentages.
-- Reserve the strongest salience for the primary task and reduce accidental competition from repeated or decorative accents.
-- Separate brand, action, focus, selection, information, success, warning, error, and destructive roles.
-- Pair status color with text, icon, shape, border, or another persistent cue.
-- Complete default, hover, pressed, focus-visible, selected, disabled, loading, validation/error, and success mappings where relevant.
-- Rebuild dark mode as semantic token mappings rather than inversion; check theme preference and first-paint behavior.
-- Verify light/dark, grayscale, high-contrast, forced-colors, and common color-vision conditions. Follow `color-system-and-states.md`.
+Read only the affected specialist rules:
 
-### Pass 4B: Media Integration
+- [color roles, themes, and interaction states](color-system-and-states.md);
+- [media composition, crops, layering, and transitions](media-and-image-transitions.md).
 
-- Map each prominent image to an asset ID, product role, focal point, desktop/mobile crop, edge treatment, layering, and loading fallback.
-- Rebuild the surrounding composition when the image currently feels appended; do not solve it only with radius, shadow, or a card wrapper.
-- Preserve the same subject across responsive art direction unless product requirements explicitly change it.
-- When approved evidence contains a transition, specify State A, midpoint, State B, trigger, timing or scroll range, responsive variant, and reduced-motion result before implementation.
-- Verify static endpoints first, then follow `media-and-image-transitions.md` and the motion phase.
+Fix an appended image's surrounding composition when necessary; a new border or wrapper alone does not establish its product role.
 
-### Pass 5: Components And Open Source
+### Components And Implementation
 
-- Create or update the Component Decision Register. Include every nontrivial primitive and explicitly record an existing/local decision when no dependency is added.
-- Replace duplicate local implementations with an existing shared primitive when behavior matches.
-- Extract only patterns repeated with the same intent or accessibility behavior.
-- Research mature GitHub components only for nontrivial behavior that the project lacks.
-- Verify popularity, maintenance, license, accessibility, compatibility, cost, and theming.
-- Wrap and restyle selected components so they consume local tokens and interaction conventions.
-- Do not add a full component system for one widget.
+Check existing primitives before selecting dependencies or extracting shared patterns. Use [open-source component selection](open-source-components.md) for nontrivial missing behavior and the existing [Component Decision Register](evidence-and-execution.md#component-decision-register) for its decision.
 
-### Pass 6: Responsive And Mobile Composition
+Follow [implementation](implementation.md) for semantic structure, state ownership, content, forms, overlays, accessibility, resilience, and technical cleanliness. Preserve user input and recovery while changing presentation.
 
-- Write the phone first-viewport priority before changing CSS.
-- Reorder, condense, collapse, or reposition content from the user's mobile task.
-- Transform navigation, sidebars, tables, filters, charts, and toolbars instead of shrinking them.
-- Reserve space for sticky/fixed controls and safe areas.
-- Test the virtual keyboard and active form controls.
-- Fix the owner of overflow instead of hiding page overflow globally.
-- Confirm 320, 375/390, 430, tablet, 1280, and 1440+ behavior.
+### Responsive Composition And States
 
-### Pass 7: States, Accessibility, And Resilience
+Define phone first-viewport priority before changing CSS. Transform dense navigation, data, and controls around the mobile task; do not merely shrink desktop. Use [responsive-mobile](responsive-mobile.md) for overflow ownership, keyboard, safe areas, and input behavior.
 
-- Complete relevant default, hover, focus-visible, active, disabled, loading, empty, error, success, permission, offline, and long-content states.
-- Use semantic elements and accessible names.
-- Verify keyboard flow, focus management, announcements, contrast, zoom, touch targets, and reduced motion.
-- Preserve user input and provide recovery.
-- Test realistic minimum, typical, maximum, translation, CJK, and interrupted states.
+Complete the states affected by the change using [implementation](implementation.md) and [quality gates](quality-gates.md). Verify realistic content and interruptions where relevant to the defect.
 
-### Pass 8: Motion And Performance
+### Motion And Performance
 
-- Add or refine motion only after layout and states are stable.
-- Create a Motion Coverage Matrix across direct controls, state/overlays, async feedback, navigation/layout, media, and brand/narrative motion. Every category needs an implementation, a concrete `not applicable` reason, or an accepted omission.
-- Create a Motion Fidelity Manifest and implement every approved reference cue or record an accepted omission. Motion is not optional when the approved direction depends on it.
-- Do not call the motion pass complete with only a button press and toast fade when the approved surface is expressive, image-led, or contains reference choreography.
-- Keep frequent product actions fast and state-led.
-- Remove animation without a named purpose.
-- Avoid `transition: all`, casual layout animation, unbounded blur/filter, and offscreen loops.
-- Measure actual bottlenecks before optimizing bundles or rendering.
-- Verify frame stability, LCP, INP, CLS, assets, and console behavior where relevant.
+Refine motion after function, layout, states, and responsiveness are stable. Follow [motion-and-interaction](motion-and-interaction.md) and its existing coverage/fidelity contracts; approved choreography remains part of the requested outcome.
+
+Keep frequent actions fast and state-led. Remove motion without a purpose and measure actual bottlenecks before changing rendering or bundles. Select relevant checks from [performance and resilience](quality-gates.md#gate-9-performance-and-resilience).
 
 ## Reference Image Decision
 
-Use the existing live page and before screenshots as the baseline for tune-ups and standards repair.
+Existing evidence is normally sufficient for tune-ups and standards repair. Consider new references for an explicit redesign, unresolved major composition, a new shared visual system, a major page without design evidence, or image-led composition needing exploration.
 
-Consider generated references when:
+Generate only for pages selected in generated-reference or hybrid mode. Follow [reference-images](reference-images.md) for Design Package prerequisites, desktop/mobile content parity, asset identity, and comparison. Direct pages implement from their approved Design Package.
 
-- the user requests a redesign or alternate direction;
-- the existing hierarchy/composition is fundamentally wrong;
-- several pages need one newly defined visual system;
-- a major new page or flow has no visual evidence;
-- image-led composition cannot be resolved safely in code alone.
-
-Do not generate references only to adjust spacing, typography, responsive behavior, component states, accessibility, metadata, or performance. Even when the cases above apply, generate only when the user selects generated-reference or hybrid mode. For selected pages, create desktop and dedicated mobile references from the same Page Content Canon and preserve approved existing identity where required. Reject a pair that changes core copy, data/state, asset subject, navigation meaning, or action outcome between viewports. Direct pages skip this generated-reference loop.
+Do not generate references merely for spacing, type, responsive behavior, component states, accessibility, metadata, or performance fixes.
 
 ## Before And After Verification
 
-Capture matching before and after screenshots at identical viewports and states. Compare:
+Within permitted scope, compare matching before/after viewports and states. Select comparisons that explain the intended improvement:
 
-- first-viewport task clarity;
-- reading order and hierarchy;
-- layout silhouette, density, and grouping;
-- typography and content fit;
-- card/container count and nesting;
-- design-system consistency;
-- mobile reordering and action visibility;
-- clipping, overlap, overflow, and sticky behavior;
-- interaction states and focus;
-- color hierarchy, semantic status, component states, and light/dark theme parity;
-- visual identity and real assets.
-- image crop, focal point, edge treatment, layering, and transition endpoints/keyframes;
-- desktop/mobile content and asset parity.
+- task clarity, reading order, grouping, density, and content fit;
+- system consistency, identity, and affected color/theme states;
+- mobile priority, action visibility, overflow, overlays, and sticky behavior;
+- affected interaction, focus, recovery, media crops/transitions, and desktop/mobile parity.
 
-Then run:
+Use [quality-gates](quality-gates.md) to select checks in proportion to the change: applicable repository checks plus authorized visual, accessibility, interaction, responsive, or performance evidence. Keep required manual comparisons unverified until the user provides results; code diffs alone do not prove experience improvement.
 
-- repository format, lint, typecheck, tests, and production build;
-- console and failed-network checks;
-- keyboard and primary flow walkthrough;
-- accessibility tooling plus manual verification;
-- responsive viewport matrix;
-- reduced motion and important error/empty/loading states;
-- light/dark, grayscale, high-contrast, forced-colors, and relevant color-vision checks;
-- performance measurements when the change can affect them.
-
-Do not declare improvement from code diffs alone. The after state must be visibly and behaviorally better without an unintended regression.
+For a further revision, name the highest-impact unresolved finding and change the smallest responsible area. Stop when scoped findings are resolved and applicable evidence is sufficient. A new change or unresolved concern can justify another check; preference alone does not justify repeating the full matrix or extending the redesign.
 
 ## Delivery Contract
 
-Report:
+Use the existing [Delivery Evidence](quality-gates.md#delivery-evidence) and [execution accountability](evidence-and-execution.md). Include:
 
-- target and optimization mode;
-- root causes fixed, ordered by user impact;
-- Surface Strategy Record, structural-exploration decision, selected direction when applicable, and preserved structural boundaries;
-- important layout, typography, visual-system, responsive, and standards changes;
-- before/after viewports and states inspected;
-- build/tests/accessibility checks run;
-- open-source component provenance and adaptations, if any;
-- component decisions when no dependency was added, including what was evaluated and why existing/local implementation was selected;
-- Motion Coverage Matrix summary, Motion Fidelity Manifest status, and reduced-motion result;
-- functionality or identity deliberately preserved;
-- remaining risks or device/browser checks not run;
-- development URL or openable file.
+- target, optimization mode, and root causes fixed by user impact;
+- structural decision and preserved behavior/identity boundaries;
+- important changes and relevant component/motion decisions;
+- baseline and after evidence inspected, checks run, and their results;
+- required manual acceptance, unresolved risks, or contexts not checked;
+- an openable development URL or file when available.
+
+Use existing artifacts instead of creating duplicate optimization records. Report applicable decisions and evidence even when existing/local implementation is selected and no dependency is added.
 
 ## Prohibited Behavior
 
-- Do not rewrite the whole interface to express personal taste.
-- Do not erase a recognizable identity during a polish request.
-- Do not expand a structural exploration to unrelated routes, workflows, or shared patterns.
-- Do not present recolors or typography swaps as structural alternatives.
-- Do not stop at recommendations when implementation was requested.
-- Do not fix isolated pixels while leaving the wrong hierarchy or flow.
-- Do not wrap every section in cards or convert mobile rows to cards by default.
-- Do not add dependencies before checking existing primitives.
-- Do not generate a new design system from accidental one-off code.
-- Do not claim browser, device, accessibility, or performance verification that was not run.
-- Do not improve desktop while leaving mobile as a squeezed derivative.
-- Do not add motion before function, layout, states, and responsiveness are stable.
+- Do not replace the interface to express personal taste or erase identity during polish.
+- Do not expand structural exploration to unrelated routes, flows, or shared patterns.
+- Do not present recolors as structural alternatives or repair pixels while retaining a broken flow.
+- Do not overwrite user-authored changes, add dependencies before checking primitives, or elevate accidental code into a new system.
+- Do not leave mobile as a compressed desktop derivative or add motion before the underlying behavior is stable.
+- Do not claim browser, device, accessibility, performance, or user verification that was not run.

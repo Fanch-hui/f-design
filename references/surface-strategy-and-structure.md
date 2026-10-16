@@ -8,6 +8,8 @@ Classify and design each meaningful surface by its primary job. A project may co
 
 Product taxonomy is a diagnostic lens, not a template catalog. Do not select a layout merely because a page was labeled `marketing`, `dashboard`, `editor`, or `commerce`.
 
+Inspect the real content's types, amounts, lengths, relationships, and decision order before proposing geometry. For public communication, connect each section's visitor question and claim to available evidence and a relevant next step. For task surfaces, connect the task to required data, actions, and visible state. Keep these relationships in the existing brief or page map.
+
 ## Surface Strategy Record
 
 Create one row per route or meaningfully distinct full-screen state before structural exploration:
@@ -92,6 +94,8 @@ Each pair must differ on at least three applicable structural axes, including th
 
 Do not force three candidates when only two are credible. Do not invent a weak wildcard to fill a quota.
 
+Filter reference compositions by the subject, tone, existing brand system, available assets, and actual content requirements. If a pattern needs absent quotations, extra pricing tiers, or unavailable imagery, choose a composition that fits the approved content. Do not reshape facts to satisfy a blueprint. Explain the composition, content needs, media role, and mobile consequence within the existing direction matrix; references supply candidates, not the final decision.
+
 ## Bounded Originality Gate
 
 Every direction, including the conservative one, must pass before it is shown to the user:
@@ -123,6 +127,8 @@ Ask the questions that expose real structural choices for the classified surface
 
 These questions reveal topology; they do not prescribe a page type. Do not translate every answer into a hero, sidebar, card grid, dashboard, or wizard by reflex.
 
+When trying, comparing, configuring, filtering, or calculating helps the approved task, expose the smallest complete interaction where it makes the relevant claim understandable. Reuse existing features and real data, support phone and keyboard use, and retain readable content when optional scripting fails. Reading, viewing, and static explanation can be complete experiences; add interaction only for a named task benefit.
+
 ## Selection Gate
 
 Present the viable directions before the final Design Package. For each direction, state its governing idea, task benefit, familiar conventions, main tradeoff, mobile consequence, and implementation risk. Let the user:
@@ -133,7 +139,7 @@ Present the viable directions before the final Design Package. For each directio
 - reject the set and request another bounded exploration;
 - explicitly delegate the selection.
 
-The final selection question must visibly repeat all five paths: select, combine, custom, reject/regenerate, or delegate. Do not end with an A/B/C-only prompt, even when the direction cards themselves are labeled A/B/C. Record the user's wording and the selected structure. When delegated, choose the direction with the strongest product evidence and lowest unresolved task risk, not the most visually novel option.
+When selection remains unresolved, the final question must visibly offer all five paths: select, combine, custom, reject/regenerate, or delegate, even when the direction cards are labeled A/B/C. Record an existing user selection or explicit delegation without asking again. When delegated, choose the direction with the strongest product evidence and lowest unresolved task risk, and record the selected structure and rationale.
 
 After selection, freeze the chosen structure in the Page and State Map and Design Package. Visual-system work may refine presentation, but it may not silently revert to another candidate or a familiar generic skeleton.
 

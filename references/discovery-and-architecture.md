@@ -109,7 +109,7 @@ Reference input answers what evidence may inform the design. Delivery mode separ
 For material design work, ask this as the first standalone choice and offer:
 
 1. **Design -> Generate References -> Implement:** approve the product, page, visual, responsive, media, and motion design first; then generate selected desktop/mobile page references and implement against them. This adds an image approval and fidelity loop.
-2. **Design -> Direct Implementation:** approve the same design decisions, then implement without generating page references. This is faster and avoids image-model drift; browser screenshots remain required for QA.
+2. **Design -> Direct Implementation:** approve the same design decisions, then implement without generating page references. This avoids image-model drift; visual QA follows the permitted verification scope, with manual acceptance kept unverified until its results arrive.
 3. **Hybrid:** generate references only for user-named key pages, states, or high-risk compositions, then implement the rest directly.
 4. **Custom / 自定义:** let the user describe another boundary or combine the modes.
 5. **你定 / Delegate:** choose based on ambiguity, visual risk, number of pages, available image tools, time, and desired fidelity, then record the rationale.
@@ -372,6 +372,26 @@ Distinguish:
 Do not create a route for every modal, or a modal for every secondary task. Exhaust inline and route-based options before defaulting to a dialog.
 
 Create this map only after required structural directions have been selected, customized, or explicitly delegated. For surfaces where exploration is not required, cite the existing suitable structure or explicit target that resolves it.
+
+## Page Content Canon
+
+For each affected page, freeze its meaning before implementation or generating viewport variants. All delivery modes use the same approved content, data/state, navigation, actions, and asset identities. Use stable IDs so items can be traced through design, code, and any generated references.
+
+```markdown
+## Page Content Canon: <route and state>
+
+- User and state:
+- Primary task and success action:
+- Navigation IDs and labels:
+- Content blocks: ID, exact approved copy or data role, priority, required/optional
+- Asset IDs: source, subject identity, focal point, allowed desktop/mobile crops
+- Controls and CTA IDs: label, outcome, priority
+- Invariants across viewports:
+- Allowed mobile transforms: reorder, condense, progressive disclosure, alternate crop
+- Explicitly prohibited changes:
+```
+
+Desktop and mobile are different compositions of this canon. Mobile may defer secondary material behind a discoverable control, condense approved secondary copy, or change the crop of the same asset where permitted. It may not silently replace claims, state, core copy, asset subjects, navigation meaning, CTA outcomes, or required content. Resolve a material canon change before presenting it as the approved design.
 
 ## State Inventory
 

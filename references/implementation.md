@@ -16,7 +16,7 @@ Edit source files, not generated output. Respect the existing build and formatti
 
 ## Pass 1: Semantic Structure And Flow
 
-Build the interaction skeleton first:
+Build the interaction skeleton with representative approved copy, data, and asset identities from the start. Their length, quantity, relationships, and states should determine the structure before visual polish:
 
 - correct routes, landmarks, heading hierarchy, regions, and reading order;
 - real links for navigation and buttons for actions;
@@ -96,6 +96,8 @@ For every mode, restate the page purpose, platform, content canon, structure, lo
 
 ## Pass 4: Real Content And Data
 
+Complete and verify the content introduced in Pass 1 against the Page Content Canon. Each scoped section must deliver its promised information; identify genuine missing material without silently expanding the scope or replacing approved content. Clearly distinguish demonstration content from verified facts and business evidence.
+
 - Use actual product copy or credible domain-specific content.
 - Use realistic minimum, typical, and maximum data.
 - Preserve user input across errors and navigation where expected.
@@ -125,7 +127,7 @@ For large data:
 - Use useful alt text for informative images and empty alt for decoration.
 - Keep UI text, buttons, forms, data, and core diagrams semantic instead of baking them into images.
 
-Implement and verify the static start and end compositions before animation. Do not place media in a generic rounded container merely because its compositional relationship is unresolved. Follow `media-and-image-transitions.md` for prominent media and approved transitions.
+Implement and verify the static page composition and media start/end states before animation. The initial frame and reduced-motion path must remain legible and support the primary task. Do not place media in a generic rounded container merely because its compositional relationship is unresolved. Follow `media-and-image-transitions.md` for prominent media and approved transitions.
 
 For a 3D experience, use Three.js or the established project renderer. Keep the primary scene full-bleed or unframed, not inside a decorative card. Verify rendered pixels on desktop and mobile, interaction, framing, movement, and fallback behavior.
 

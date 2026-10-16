@@ -21,21 +21,7 @@ A reference website is evidence, not a license. Recreate approved principles and
 
 ## Preconditions
 
-Before generating images, have:
-
-- a Design Delivery Mode Record that names the pages/states selected for generated references;
-- a confirmed or explicitly delegated Product Brief;
-- a Reference Intake Record, including an explicit `no reference` or delegated result when applicable;
-- an Architecture Decision Record selected or delegated by the user;
-- a Surface Strategy Record for every selected page/state;
-- a selected or explicitly delegated Structural Direction Record when exploration was required, or concrete evidence that it was not required;
-- a complete Page and State Map;
-- a confirmed project design contract;
-- a project `DESIGN.md` when this work creates or changes a multi-page visual system;
-- a Page Content Canon for every affected page;
-- real content roles and approximate content lengths;
-- a list of existing assets and media gaps;
-- desktop and mobile first-viewport priorities for every page.
+Before generating images, complete the shared [Design Package](visual-system.md#design-package) and resolve the delivery mode, reference intake, and architecture choices in [discovery-and-architecture.md](discovery-and-architecture.md). The delivery-mode record must name the pages/states selected for generated references. Reuse the package's content canon, asset inventory, media gaps, and desktop/mobile priorities.
 
 Do not generate a polished homepage while the product, page scope, visual system, responsive rules, media intent, or content canon remain undefined. Do not ask the image model to invent product scope or make unresolved design decisions. Direct implementation pages stop here and do not create generated artifacts.
 
@@ -47,23 +33,7 @@ Only after that approval may generated-reference or hybrid pages be rendered. Ge
 
 ## Page Content Canon
 
-Freeze the page's meaning before generating viewport variants. Use stable IDs so the same item can be traced through prompts, references, code, and tests.
-
-```markdown
-## Page Content Canon: <route and state>
-
-- User and state:
-- Primary task and success action:
-- Navigation IDs and labels:
-- Content blocks: ID, exact approved copy or data role, priority, required/optional
-- Asset IDs: source, subject identity, focal point, allowed desktop/mobile crops
-- Controls and CTA IDs: label, outcome, priority
-- Invariants across viewports:
-- Allowed mobile transforms: reorder, condense, progressive disclosure, alternate crop
-- Explicitly prohibited changes:
-```
-
-Desktop and mobile references are two compositions of this same canon. Mobile may defer secondary material behind a discoverable control, shorten approved secondary copy, or use a different crop of the same asset when the canon allows it. It may not change product claims, user/data state, core copy, asset subject, navigation meaning, CTA outcome, or required content.
+Use the shared [Page Content Canon](discovery-and-architecture.md#page-content-canon). Generated desktop and mobile references must visualize that same canon; the parity audit below checks the selected reference set without creating another source of content truth.
 
 ## Reference Matrix
 

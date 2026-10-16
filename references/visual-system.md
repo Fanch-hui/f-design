@@ -18,7 +18,7 @@ Switch register by surface, not randomly by section. A public homepage can be ex
 
 ## Project Design Contract
 
-Lock these decisions before generating the full reference set. For material or multi-page work, write them into the project's existing design documentation or a project-specific `DESIGN.md`; do not leave the system only inside a chat message.
+Lock these decisions before implementation or generating references. For material or multi-page work, write them into the project's existing design documentation or a project-specific `DESIGN.md`; do not leave the system only inside a chat message.
 
 ```markdown
 # Product DESIGN.md
@@ -58,6 +58,17 @@ Lock these decisions before generating the full reference set. For material or m
 
 If a repository already has `DESIGN.md`, tokens, or a documented system, treat them as the starting contract. Change them only when the user approved a redesign. For a new direction, use `design-reference-synthesis.md` to extract concrete qualities from selected references without cloning a brand.
 
+## Design Package
+
+For material new builds, redesigns, or page additions, assemble the shared package from the existing records:
+
+- confirmed Product Brief and delivery mode, reference intake, and architecture decisions;
+- Surface Strategy Record, selected structural direction when exploration was required, and Page and State Map;
+- project design contract, desktop/mobile composition, Color Role Table, Theme Matrix, and Component State Matrix, reusing established mappings where unchanged;
+- media and motion intent, asset inventory and genuine gaps, and the [Page Content Canon](discovery-and-architecture.md#page-content-canon) for every affected page.
+
+Present the package for confirmation or record explicit delegation before implementation or image generation. Generated-reference, direct, and hybrid modes share this design contract; the mode only changes which reference-image artifacts follow. Visual refinement may not silently replace the selected structure or approved content with another design. Use existing project documents rather than creating a parallel system.
+
 ## Subject-World Identity
 
 Before choosing a visual style, inventory the product's real world:
@@ -69,6 +80,10 @@ Before choosing a visual style, inventory the product's real world:
 - familiar interaction metaphors that preserve usability.
 
 Use this inventory to choose imagery, texture, type roles, structural devices, copy, and one signature visual or motion move. On a brand surface, the first viewport should act as the page's thesis and foreground the most characteristic subject signal; a conventional hero is one valid structure, not a requirement. A product surface may express identity more quietly through language, density, data treatment, and interaction detail.
+
+For a new or substantially redesigned brand direction, explain which concrete subject fact becomes the page's governing device and how it shapes copy, composition, media, and any useful interaction. Record this in the existing Product Brief or design contract. Test the concept by substituting the nearest actual competitor: if the explanation and section content still fit unchanged, ground them in facts that distinguish this subject. Familiar task screens may express identity through their objects and workflow without an artistic concept.
+
+Carry the governing idea through the page where it explains the subject, including supporting sections and the closing action. A distinctive first viewport followed by unrelated stock blocks does not establish a coherent identity.
 
 Numbering, timelines, rulers, chapter markers, or technical annotations must encode real order, progress, scale, or meaning. Do not add structural decoration that looks informative but carries no information.
 
@@ -97,6 +112,10 @@ Establish hierarchy through:
 5. elevation or motion only when needed.
 
 Use the squint test: the primary element, secondary group, and next action should remain evident without reading details. Do not make every heading, metric, button, and image loud.
+
+Removing decorative wrappers must leave the approved content fully served. Use meaningful product details, work samples, comparisons, process, or media where they answer the visitor's question; scale and color fields may support that material. An empty section is not improved merely because its ornaments disappeared. Preserve intentional pauses and task-focused whitespace when they help reading or interaction.
+
+With motion paused, the initial composition must still communicate the subject, hierarchy, content, and primary task. State changes may happen immediately, and richer approved motion may connect complete compositions; it must not conceal missing content or an unresolved layout.
 
 ## Layout Grammar
 
